@@ -1,11 +1,10 @@
 'use client'
 import LoginForm from "@/app/(auth)/login/components/LoginForm";
-import Revenue from "@/app/revenue/components/Revenue";
 
 const Page = () => {
-  return (
-     <LoginForm/>
-  )
+    return (
+        <LoginForm/>
+    )
 }
 
 export default Page;
