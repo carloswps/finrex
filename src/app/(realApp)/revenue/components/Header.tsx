@@ -5,7 +5,7 @@ import Profit from './icons/Profit.svg'
 
 const Header = () => {
     return (
-        <header>
+        <header className='bg-white'>
             <div>
                 <nav>
                     <ul className={'flex items-center border-b border-[var(--green-theme)] w-fit py-8 gap-32 m-auto'}>

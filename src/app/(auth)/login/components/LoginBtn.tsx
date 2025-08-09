@@ -1,3 +1,5 @@
+import { useRouter } from "next/navigation";
+
 type Props = {
     hasLoggedIn: boolean;
     disabled?: boolean;

@@ -1,5 +1,5 @@
 'use client'
-import Revenue from "@/app/revenue/components/Revenue";
+import Revenue from "@/app/(realApp)/revenue/components/Revenue";
 
 const Page = () => {
     return (

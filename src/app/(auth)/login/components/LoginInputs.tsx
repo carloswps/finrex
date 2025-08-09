@@ -46,7 +46,7 @@ export const LoginInputs = (props: LoginInputProps) => {
                     )
                 )}
             </div>
-            {fieldState.error && <p className={'-mt-6 font-semibold'}>{fieldState.error.message}</p>}
+            {fieldState.error && <p className='-mt-6 font-semibold'>{fieldState.error.message}</p>}
         </div>
     )
 }

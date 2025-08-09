@@ -1,4 +1,4 @@
-const barsLogin = () => {
+const BarsLogin = () => {
     return (
         <div
             className={'border-3 border-[var(--yellow-theme)] absolute ' +
@@ -11,4 +11,4 @@ const barsLogin = () => {
     )
 }
 
-export default barsLogin;
+export default BarsLogin;
