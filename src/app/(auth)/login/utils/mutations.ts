@@ -1,14 +1,20 @@
-import {useMutation} from "@tanstack/react-query";
-import {addPost, addRevenueValues} from "@/api/api";
+import { useMutation } from '@tanstack/react-query';
+import { addRevenueValues, loginUser, registerUser } from '@/api/api';
 
-export const useAddData = () => {
-    return useMutation({
-        mutationFn: addPost
-    })
-}
+export const useAddRegister = () => {
+  return useMutation({
+    mutationFn: registerUser,
+  });
+};
+
+export const useLogin = () => {
+  return useMutation({
+    mutationFn: loginUser,
+  });
+};
 
 export const useRevenueValues = () => {
-    return useMutation({
-        mutationFn: addRevenueValues
-    })
-}
+  return useMutation({
+    mutationFn: addRevenueValues,
+  });
+};

@@ -1,10 +1,8 @@
-'use client'
-import Revenue from "@/app/(realApp)/revenue/components/Revenue";
+'use client';
+import Revenue from '@/app/(realApp)/revenue/components/Revenue';
 
 const Page = () => {
-    return (
-        <Revenue/>
-    )
-}
+  return <Revenue />;
+};
 
 export default Page;
