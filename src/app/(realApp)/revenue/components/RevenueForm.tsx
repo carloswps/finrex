@@ -46,7 +46,7 @@ const RevenueForm = ({title, subTitle, data, secondData, secondTitle, subSecondT
     return (
             <div>
                 <form onSubmit={handleSubmit(handleFormSubmit)}>
-                    <div className="grid grid-cols-2 pt-6 px-15">
+                    <div className="grid grid-cols-2">
                         <div className="border-r border-[var(--lines-color)] mr-22">
                             <h2 className={'text-[var(--text-color)] text-3xl font-semibold'}>{title}</h2>
                             <h5 className={'text-[var(--green-theme)] text-sm mb-6'}>{subTitle}</h5>

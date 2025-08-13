@@ -6,8 +6,6 @@ import BarsLogin from "@/app/(auth)/login/components/barsLogin";
 import FormAction from "./FormAction";
 
 const LoginForm = () => {
-    const [hasLoggedIn, setHasLoggedIn] = useState(false);
-
     return (
         <div className={'h-screen w-screen flex justify-center'}>
             <div className={'bg-white w-1/2 p-8'}>

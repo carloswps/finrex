@@ -1,7 +1,8 @@
-import Insights from './icons/Insights.svg'
-import RevenueSpending from './icons/RevenueSpending.svg'
-import Goals from './icons/Goals.svg'
-import Profit from './icons/Profit.svg'
+import Insights from './revenue/components/icons/Insights.svg'
+import RevenueSpending from './revenue/components/icons/RevenueSpending.svg'
+import Goals from './revenue/components/icons/Goals.svg'
+import Profit from './revenue/components/icons/Profit.svg'
+import Link from 'next/link'
 
 const Header = () => {
     return (
@@ -13,10 +14,12 @@ const Header = () => {
                             <img src="/darkLogo.png" alt="logo" className={'w-45'}/>
                         </li>
                         <li className={'flex items-center gap-2 text-xl text-[var(--desactive-color)] hover:text-[var(--text-color)]'}>
-                            <Insights className={'w-10 h-10'}/>Insights
+                            <Insights className={'w-10 h-10'}/>
+                            <Link href={"./insights"}>Insights</Link>
                         </li>
                         <li className={'flex items-center gap-2 text-xl text-[var(--desactive-color)] hover:text-[var(--text-color)] text-nowrap'}>
-                            <RevenueSpending className={'w-10 h-10'}/>Revenue & Spending
+                            <RevenueSpending className={'w-10 h-10'}/>
+                            <Link href={"./revenue"}>Revenue & Spending</Link>
                         </li>
                         <li className={'flex items-center gap-2 text-xl text-[var(--desactive-color)] hover:text-[var(--text-color)]'}>
                             <Goals className={'w-10 h-10'}/>Goals
