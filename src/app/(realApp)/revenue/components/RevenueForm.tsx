@@ -4,17 +4,14 @@ import { revenueSchema, revenueSchemaType } from "../schemas/revenueSchema";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useRevenueValues } from "@/app/(auth)/login/utils/mutations";
 import { incomeItem } from "../types/incomeType";
+import TitleAndSubtitle from "@/app/components/TitleAndSubtitle";
 
 type Props = {
-    title: string;
-    subTitle: string;
-    secondTitle: string;
-    subSecondTitle: string;
     data: incomeItem[];
     secondData: incomeItem[];
 }
 
-const RevenueForm = ({title, subTitle, data, secondData, secondTitle, subSecondTitle}: Props) => {
+const RevenueForm = ({ data, secondData }: Props) => {
 
      const { handleSubmit, control } = useForm({
             resolver: zodResolver(revenueSchema),
@@ -48,8 +45,10 @@ const RevenueForm = ({title, subTitle, data, secondData, secondTitle, subSecondT
                 <form onSubmit={handleSubmit(handleFormSubmit)}>
                     <div className="grid grid-cols-2">
                         <div className="border-r border-[var(--lines-color)] mr-22">
-                            <h2 className={'text-[var(--text-color)] text-3xl font-semibold'}>{title}</h2>
-                            <h5 className={'text-[var(--green-theme)] text-sm mb-6'}>{subTitle}</h5>
+                            <TitleAndSubtitle
+                                title="Monthly income"
+                                subTitle="Log your income"
+                            />
                             {data.map(input => (
                                 <DefaultInput
                                     key={input.name}
@@ -61,8 +60,10 @@ const RevenueForm = ({title, subTitle, data, secondData, secondTitle, subSecondT
                             ))}
                         </div>
                         <div className="pl-6">
-                            <h2 className={'text-[var(--text-color)] text-3xl font-semibold'}>{secondTitle}</h2>
-                            <h5 className={'text-[var(--green-theme)] text-sm mb-6'}>{subSecondTitle}</h5>
+                            <TitleAndSubtitle
+                                title="Monthly Spending"
+                                subTitle="Record your expenses"
+                            />
                              {secondData.map(input => (
                                 <DefaultInput
                                     key={input.name}
