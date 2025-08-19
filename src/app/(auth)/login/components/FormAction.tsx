@@ -14,7 +14,7 @@ type FormData = loginSchemaType | registerSchemaType;
 const FormAction = () => {
   const [hasLoggedIn, setHasLoggedIn] = useState(false);
   const router = useRouter();
-  const { register, control, handleSubmit, reset } = useForm<FormData>({
+  const { control, handleSubmit, reset } = useForm<FormData>({
     resolver: zodResolver(hasLoggedIn ? registerSchema : loginSchema),
     defaultValues: {
       email: '',
@@ -46,7 +46,7 @@ const FormAction = () => {
         await loginUser.mutateAsync(data as loginSchemaType);
         console.log('Login realizado', data);
 
-        await router.push('/revenue');
+        router.push('/revenue');
       }
     } catch (error) {
       console.log('Erro:', error);
