@@ -1,5 +1,5 @@
 'use client'
-import {useEffect, useRef} from "react";
+import {useContext, useEffect, useRef} from "react";
 
 import {
     Chart,
@@ -10,11 +10,22 @@ import {
     Title,
     Tooltip,
     Legend,
+    LineController,
+    LineElement,
+    PointElement,
+    ArcElement,
+    DoughnutController
 } from "chart.js";
+import {GraphContext} from "@/app/(realApp)/insights/contexts/GraphContext";
 
 Chart.register(
     BarController,
     BarElement,
+    LineController,
+    LineElement,
+    PointElement,
+    DoughnutController,
+    ArcElement,
     CategoryScale,
     LinearScale,
     Title,
@@ -22,17 +33,19 @@ Chart.register(
     Legend
 );
 
+
 const FormDataGraph = () => {
     const canvasRef = useRef<HTMLCanvasElement>(null);
+    const context = useContext(GraphContext);
 
     useEffect(() => {
-        if(!canvasRef.current) return;
+        if(!canvasRef.current || !context) return;
 
         const ctx = canvasRef.current.getContext('2d');
         if(!ctx) return;
 
         const myChart = new Chart(ctx, {
-            type: "bar",
+            type: context?.style ?? 'bar',
             data: {
                 labels: ["Jan", "Feb", "Mar"],
                 datasets: [
@@ -52,7 +65,7 @@ const FormDataGraph = () => {
         return () => {
             myChart.destroy();
         }
-    }, [])
+    }, [context?.style])
 
     return (
         <div>

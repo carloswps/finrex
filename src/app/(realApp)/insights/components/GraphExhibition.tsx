@@ -14,10 +14,10 @@ const GraphExhibition = () => {
     }
     return (
         <div className={'flex gap-10'}>
-            <LinegGraph onClick={() => selectStyle('line')} className={'text-[var(--desactive-color)]] w-11 h-11 hover:text-[var(--yellow-theme)]'}/>
-            <BarGraph onClick={() => selectStyle('bar')} className={'text-[var(--desactive-color)]] w-11 h-11 hover:text-[var(--green-theme)]'}/>
-            <PizzaGraph onClick={() => selectStyle('doughnut')} className={'text-[var(--desactive-color)]] w-11 h-11 hover:text-[var(--purple-theme)]'}/>
-            <ColumnGraph onClick={() => selectStyle('bar')} className={'text-[var(--desactive-color)]] w-11 h-11 hover:text-[var(--orange-theme)]'}/>
+            <LinegGraph onClick={() => selectStyle('line')} className={'text-[var(--desactive-color)]] w-11 h-11 hover:text-[var(--yellow-theme)] cursor-pointer'}/>
+            <BarGraph onClick={() => selectStyle('bar')} className={'text-[var(--desactive-color)]] w-11 h-11 hover:text-[var(--green-theme)] cursor-pointer'}/>
+            <PizzaGraph onClick={() => selectStyle('doughnut')} className={'text-[var(--desactive-color)]] w-11 h-11 hover:text-[var(--purple-theme)] cursor-pointer'}/>
+            <ColumnGraph onClick={() => selectStyle('bar')} className={'text-[var(--desactive-color)]] w-11 h-11 hover:text-[var(--orange-theme)] cursor-pointer'}/>
         </div>
     )
 }
