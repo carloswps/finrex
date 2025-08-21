@@ -2,7 +2,7 @@ import { useForm } from "react-hook-form";
 import DefaultInput from "./DefaultInput";
 import { revenueSchema, revenueSchemaType } from "../schemas/revenueSchema";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { useRevenueValues } from "@/app/(auth)/login/utils/mutations";
+import {useRevenueValues} from "@/app/(auth)/login/utils/mutations";
 import { incomeItem } from "../types/incomeType";
 import TitleAndSubtitle from "@/app/components/TitleAndSubtitle";
 
@@ -33,8 +33,7 @@ const RevenueForm = ({ data, secondData }: Props) => {
         
             const handleFormSubmit = async (data: revenueSchemaType) => {
                 try {
-                    await addRevenueValues.mutateAsync(data); 
-                    console.log(data)
+                    await addRevenueValues.mutateAsync(data);
                 } catch {
                     console.log('error')
                 }

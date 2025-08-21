@@ -48,6 +48,6 @@ export const loginUser = async (data: loginSchemaType): Promise<AuthResponse> =>
 };
 
 export const addRevenueValues = async (data: revenueSchemaType): Promise<revenueSchemaType> => {
-  const result = await req.post('/posts', data);
+  const result = await req.post('/revenue', data);
   return result.data;
 };

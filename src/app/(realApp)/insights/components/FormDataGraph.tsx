@@ -38,6 +38,7 @@ const FormDataGraph = () => {
     const canvasRef = useRef<HTMLCanvasElement>(null);
     const context = useContext(GraphContext);
 
+
     useEffect(() => {
         if(!canvasRef.current || !context) return;
 
@@ -45,12 +46,11 @@ const FormDataGraph = () => {
         if(!ctx) return;
 
         const myChart = new Chart(ctx, {
-            type: context?.style ?? 'bar',
+            type: context?.style,
             data: {
                 labels: ["Jan", "Feb", "Mar"],
                 datasets: [
                     {
-                        label: "Vendas",
                         data: [12, 19, 3],
                         backgroundColor: "rgba(75, 192, 192, 0.2)",
                         borderColor: "rgba(75, 192, 192, 1)",
@@ -69,7 +69,10 @@ const FormDataGraph = () => {
 
     return (
         <div>
-            <canvas ref={canvasRef}></canvas>
+            <canvas
+                ref={canvasRef}
+            >
+            </canvas>
         </div>
     )
 }
