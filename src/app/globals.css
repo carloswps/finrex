@@ -32,8 +32,6 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
   --font-nunito: var(--font-nunito);
 }
 
@@ -46,8 +44,7 @@
 
 body {
   background: var(--background);
-  color: var(--foreground);
-  font-family: var(--font-nunito), Arial;
+  color: var(--foreground);font-family: var(--font-nunito), Arial, serif;
 }
 
 .input-no-spinner::-webkit-inner-spin-button,

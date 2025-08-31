@@ -1,25 +1,27 @@
+'use client'
 import FormDataGraph from "@/app/(realApp)/insights/components/FormDataGraph";
 import GraphExhibition from "@/app/(realApp)/insights/components/GraphExhibition";
 import {GraphProvider} from "@/app/(realApp)/insights/contexts/GraphContext";
+import {CalendarProvider} from "@/app/(realApp)/insights/contexts/CalendarContext";
+import CalendarLogicWrapper from "@/app/(realApp)/insights/components/CalendarLogicWrapper";
 
 type Props = {
-    data: string,
-    showData: boolean,
     graphSelection: boolean,
+    showCalendar?: boolean,
 }
 
-const FormDataContainer = ({ data, showData, graphSelection }: Props) => {
+const FormDataContainer = ({ graphSelection, showCalendar }: Props) => {
     return (
-        <div>
-            {showData &&
-                <h3 className={'text-[var(--text-color)] text-2xl font-semibold'}>{data}</h3>
+        <div className={'mt-10'}>
+            {showCalendar &&
+                <CalendarProvider>
+                    <CalendarLogicWrapper/>
+                </CalendarProvider>
             }
             <GraphProvider>
                 <FormDataGraph/>
                 {graphSelection &&
-                    <div>
                         <GraphExhibition/>
-                    </div>
                 }
             </GraphProvider>
         </div>

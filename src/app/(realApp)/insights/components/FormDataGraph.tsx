@@ -45,22 +45,27 @@ const FormDataGraph = () => {
         const ctx = canvasRef.current.getContext('2d');
         if(!ctx) return;
 
+        const options: any = {responsive: true};
+        if(context?.style === 'doughnut') {
+            options.maintainAspectRatio = false;
+            options.cutout = '60%';
+            options.radius = '80%';
+        }
+
         const myChart = new Chart(ctx, {
             type: context?.style,
             data: {
                 labels: ["Jan", "Feb", "Mar"],
                 datasets: [
                     {
-                        data: [12, 19, 3],
+                        data: [12, 19, 3, 16, 40],
                         backgroundColor: "rgba(75, 192, 192, 0.2)",
                         borderColor: "rgba(75, 192, 192, 1)",
                         borderWidth: 1,
                     },
                 ],
             },
-            options: {
-                responsive: true,
-            },
+            options,
         });
         return () => {
             myChart.destroy();
@@ -68,7 +73,7 @@ const FormDataGraph = () => {
     }, [context?.style])
 
     return (
-        <div>
+        <div className={context?.style === 'doughnut' ? 'w-[500px] h-[500px] mx-auto' : 'w-full' }>
             <canvas
                 ref={canvasRef}
             >

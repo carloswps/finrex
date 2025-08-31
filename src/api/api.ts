@@ -15,15 +15,21 @@ req.interceptors.request.use(config => {
 });
 
 req.interceptors.response.use(
-  response => response,
-  error => {
-    if (error.response.status === 401) {
-      localStorage.removeItem('token');
-      window.location.href = '/login';
+    response => response,
+    error => {
+        if (error.response) {
+            if (error.response.status === 401) {
+                localStorage.removeItem('token');
+                window.location.href = '/login';
+            }
+
+            return Promise.reject(error.response.data.message || 'Error Desconhecido');
+        }
+
+        return Promise.reject('Erro de conexão com o servidor');
     }
-    return Promise.reject(error);
-  }
 );
+
 
 interface AuthResponse {
   token: string;

@@ -1,11 +1,11 @@
 import { ReactNode } from "react";
-import Header from "@/app/(realApp)/Header";
+import Header from "@/app/components/Header";
 
 export default function RealAppLayout({ children }: { children: ReactNode }) {
     return (
-        <div className="flex flex-col h-screen">
-            <Header />
-            <div className="flex-1 overflow-auto pt-6 px-15">
+        <div className="h-screen">
+            <div className="flex-1 overflow-auto px-15">
+                <Header />
                 {children}
             </div>
         </div>
