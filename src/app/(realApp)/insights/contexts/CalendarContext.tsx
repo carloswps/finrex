@@ -1,23 +1,19 @@
-'use client'
-import {createContext, ReactNode, useState} from "react";
+'use client';
+import { createContext, ReactNode, useState } from 'react';
 
 type CalendarContextType = {
-    showCalendar: boolean,
-    setShowCalendar: (show: boolean) => void;
-}
+  showCalendar: boolean;
+  setShowCalendar: (show: boolean) => void;
+};
 
 export const CalendarContext = createContext<CalendarContextType | null>(null);
 
 type CalendarProviderProps = {
-    children: ReactNode;
-}
+  children: ReactNode;
+};
 
 export const CalendarProvider = ({ children }: CalendarProviderProps) => {
-    const [ showCalendar, setShowCalendar ] = useState(false);
+  const [showCalendar, setShowCalendar] = useState(false);
 
-    return (
-        <CalendarContext.Provider value={{ showCalendar, setShowCalendar }}>
-            {children}
-        </CalendarContext.Provider>
-    )
-}
+  return <CalendarContext.Provider value={{ showCalendar, setShowCalendar }}>{children}</CalendarContext.Provider>;
+};

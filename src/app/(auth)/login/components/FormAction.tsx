@@ -8,7 +8,7 @@ import HaveAccount from './HaveAccount';
 import LoginLoad from './LoginLoad';
 import { useAddRegister, useLogin } from '@/app/(auth)/login/utils/mutations';
 import { useRouter } from 'next/navigation';
-import ErrorAlert from "@/app/(auth)/login/components/ErrorAlert";
+import ErrorAlert from '@/app/(auth)/login/components/ErrorAlert';
 
 type FormData = loginSchemaType | registerSchemaType;
 
@@ -96,9 +96,9 @@ const FormAction = () => {
           <HaveAccount hasLoggedIn={hasLoggedIn} toggleLogged={handleAlreadyLogged} />
         </div>
       </form>
-        {(loginUser.isError || addNewRegister.isError) && (
-            <ErrorAlert message={String(loginUser.error ?? addNewRegister.error)} />
-        )}
+      {(loginUser.isError || addNewRegister.isError) && (
+        <ErrorAlert message={String(loginUser.error ?? addNewRegister.error)} />
+      )}
     </div>
   );
 };

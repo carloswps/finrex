@@ -1,10 +1,8 @@
 type Props = {
-    width: string
-}
+  width: string;
+};
 const Bar = ({ width }: Props) => {
-    return (
-        <div className={`${width} h-1 bg-[var(--red-theme)] mx-7`}></div>
-    )
-}
+  return <div className={`${width} mx-7 h-1 bg-[var(--red-theme)]`}></div>;
+};
 
 export default Bar;

@@ -1,6 +1,7 @@
 import { loginSchemaType, registerSchemaType } from '@/app/(auth)/login/schemas/loginSchema';
 import { revenueSchemaType } from '@/app/(realApp)/revenue/schemas/revenueSchema';
 import axios from 'axios';
+import { handleError } from '@/api/services/errorHandler';
 
 const req = axios.create({
   baseURL: process.env.NEXT_PUBLIC_URL_FINREX_API,
@@ -15,21 +16,19 @@ req.interceptors.request.use(config => {
 });
 
 req.interceptors.response.use(
-    response => response,
-    error => {
-        if (error.response) {
-            if (error.response.status === 401) {
-                localStorage.removeItem('token');
-                window.location.href = '/login';
-            }
+  res => res,
+  err => {
+    const message = err.response?.data?.message || err.response?.data?.error || err.message || 'Erro desconhecido';
 
-            return Promise.reject(error.response.data.message || 'Error Desconhecido');
-        }
+    handleError(message);
 
-        return Promise.reject('Erro de conexão com o servidor');
+    if (err.response?.status === 401) {
+      localStorage.removeItem('token');
+      window.location.href = '/login';
     }
+    return Promise.reject(message);
+  }
 );
-
 
 interface AuthResponse {
   token: string;
