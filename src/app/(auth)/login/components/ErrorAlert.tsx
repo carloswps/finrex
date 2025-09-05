@@ -1,8 +1,8 @@
-import { useAlertError } from '@/app/(realApp)/insights/contexts/AlertErrorContext';
 import { useEffect } from 'react';
+import { useAlertError } from '@/app/(realApp)/insights/contexts/AlertErrorContext';
 
 const ErrorAlert = () => {
-  const { error, setError } = useAlertError();
+  const { error, setError, formatError } = useAlertError();
 
   useEffect(() => {
     if (!error) return;
@@ -14,14 +14,16 @@ const ErrorAlert = () => {
 
   if (!error) return null;
 
+  const errorMessage = formatError(error);
+
   return (
     <div
       className={
-        'top-100 left-160 absolute h-12 w-44 bg-[var(--red-theme)]' +
-        ' flex items-center justify-center text-nowrap rounded-md border text-center'
+        'top-100 left-160 absolute h-12 w-auto min-w-[200px] bg-[var(--red-theme)]' +
+        ' flex items-center justify-center text-nowrap rounded-md border px-4 py-2 text-center'
       }
     >
-      {error}
+      {errorMessage}
     </div>
   );
 };
