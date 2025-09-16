@@ -1,20 +1,19 @@
-import { useEffect } from 'react';
 import { useAlertError } from '@/app/(realApp)/insights/contexts/AlertErrorContext';
+import { useEffect } from 'react';
 
-const ErrorAlert = () => {
+const ErrorAlert = ({ message }: { message?: string }) => {
   const { error, setError, formatError } = useAlertError();
+  const displayError = message || (error ? formatError(error) : null);
 
   useEffect(() => {
     if (!error) return;
     const timer = setTimeout(() => {
-      setError(null);
+      setError(undefined);
     }, 3000);
     return () => clearTimeout(timer);
   }, [error, setError]);
 
-  if (!error) return null;
-
-  const errorMessage = formatError(error);
+  if (!message) return null;
 
   return (
     <div
@@ -23,7 +22,7 @@ const ErrorAlert = () => {
         ' flex items-center justify-center text-nowrap rounded-md border px-4 py-2 text-center'
       }
     >
-      {errorMessage}
+      {message}
     </div>
   );
 };

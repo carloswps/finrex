@@ -4,7 +4,8 @@ import axios from 'axios';
 import { handleError } from '@/api/services/errorHandler';
 
 const req = axios.create({
-  baseURL: process.env.NEXT_PUBLIC_URL_FINREX_API,
+  //baseURL: process.env.NEXT_PUBLIC_URL_FINREX_API,
+  baseURL: 'http://localhost:5023/api/v1',
 });
 
 req.interceptors.request.use(config => {
@@ -16,17 +17,20 @@ req.interceptors.request.use(config => {
 });
 
 req.interceptors.response.use(
-  res => res,
-  err => {
-    const message = err.response?.data?.message || err.response?.data?.error || err.message || 'Erro desconhecido';
-
-    handleError(message);
-
-    if (err.response?.status === 401) {
-      localStorage.removeItem('token');
-      window.location.href = '/login';
+  response => {
+    // Handle successful responses
+    if (response.data && !response.data.Success) {
+      const errorMessage = response.data.Message || 'Erro desconhecido';
+      return Promise.reject(new Error(errorMessage));
     }
-    return Promise.reject(message);
+    return response;
+  },
+  error => {
+    // Handle error responses
+    const message =
+      error.response?.data?.Message || error.response?.data?.error || error.message || 'Erro desconhecido';
+    handleError(message);
+    return Promise.reject(new Error(message));
   }
 );
 

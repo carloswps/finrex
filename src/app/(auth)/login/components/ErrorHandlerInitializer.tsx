@@ -7,7 +7,7 @@ const ErrorHandlerInitializer = () => {
 
   useEffect(() => {
     registerErrorHandler(error => {
-      setError(error);
+      setError(undefined);
     });
   }, [setError]);
 
