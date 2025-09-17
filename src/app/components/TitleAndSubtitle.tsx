@@ -5,7 +5,7 @@ type Props = {
   textSize?: string;
 };
 
-const TitleAndSubtitle = ({ title, subTitle, hasLine, textSize }: Props) => {
+const TitleAndSubtitle = ({ title, subTitle, hasLine }: Props) => {
   return (
     <>
       <h2 className={`text-3xl font-semibold text-[var(--text-color)]`}>{title}</h2>

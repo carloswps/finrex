@@ -2,8 +2,7 @@ import { useAlertError } from '@/app/(realApp)/insights/contexts/AlertErrorConte
 import { useEffect } from 'react';
 
 const ErrorAlert = ({ message }: { message?: string }) => {
-  const { error, setError, formatError } = useAlertError();
-  const displayError = message || (error ? formatError(error) : null);
+  const { error, setError } = useAlertError();
 
   useEffect(() => {
     if (!error) return;
@@ -19,7 +18,7 @@ const ErrorAlert = ({ message }: { message?: string }) => {
     <div
       className={
         'top-100 left-160 absolute h-12 w-auto min-w-[200px] bg-[var(--red-theme)]' +
-        ' flex items-center justify-center text-nowrap rounded-md border px-4 py-2 text-center'
+        ' z-40 flex items-center justify-center text-nowrap rounded-md border px-4 py-2 text-center'
       }
     >
       {message}

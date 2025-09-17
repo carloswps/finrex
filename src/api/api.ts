@@ -17,14 +17,7 @@ req.interceptors.request.use(config => {
 });
 
 req.interceptors.response.use(
-  response => {
-    // Handle successful responses
-    if (response.data && !response.data.Success) {
-      const errorMessage = response.data.Message || 'Erro desconhecido';
-      return Promise.reject(new Error(errorMessage));
-    }
-    return response;
-  },
+  response => response,
   error => {
     // Handle error responses
     const message =

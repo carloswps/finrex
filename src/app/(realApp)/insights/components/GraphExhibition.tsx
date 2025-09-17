@@ -1,9 +1,8 @@
 'use client';
 import BarGraph from './icons/BarGraph.svg';
-import ColumnGraph from './icons/ColumnGraph.svg';
 import LineGraph from './icons/LineGraph.svg';
 import PizzaGraph from './icons/PizzaGraph.svg';
-import { useContext, useRef } from 'react';
+import { useContext } from 'react';
 import { ChartStyle, GraphContext } from '@/app/(realApp)/insights/contexts/GraphContext';
 
 const GraphExhibition = () => {
