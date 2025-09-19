@@ -9,7 +9,7 @@ const Header = () => {
         <header className='bg-white mb-9'>
             <div>
                 <nav>
-                    <ul className={'flex items-center border-b border-[var(--green-theme)] w-fit py-8 gap-32 m-auto'}>
+                    <ul className={'flex items-center border-b border-[var(--green-theme)] w-fit py-8 gap-32 m-auto cursor-pointer'}>
                         <li>
                             <img src="/darkLogo.png" alt="logo" className={'w-45'}/>
                         </li>
@@ -22,7 +22,8 @@ const Header = () => {
                             <Link href={"/revenue"}>Revenue & Spending</Link>
                         </li>
                         <li className={'flex items-center gap-2 text-xl text-[var(--desactive-color)] hover:text-[var(--text-color)]'}>
-                            <Goals className={'w-10 h-10'}/>Goals
+                            <Goals className={'w-10 h-10'}/>
+                            <Link href={"/goals"}>Goals</Link>
                         </li>
                         <li className={'flex items-center gap-2 text-xl text-[var(--desactive-color)] hover:text-[var(--text-color)]'}>
                             <Profit className={'w-10 h-10'}/>Profit

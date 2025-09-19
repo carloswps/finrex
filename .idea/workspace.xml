@@ -5,34 +5,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1c27f75e-0b8a-4582-93d4-eef6baf0216e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/app/(auth)/login/components/ErrorAlert.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/(realApp)/insights/components/Bar.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/(realApp)/insights/components/Calendar.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/(realApp)/insights/components/CalendarLogicWrapper.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/(realApp)/insights/components/CalendarShowBtn.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/(realApp)/insights/components/LastMonth.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/(realApp)/insights/components/RealSpendingGraph.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/(realApp)/insights/components/icons/CalendarArrow.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/(realApp)/insights/components/icons/DownArrow.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/(realApp)/insights/components/icons/EvenArrow.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/(realApp)/insights/components/icons/UpArrow.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/(realApp)/insights/contexts/CalendarContext.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/components/Summary.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/(realApp)/goals/components/AddNewGoal.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/(realApp)/goals/components/EditGoal.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/(realApp)/goals/components/ExcludeGoal.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/(realApp)/goals/components/FloatPercent.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/(realApp)/goals/components/GoalGraph.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/(realApp)/goals/components/GoalIcon.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/(realApp)/goals/components/GoalInfo.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/(realApp)/goals/components/Goals.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/(realApp)/goals/components/icons/BookMarkIcon.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/(realApp)/goals/components/icons/EditIcon.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/(realApp)/goals/components/icons/ExcludeIcon.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/(realApp)/goals/components/icons/UploadIcon.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/(realApp)/goals/hooks/usePersistedState.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/(realApp)/goals/page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/api.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/api.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(auth)/login/components/FormAction.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(auth)/login/components/FormAction.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(auth)/login/components/LoginForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(auth)/login/components/LoginForm.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(auth)/login/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(auth)/login/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(realApp)/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/Header.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(realApp)/insights/components/FormDataContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(realApp)/insights/components/FormDataContainer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(auth)/login/components/ErrorAlert.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(auth)/login/components/ErrorAlert.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/(realApp)/insights/components/FormDataGraph.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(realApp)/insights/components/FormDataGraph.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(realApp)/insights/components/GraphExhibition.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(realApp)/insights/components/GraphExhibition.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(realApp)/insights/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(realApp)/insights/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(realApp)/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(realApp)/layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/TitleAndSubtitle.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/TitleAndSubtitle.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/globals.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(realApp)/insights/contexts/GraphContext.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(realApp)/insights/contexts/GraphContext.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/Header.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,6 +67,7 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;JavaScript Debug.localhost:3000.executor&quot;: &quot;Debug&quot;,
     &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
@@ -109,8 +103,11 @@
       <recent name="C:\Users\vinic\OneDrive\Desktop\finrex\src\app\(realApp)\insights\components" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.Next.js: server-side">
+  <component name="RunManager" selected="JavaScript Debug.localhost:3000">
     <configuration name="Next.js: debug client-side" type="JavascriptDebugType" uri="http://localhost:3000/">
+      <method v="2" />
+    </configuration>
+    <configuration name="localhost:3000" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:3000">
       <method v="2" />
     </configuration>
     <configuration name="Next.js: server-side" type="js.build_tools.npm">
@@ -123,6 +120,11 @@
       <envs />
       <method v="2" />
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JavaScript Debug.localhost:3000" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -180,6 +182,37 @@
       <workItem from="1756484802548" duration="1189000" />
       <workItem from="1756593137350" duration="3469000" />
       <workItem from="1756675615454" duration="513000" />
+      <workItem from="1756677538183" duration="4686000" />
+      <workItem from="1756682354787" duration="2776000" />
+      <workItem from="1756743074245" duration="4936000" />
+      <workItem from="1756829980043" duration="6233000" />
+      <workItem from="1756946346884" duration="1131000" />
+      <workItem from="1757011506682" duration="4312000" />
+      <workItem from="1757015894963" duration="1341000" />
+      <workItem from="1757033449669" duration="132000" />
+      <workItem from="1757124134813" duration="266000" />
+      <workItem from="1757125246301" duration="565000" />
+      <workItem from="1757348581001" duration="2917000" />
+      <workItem from="1757430770346" duration="89000" />
+      <workItem from="1757430883594" duration="2772000" />
+      <workItem from="1757516187465" duration="1968000" />
+      <workItem from="1757518221349" duration="2996000" />
+      <workItem from="1757604939280" duration="1861000" />
+      <workItem from="1757612783460" duration="1755000" />
+      <workItem from="1757615144749" duration="38000" />
+      <workItem from="1757727139113" duration="428000" />
+      <workItem from="1757789783792" duration="2496000" />
+      <workItem from="1757793202045" duration="896000" />
+      <workItem from="1757877496576" duration="2648000" />
+      <workItem from="1757951134038" duration="5128000" />
+      <workItem from="1758047940520" duration="2975000" />
+      <workItem from="1758051058511" duration="751000" />
+      <workItem from="1758053411323" duration="307000" />
+      <workItem from="1758116527739" duration="651000" />
+      <workItem from="1758117210487" duration="5290000" />
+      <workItem from="1758221760566" duration="1359000" />
+      <workItem from="1758290818559" duration="2944000" />
+      <workItem from="1758293801611" duration="212000" />
     </task>
     <servers />
   </component>
@@ -206,6 +239,11 @@
           <url>file://$PROJECT_DIR$/src/app/(realApp)/insights/components/Calendar.tsx</url>
           <line>2</line>
           <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/app/(realApp)/goals/components/GoalInfo.tsx</url>
+          <line>73</line>
+          <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

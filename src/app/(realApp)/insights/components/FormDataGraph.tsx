@@ -33,8 +33,15 @@ Chart.register(
     Legend
 );
 
+type Props = {
+    width?: number;
+    height?: number;
+    margin?: string;
+    chartOptions?: any,
+    chartData?: any
+}
 
-const FormDataGraph = () => {
+const FormDataGraph = ({ width, height, margin, chartOptions, chartData }: Props) => {
     const canvasRef = useRef<HTMLCanvasElement>(null);
     const context = useContext(GraphContext);
 
@@ -45,16 +52,18 @@ const FormDataGraph = () => {
         const ctx = canvasRef.current.getContext('2d');
         if(!ctx) return;
 
-        const options: any = {responsive: true};
+        let options: any = {responsive: true};
         if(context?.style === 'doughnut') {
             options.maintainAspectRatio = false;
             options.cutout = '60%';
             options.radius = '80%';
         }
 
+        options={...options, ...chartOptions};
+
         const myChart = new Chart(ctx, {
             type: context?.style,
-            data: {
+            data: chartData || {
                 labels: ["Jan", "Feb", "Mar"],
                 datasets: [
                     {
@@ -70,10 +79,13 @@ const FormDataGraph = () => {
         return () => {
             myChart.destroy();
         }
-    }, [context?.style])
+    }, [context?.style, chartOptions, chartData])
 
     return (
-        <div className={context?.style === 'doughnut' ? 'w-[500px] h-[500px] mx-auto' : 'w-full' }>
+        <div
+            className={context?.style === 'doughnut' ? 'w-[500px] h-[500px] mx-auto' : 'w-full' }
+            style={context?.style === 'doughnut' ? { height, width, margin } : undefined}
+        >
             <canvas
                 ref={canvasRef}
             >
