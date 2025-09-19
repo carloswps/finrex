@@ -1,9 +1,11 @@
 import { loginSchemaType, registerSchemaType } from '@/app/(auth)/login/schemas/loginSchema';
 import { revenueSchemaType } from '@/app/(realApp)/revenue/schemas/revenueSchema';
 import axios from 'axios';
+import { handleError } from '@/api/services/errorHandler';
 
 const req = axios.create({
-  baseURL: process.env.NEXT_PUBLIC_URL_FINREX_API,
+  //baseURL: process.env.NEXT_PUBLIC_URL_FINREX_API,
+  baseURL: 'http://localhost:5023/api/v1',
 });
 
 req.interceptors.request.use(config => {
@@ -17,11 +19,11 @@ req.interceptors.request.use(config => {
 req.interceptors.response.use(
   response => response,
   error => {
-    if (error.response.status === 401) {
-      localStorage.removeItem('token');
-      window.location.href = '/login';
-    }
-    return Promise.reject(error);
+    // Handle error responses
+    const message =
+      error.response?.data?.Message || error.response?.data?.error || error.message || 'Erro desconhecido';
+    handleError(message);
+    return Promise.reject(new Error(message));
   }
 );
 
@@ -48,6 +50,6 @@ export const loginUser = async (data: loginSchemaType): Promise<AuthResponse> =>
 };
 
 export const addRevenueValues = async (data: revenueSchemaType): Promise<revenueSchemaType> => {
-  const result = await req.post('/posts', data);
+  const result = await req.post('/revenue', data);
   return result.data;
 };
