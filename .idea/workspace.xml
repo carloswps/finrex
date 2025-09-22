@@ -5,26 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1c27f75e-0b8a-4582-93d4-eef6baf0216e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/app/(realApp)/goals/components/AddNewGoal.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/(realApp)/goals/components/EditGoal.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/(realApp)/goals/components/ExcludeGoal.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/(realApp)/goals/components/FloatPercent.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/(realApp)/goals/components/GoalGraph.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/(realApp)/goals/components/GoalIcon.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/(realApp)/goals/components/GoalInfo.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/(realApp)/goals/components/Goals.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/(realApp)/goals/components/icons/BookMarkIcon.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/(realApp)/goals/components/icons/EditIcon.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/(realApp)/goals/components/icons/ExcludeIcon.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/(realApp)/goals/components/icons/UploadIcon.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/(realApp)/goals/hooks/usePersistedState.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/(realApp)/goals/page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/(realApp)/profit/components/GrowthIndicator.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/(realApp)/profit/components/ProfitGraph.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/(realApp)/profit/components/SavingsTable.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/(realApp)/profit/components/TableRow.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/(realApp)/profit/components/TopEarnMonths.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/(realApp)/profit/components/icons/TripleUpArrow.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/(realApp)/profit/page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(auth)/login/components/ErrorAlert.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(auth)/login/components/ErrorAlert.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/(realApp)/insights/components/FormDataGraph.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(realApp)/insights/components/FormDataGraph.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(realApp)/insights/contexts/GraphContext.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(realApp)/insights/contexts/GraphContext.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(realApp)/insights/components/icons/DownArrow.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(realApp)/insights/components/icons/DownArrow.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/components/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/Header.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -213,6 +203,12 @@
       <workItem from="1758221760566" duration="1359000" />
       <workItem from="1758290818559" duration="2944000" />
       <workItem from="1758293801611" duration="212000" />
+      <workItem from="1758305477796" duration="2998000" />
+      <workItem from="1758329893979" duration="891000" />
+      <workItem from="1758421200174" duration="2778000" />
+      <workItem from="1758485663089" duration="7479000" />
+      <workItem from="1758493265744" duration="2026000" />
+      <workItem from="1758560377369" duration="1351000" />
     </task>
     <servers />
   </component>
@@ -227,15 +223,6 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/app/(realApp)/insights/components/FormDataGraph.tsx</url>
-          <line>1</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/app/(realApp)/insights/components/FormDataGraph.tsx</url>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/app/(realApp)/insights/components/Calendar.tsx</url>
           <line>2</line>
           <option name="timeStamp" value="3" />
@@ -244,6 +231,11 @@
           <url>file://$PROJECT_DIR$/src/app/(realApp)/goals/components/GoalInfo.tsx</url>
           <line>73</line>
           <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/app/(realApp)/profit/components/ProfitGraph.tsx</url>
+          <line>61</line>
+          <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
