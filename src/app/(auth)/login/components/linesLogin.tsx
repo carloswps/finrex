@@ -1,13 +1,15 @@
 const LinesLogin = () => {
-    return (
-        <div
-            className={'bg-[var(--white-login)] absolute text-[var(--green-theme)] ' +
-                'top-40 left-200 p-5 rounded-md w-sm font-bold shadow-custom'}
-        >
-            <img src="/linesAnalytics-removebg-preview.png" alt=""/>
-            Get your personal analitics
-        </div>
-    )
-}
+  return (
+    <div
+      className={
+        'absolute bg-[var(--white-login)] text-[var(--green-theme)] ' +
+        'left-200 w-sm shadow-custom top-40 rounded-md p-5 font-bold'
+      }
+    >
+      <img src="/linesAnalytics-removebg-preview.png" alt="" />
+      Get your personal analitics
+    </div>
+  );
+};
 
 export default LinesLogin;

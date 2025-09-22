@@ -38,12 +38,12 @@ export const LoginInputs = (props: LoginInputProps) => {
           (isHidden ? (
             <HideIcon
               onClick={toggleHide}
-              className={'absolute right-3 bottom-9 h-6 w-6 cursor-pointer text-[var(--lines-color)]'}
+              className={'absolute bottom-9 right-3 h-6 w-6 cursor-pointer text-[var(--lines-color)]'}
             />
           ) : (
             <ShowIcon
               onClick={toggleHide}
-              className={'absolute right-3 bottom-9 h-6 w-6 cursor-pointer text-[var(--lines-color)]'}
+              className={'absolute bottom-9 right-3 h-6 w-6 cursor-pointer text-[var(--lines-color)]'}
             />
           ))}
       </div>

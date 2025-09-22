@@ -1,19 +1,19 @@
-'use client'
+'use client';
 
-import { useContext } from "react";
-import { CalendarContext } from "@/app/(realApp)/insights/contexts/CalendarContext";
-import FullCalendar from "@fullcalendar/react";
-import dayGridPlugin from "@fullcalendar/daygrid";
+import { useContext } from 'react';
+import { CalendarContext } from '@/app/(realApp)/insights/contexts/CalendarContext';
+import FullCalendar from '@fullcalendar/react';
+import dayGridPlugin from '@fullcalendar/daygrid';
 
 const Calendar = () => {
-    const ctx = useContext(CalendarContext);
+  const ctx = useContext(CalendarContext);
 
-    if (!ctx?.showCalendar) return null;
+  if (!ctx?.showCalendar) return null;
 
-    return (
-        <>
-            <style>
-                {`
+  return (
+    <>
+      <style>
+        {`
                     .fc .fc-button {
                         background-color: #A25BAE;
                         color: white;
@@ -49,17 +49,13 @@ const Calendar = () => {
                         color: #000; 
                     }
                 `}
-            </style>
+      </style>
 
-            <div className="absolute mt-2 rounded-lg z-10 bg-white w-96 h-auto p-4 shadow-xl border border-gray-200">
-                <FullCalendar
-                    plugins={[dayGridPlugin]}
-                    initialView="dayGridMonth"
-                    titleFormat={() => ""}
-                />
-            </div>
-        </>
-    );
+      <div className="absolute z-10 mt-2 h-auto w-96 rounded-lg border border-gray-200 bg-white p-4 shadow-xl">
+        <FullCalendar plugins={[dayGridPlugin]} initialView="dayGridMonth" titleFormat={() => ''} />
+      </div>
+    </>
+  );
 };
 
 export default Calendar;

@@ -8,60 +8,55 @@ import HaveAccount from './HaveAccount';
 import LoginLoad from './LoginLoad';
 import { useAddRegister, useLogin } from '@/app/(auth)/login/utils/mutations';
 import { useRouter } from 'next/navigation';
-import ErrorAlert from "@/app/(auth)/login/components/ErrorAlert";
+import ErrorAlert from '@/app/(auth)/login/components/ErrorAlert';
 
 type FormData = loginSchemaType | registerSchemaType;
 
 const FormAction = () => {
-  const [hasLoggedIn, setHasLoggedIn] = useState(false);
+  const [isRegisterMode, setIsRegisterMode] = useState(false);
   const router = useRouter();
+
+  const schema = isRegisterMode ? registerSchema : loginSchema;
+
   const { control, handleSubmit, reset } = useForm<FormData>({
-    resolver: zodResolver(hasLoggedIn ? registerSchema : loginSchema),
+    resolver: zodResolver(schema),
     defaultValues: {
       email: '',
       password: '',
     },
   });
 
-  const addNewRegister = useAddRegister();
-  const loginUser = useLogin();
+  const registerMutation = useAddRegister({
+    onSuccess: () => {
+      setIsRegisterMode(false);
+      reset();
+    },
+  });
+  const loginMutation = useLogin({
+    onSuccess: () => {
+      router.push('/revenue');
+    },
+  });
 
-  const [disabledBtn, setDisableBtn] = useState(false);
+  const mutation = isRegisterMode ? registerMutation : loginMutation;
 
-  const handleAlreadyLogged = () => {
-    setHasLoggedIn(!hasLoggedIn);
+  const toggleFormMode = () => {
+    setIsRegisterMode(prev => !prev);
     reset();
   };
 
-  const handleFormSubmit = async (data: FormData) => {
-    setDisableBtn(true);
-
-    try {
-      if (hasLoggedIn) {
-        await addNewRegister.mutateAsync(data as registerSchemaType);
-        console.log('Registro realizado', data);
-        setHasLoggedIn(false);
-        reset();
-      } else {
-        await loginUser.mutateAsync(data as loginSchemaType);
-        console.log('Login realizado', data);
-        router.push('/revenue');
-      }
-    } catch (error) {
-      console.log('Erro:', error);
-    } finally {
-      setDisableBtn(false);
-    }
+  const handleFormSubmit = (data: FormData) => {
+    mutation.mutate(data as any);
   };
 
   return (
     <div>
       <div className={'w-sm border-b-1 border-[var(--lines-color)] pb-4'}>
         <h2 className={'text-3xl font-bold text-[var(--text-color)]'}>
-          {!hasLoggedIn ? 'Welcome Back' : 'Welcome to Finrex'}
+          {!isRegisterMode ? 'Welcome Back' : 'Welcome to Finrex'}
         </h2>
         <h4 className={'-mt-2 font-bold text-[var(--green-theme)]'}>
-          {!hasLoggedIn ? 'Glad to see you again!' : `Let's create your account`}
+          {!isRegisterMode ? 'Glad to see you again!' : `Let's create your account`}
         </h4>
       </div>
 
@@ -85,20 +80,13 @@ const FormAction = () => {
         />
 
         <div className={'flex flex-col items-center gap-4'}>
-          <LoginBtn
-            hasLoggedIn={hasLoggedIn}
-            disabled={disabledBtn || (hasLoggedIn ? addNewRegister.isPending : loginUser.isPending)}
-          />
+          <LoginBtn hasLoggedIn={isRegisterMode} disabled={mutation.isPending} />
 
-          {(hasLoggedIn ? addNewRegister.isPending : loginUser.isPending) && (
-            <LoginLoad label={!hasLoggedIn ? 'Login' : 'Sign Up'} />
-          )}
-          <HaveAccount hasLoggedIn={hasLoggedIn} toggleLogged={handleAlreadyLogged} />
+          {mutation.isPending && <LoginLoad label={isRegisterMode ? 'Sign Up' : 'Login'} />}
+          <HaveAccount hasLoggedIn={isRegisterMode} toggleLogged={toggleFormMode} />
         </div>
       </form>
-        {(loginUser.isError || addNewRegister.isError) && (
-            <ErrorAlert message={String(loginUser.error ?? addNewRegister.error)} />
-        )}
+      {mutation.isError && mutation.error && <ErrorAlert message={mutation.error.message} />}
     </div>
   );
 };
