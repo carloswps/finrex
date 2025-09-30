@@ -30,7 +30,9 @@ const Header = () => {
                             <Link href={"/profit"}>Profit</Link>
                         </li>
                         <li className={'rounded-full'}>
-                            <img src="/user.png" alt="" className={'w-13 h-13'}/>
+                            <Link href={"/profile"}>
+                                <img src="/user.png" alt="" className={'w-13 h-13'}/>
+                            </Link>
                         </li>
                     </ul>
                 </nav>
