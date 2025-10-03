@@ -1,5 +1,5 @@
 import { ReactNode } from 'react';
-import Header from '@/app/components/Header';
+import Header from '@/shared/components/Header';
 
 export default function RealAppLayout({ children }: { children: ReactNode }) {
   return (

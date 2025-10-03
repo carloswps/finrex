@@ -1,3 +1,4 @@
+'use client';
 import { incomeData } from '../data/incomeData';
 import { spendingData } from '../data/spendingData';
 import RevenueForm from './RevenueForm';

@@ -6,9 +6,9 @@ import { LoginInputs } from './LoginInputs';
 import LoginBtn from './LoginBtn';
 import HaveAccount from './HaveAccount';
 import LoginLoad from './LoginLoad';
-import { useAddRegister, useLogin } from '@/app/(auth)/login/utils/mutations';
 import { useRouter } from 'next/navigation';
-import ErrorAlert from '@/app/(auth)/login/components/ErrorAlert';
+import { useAddRegister, useLogin } from '../utils/mutations';
+import ErrorAlert from './ErrorAlert';
 
 type FormData = loginSchemaType | registerSchemaType;
 

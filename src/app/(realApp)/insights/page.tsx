@@ -1,7 +1,7 @@
-import TitleAndSubtitle from '@/app/components/TitleAndSubtitle';
+import TitleAndSubtitle from '@/shared/components/TitleAndSubtitle';
 import FromDataGraph from '@/app/(realApp)/insights/components/FormDataContainer';
 import LastMonth from '@/app/(realApp)/insights/components/LastMonth';
-import Summary from '@/app/components/Summary';
+import Summary from '@/shared/components/Summary';
 import RealSpendingGraph from '@/app/(realApp)/insights/components/RealSpendingGraph';
 
 const Page = () => {

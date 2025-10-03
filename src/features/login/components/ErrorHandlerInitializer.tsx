@@ -1,17 +1,23 @@
 import { useEffect } from 'react';
-import { registerErrorHandler } from '@/api/services/errorHandler';
-import { useAlertError } from '@/app/(realApp)/insights/contexts/AlertErrorContext';
+import { registerErrorHandler } from '@/shared/lib/api/services/errorHandler';
+import { useQueryClient } from '@tanstack/react-query';
 
 const ErrorHandlerInitializer = () => {
-  const { setError } = useAlertError();
+  const queryClient = useQueryClient();
 
   useEffect(() => {
-    registerErrorHandler(() => {
-      setError(undefined);
+    registerErrorHandler(message => {
+      // Aqui você pode mostrar o erro para o usuário
+      // Por exemplo, usando um toast, um modal, ou um estado global
+      console.error('Erro global tratado:', message);
+      // Exemplo de como você poderia armazenar o erro em um estado global
+      // ou exibir um alerta. Isso depende da sua implementação de UI.
+      // alert(message);
     });
-  }, [setError]);
+  }, [queryClient]);
 
-  return null;
+  return null; // Este componente não renderiza nada
 };
 
 export default ErrorHandlerInitializer;
+
