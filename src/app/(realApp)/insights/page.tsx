@@ -27,8 +27,27 @@ const Page = () => {
         <div className="mt-8">
           <TitleAndSubtitle title="Vs Last Month" subTitle="Monthly Comparison" hasLine={true} />
           <LastMonth />
-          <Summary />
-          <Summary />
+          <Summary
+              title={'Summary'}
+              cubeSize={'23px'}
+              fontSize={'16px'}
+              titleFontSize={'16px'}
+              backgroundColor={'var(--purple-theme)'}
+              arrowDirection={'up'}
+              pastValue={80}
+              currentValue={200}
+              summaryName={'Transport:'}
+          />
+          <Summary
+            arrowDirection={'even'}
+            backgroundColor={'var(--green-theme)'}
+            cubeSize={'23px'}
+            fontSize={'16px'}
+            titleFontSize={'16px'}
+            pastValue={300}
+            currentValue={30}
+            summaryName={'Rent:'}
+          />
         </div>
       </aside>
     </div>

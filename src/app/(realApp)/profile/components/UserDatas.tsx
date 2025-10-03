@@ -13,9 +13,9 @@ const UserDatas = () => {
             {isEditing ? (
                 <input
                     type="text"
-                    className={'font-bold text-xl text-[var(--text-color)]'}
+                    maxLength={12}
+                    className={'font-bold text-xl text-[var(--text-color)] max-w-32'}
                     onChange={event => setUsername(event.target.value)}
-                    autoFocus
                     onBlur={handleBlur}
                 />
             ) : (

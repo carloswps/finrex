@@ -31,10 +31,10 @@ const PersonalForm = () => {
         <div className={'flex flex-col justify-center px-6 py-2 border border-[var(--green-theme)] rounded-md gap-4 w-2/3'}>
             <UsageTimeIcon
                 monthsUsed={6}
-                positionY={50}
-                positionX={230}
+                positionY={45}
+                positionX={210}
             />
-            <div className={'flex gap-4 items-center'}>
+            <div className={'flex gap-4 pt-5'}>
                 <ProfilePic/>
                 <UserDatas/>
             </div>

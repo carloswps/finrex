@@ -5,17 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1c27f75e-0b8a-4582-93d4-eef6baf0216e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/app/(realApp)/profile/components/PersonalForm.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/(realApp)/profile/components/PersonalFormInput.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/(realApp)/profile/components/ProfilePic.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/(realApp)/profile/components/UsageTimeIcon.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/(realApp)/profile/components/UserDatas.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/(realApp)/profile/page.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/(realApp)/profile/schemas/profileSchema.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/(realApp)/profile/utils/mutations.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/(realApp)/profile/components/UsageGraph.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/contexts/ProfilePicContext.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/api.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/api.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(auth)/login/utils/providers.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(auth)/login/utils/providers.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(realApp)/insights/components/LastMonth.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(realApp)/insights/components/LastMonth.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(realApp)/insights/components/icons/UpArrow.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(realApp)/insights/components/icons/UpArrow.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(realApp)/insights/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(realApp)/insights/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(realApp)/profile/components/PersonalForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(realApp)/profile/components/PersonalForm.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(realApp)/profile/components/ProfilePic.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(realApp)/profile/components/ProfilePic.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(realApp)/profile/components/UserDatas.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(realApp)/profile/components/UserDatas.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(realApp)/profile/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(realApp)/profile/page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/components/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/Header.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/Summary.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/Summary.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/globals.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -215,6 +218,12 @@
       <workItem from="1759178733390" duration="3296000" />
       <workItem from="1759238475957" duration="4339000" />
       <workItem from="1759246089763" duration="4055000" />
+      <workItem from="1759328442664" duration="240000" />
+      <workItem from="1759342672454" duration="8509000" />
+      <workItem from="1759427433190" duration="4783000" />
+      <workItem from="1759432302632" duration="536000" />
+      <workItem from="1759511163852" duration="2134000" />
+      <workItem from="1759514330826" duration="2753000" />
     </task>
     <servers />
   </component>
@@ -239,18 +248,12 @@
           <option name="timeStamp" value="4" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/app/(realApp)/profit/components/ProfitGraph.tsx</url>
-          <line>61</line>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/app/(realApp)/profile/components/UsageTimeIcon.tsx</url>
           <option name="timeStamp" value="6" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/app/(realApp)/profile/components/PersonalForm.tsx</url>
           <line>1</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="7" />
         </line-breakpoint>
       </breakpoints>

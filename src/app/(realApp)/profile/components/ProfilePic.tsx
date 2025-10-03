@@ -2,10 +2,11 @@
 import UploadIcon from "@/app/(realApp)/goals/components/icons/UploadIcon.svg";
 import {ChangeEvent, useState} from "react";
 import axios from "axios";
+import {useProfilePic} from "@/app/contexts/ProfilePicContext";
 
 const ProfilePic = () => {
     const [selectedFile, setSelectedFile] = useState<File | null>(null);
-    const [fileUrl, setFileUrl] = useState<string | null>(null);
+    const { fileUrl, setFileUrl } = useProfilePic();
 
     const handleFileChange = async (e: ChangeEvent<HTMLInputElement>) => {
         if(e.target.files && e.target.files.length > 0) {
@@ -23,7 +24,11 @@ const ProfilePic = () => {
                         "Content-Type" : "multipart/form-data"
                     }
                 });
-                console.log('Success: ', req.data)
+                const newGlobalUrl = req.data.url;
+                if (newGlobalUrl) {
+                    setFileUrl(newGlobalUrl);
+                }
+                console.log('Success: ', req.data);
             } catch (error) {
                 console.error('Upload Error: ', error);
             }
