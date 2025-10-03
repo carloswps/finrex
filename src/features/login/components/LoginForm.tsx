@@ -1,8 +1,8 @@
 'use client';
-import Cubes from '@/app/(auth)/login/components/Cubes';
-import LinesLogin from '@/app/(auth)/login/components/linesLogin';
-import BarsLogin from '@/app/(auth)/login/components/barsLogin';
+import BarsLogin from './barsLogin';
+import Cubes from './Cubes';
 import FormAction from './FormAction';
+import LinesLogin from './linesLogin';
 
 const LoginForm = () => {
   return (

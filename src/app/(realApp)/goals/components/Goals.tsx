@@ -1,10 +1,10 @@
 'use client'
-import {useEffect, useRef, useState} from "react";
-import EditGoal from "@/app/(realApp)/goals/components/EditGoal";
-import GoalIcon from "@/app/(realApp)/goals/components/GoalIcon";
-import GoalGraph from "@/app/(realApp)/goals/components/GoalGraph";
-import GoalInfo from "@/app/(realApp)/goals/components/GoalInfo";
-import {usePersistedState} from "@/app/(realApp)/goals/hooks/usePersistedState";
+import { useEffect, useRef, useState } from 'react';
+import EditGoal from '@/app/(realApp)/goals/components/EditGoal';
+import GoalIcon from '@/app/(realApp)/goals/components/GoalIcon';
+import GoalGraph from '@/app/(realApp)/goals/components/GoalGraph';
+import GoalInfo from '@/app/(realApp)/goals/components/GoalInfo';
+import { usePersistedState } from '@/app/(realApp)/goals/hooks/usePersistedState';
 import ExcludeGoal from "@/app/(realApp)/goals/components/ExcludeGoal";
 
 type Props = {

@@ -1,4 +1,4 @@
-import Summary from '@/app/components/Summary';
+import Summary from '@/shared/components/Summary';
 import FromDataGraph from '@/app/(realApp)/insights/components/FormDataContainer';
 
 const LastMonth = () => {

@@ -1,10 +1,11 @@
+'use client';
 import { useForm } from 'react-hook-form';
 import DefaultInput from './DefaultInput';
 import { revenueSchema, revenueSchemaType } from '../schemas/revenueSchema';
 import { zodResolver } from '@hookform/resolvers/zod';
-import { useRevenueValues } from '@/app/(auth)/login/utils/mutations';
 import { incomeItem } from '../types/incomeType';
-import TitleAndSubtitle from '@/app/components/TitleAndSubtitle';
+import TitleAndSubtitle from '@/shared/components/TitleAndSubtitle';
+import { useRevenueValues } from '../../../../features/login/utils/mutations';
 
 type Props = {
   data: incomeItem[];
