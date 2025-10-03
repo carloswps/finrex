@@ -1,8 +1,8 @@
 import { loginSchemaType, registerSchemaType } from '@/features/login/schemas/loginSchema';
 import axios from 'axios';
 import { revenueSchemaType } from '@/app/(realApp)/revenue/schemas/revenueSchema';
-import { handleError } from '@/api/services/errorHandler';
 import { ProfileFormValues } from '@/app/(realApp)/profile/schemas/profileSchema';
+import { handleError } from './services/errorHandler';
 
 const req = axios.create({
   //baseURL: process.env.NEXT_PUBLIC_URL_FINREX_API,
