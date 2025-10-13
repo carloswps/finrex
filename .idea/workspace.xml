@@ -5,17 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1c27f75e-0b8a-4582-93d4-eef6baf0216e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/app/(realApp)/profile/components/UsageGraph.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/contexts/ProfilePicContext.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/(realApp)/profit/utils/ResolveColorCss.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(auth)/login/utils/providers.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(auth)/login/utils/providers.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(realApp)/goals/components/GoalGraph.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(realApp)/goals/components/GoalGraph.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(realApp)/insights/components/Bar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(realApp)/insights/components/Bar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(realApp)/insights/components/FormDataGraph.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(realApp)/insights/components/FormDataGraph.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(realApp)/insights/components/GraphExhibition.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(realApp)/insights/components/GraphExhibition.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/(realApp)/insights/components/LastMonth.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(realApp)/insights/components/LastMonth.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(realApp)/insights/components/icons/UpArrow.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(realApp)/insights/components/icons/UpArrow.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(realApp)/insights/components/RealSpendingGraph.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(realApp)/insights/components/RealSpendingGraph.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(realApp)/insights/contexts/GraphContext.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(realApp)/insights/contexts/GraphContext.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/(realApp)/insights/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(realApp)/insights/page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/(realApp)/profile/components/PersonalForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(realApp)/profile/components/PersonalForm.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(realApp)/profile/components/ProfilePic.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(realApp)/profile/components/ProfilePic.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(realApp)/profile/components/UserDatas.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(realApp)/profile/components/UserDatas.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(realApp)/profile/components/UsageGraph.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(realApp)/profile/components/UsageGraph.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/(realApp)/profile/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(realApp)/profile/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(realApp)/profit/components/ProfitGraph.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(realApp)/profit/components/ProfitGraph.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(realApp)/profit/components/SavingsTable.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(realApp)/profit/components/SavingsTable.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(realApp)/profit/components/TableRow.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(realApp)/profit/components/TableRow.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(realApp)/profit/components/TopEarnMonths.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(realApp)/profit/components/TopEarnMonths.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/components/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/Header.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/components/Summary.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/Summary.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/globals.css" afterDir="false" />
@@ -224,6 +230,15 @@
       <workItem from="1759432302632" duration="536000" />
       <workItem from="1759511163852" duration="2134000" />
       <workItem from="1759514330826" duration="2753000" />
+      <workItem from="1759692469306" duration="766000" />
+      <workItem from="1759709826400" duration="1603000" />
+      <workItem from="1759773729496" duration="4914000" />
+      <workItem from="1759801383426" duration="896000" />
+      <workItem from="1759802304937" duration="3257000" />
+      <workItem from="1759857219047" duration="19000" />
+      <workItem from="1759939285943" duration="7110000" />
+      <workItem from="1759975860489" duration="582000" />
+      <workItem from="1760375006667" duration="322000" />
     </task>
     <servers />
   </component>

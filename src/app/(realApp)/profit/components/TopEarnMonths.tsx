@@ -15,12 +15,12 @@ const TopEarnMonths = () => {
                    percentage={11}
                />
                 <GrowthIndicator
-                    month={'April'}
-                    percentage={11}
+                    month={'May'}
+                    percentage={25}
                 />
                 <GrowthIndicator
-                    month={'April'}
-                    percentage={11}
+                    month={'June'}
+                    percentage={60}
                 />
             </div>
         </>

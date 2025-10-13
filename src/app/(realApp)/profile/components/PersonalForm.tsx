@@ -75,6 +75,8 @@ const PersonalForm = () => {
                 </div>
 
                 <button
+                    className={'p-3 bg-[var(--green-theme)] rounded-lg text-white self-center relative left-15 ' +
+                        'hover:bg-[var(--green-theme)]/90 transition'}
                     type={"submit"}
                 >
                     Save Profile

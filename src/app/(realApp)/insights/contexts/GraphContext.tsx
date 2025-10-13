@@ -15,7 +15,7 @@ type GraphProviderProps = {
     initialStyle?: ChartStyle;
 }
 export const GraphProvider = ({ children, initialStyle }: GraphProviderProps) =>  {
-    const [style, setStyle] = useState<ChartStyle>(initialStyle || 'line');
+    const [style, setStyle] = useState<ChartStyle>(initialStyle || 'bar');
 
     return (
         <GraphContext.Provider value={{ style, setStyle }}>{children}</GraphContext.Provider>

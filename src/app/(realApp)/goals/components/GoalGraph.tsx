@@ -17,8 +17,8 @@ const GoalGraph = ({ completePercent, remainingPercent, customOptions, customDat
                     percent={completePercent}
                     color={'var(--green-theme)'}
                     barRotation={130}
-                    orientationX={155}
-                    orientationY={60}
+                    orientationX={165}
+                    orientationY={10}
                 />
                 <FormDataGraph
                     height={200}
@@ -30,8 +30,8 @@ const GoalGraph = ({ completePercent, remainingPercent, customOptions, customDat
                     percent={remainingPercent}
                     color={'var(--lines-color)'}
                     barRotation={60}
-                    orientationX={25}
-                    orientationY={60}
+                    orientationX={5}
+                    orientationY={20}
                 />
             </div>
         </GraphProvider>

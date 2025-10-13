@@ -17,8 +17,10 @@ const Page = () => {
                 <UsageGraph/>
                 <div className={'ml-2'}>
                     <Summary
+                        pastValue={400}
+                        currentValue={400}
                         summaryName={'Net Profit:'}
-                        growthPercentage={150}
+                        growthPercentage={0}
                         bottom={'20px'}
                         fontSize={'18px'}
                         titleFontSize={'20px'}
@@ -28,8 +30,10 @@ const Page = () => {
                         arrowSize={'28px'}
                     />
                     <Summary
+                        pastValue={100}
+                        currentValue={300}
                         summaryName={'Money Saved:'}
-                        growthPercentage={150}
+                        growthPercentage={200}
                         bottom={'20px'}
                         fontSize={'18px'}
                         titleFontSize={'20px'}
@@ -39,8 +43,10 @@ const Page = () => {
                         arrowSize={'28px'}
                     />
                     <Summary
+                        pastValue={1000}
+                        currentValue={130}
                         summaryName={'Savings Growth:'}
-                        growthPercentage={150}
+                        growthPercentage={87}
                         bottom={'20px'}
                         fontSize={'18px'}
                         titleFontSize={'20px'}

@@ -5,11 +5,24 @@ import Goals from '../(realApp)/revenue/components/icons/Goals.svg'
 import Profit from '../(realApp)/revenue/components/icons/Profit.svg'
 import Link from 'next/link'
 import {useProfilePic} from "@/app/contexts/ProfilePicContext";
+import {usePathname} from "next/navigation";
 
 const Header = () => {
     const { fileUrl } = useProfilePic();
 
     const picSource = fileUrl || '/user.png';
+    const pathName = usePathname();
+
+    const activeColor = 'var(--text-color)';
+    const desactiveColor = 'var(--desactive-color)';
+
+    const getLinkClass = (path: string) => {
+        const isActive = pathName.startsWith(path)
+
+        const colorClass = isActive ? `text-[${activeColor}]` : `text-[${desactiveColor}]`;
+
+        return `flex items-center gap-2 text-xl text-nowrap hover:text-[${activeColor}] ${colorClass}`;
+    }
 
     return (
         <header className='bg-white mb-9'>
@@ -19,19 +32,19 @@ const Header = () => {
                         <li>
                             <img src="/darkLogo.png" alt="logo" className={'w-45'}/>
                         </li>
-                        <li className={'flex items-center gap-2 text-xl text-[var(--desactive-color)] hover:text-[var(--text-color)]'}>
+                        <li className={getLinkClass('/insights')}>
                             <Insights className={'w-10 h-10'}/>
                             <Link href={"/insights"}>Insights</Link>
                         </li>
-                        <li className={'flex items-center gap-2 text-xl text-[var(--desactive-color)] hover:text-[var(--text-color)] text-nowrap'}>
+                        <li className={getLinkClass('/revenue')}>
                             <RevenueSpending className={'w-10 h-10'}/>
                             <Link href={"/revenue"}>Revenue & Spending</Link>
                         </li>
-                        <li className={'flex items-center gap-2 text-xl text-[var(--desactive-color)] hover:text-[var(--text-color)]'}>
+                        <li className={getLinkClass('/goals')}>
                             <Goals className={'w-10 h-10'}/>
                             <Link href={"/goals"}>Goals</Link>
                         </li>
-                        <li className={'flex items-center gap-2 text-xl text-[var(--desactive-color)] hover:text-[var(--text-color)]'}>
+                        <li className={getLinkClass('/profit')}>
                             <Profit className={'w-10 h-10'}/>
                             <Link href={"/profit"}>Profit</Link>
                         </li>

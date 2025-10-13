@@ -1,8 +1,9 @@
 type Props = {
   width: string;
+  barColor: string;
 };
-const Bar = ({ width }: Props) => {
-  return <div className={`${width} mx-7 h-1 bg-[var(--red-theme)]`}></div>;
+const Bar = ({ width, barColor }: Props) => {
+  return <div style={{ backgroundColor: `var(--${barColor})` }} className={`${width} mx-7 h-1`}></div>;
 };
 
 export default Bar;

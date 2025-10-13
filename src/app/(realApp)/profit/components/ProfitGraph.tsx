@@ -11,6 +11,7 @@ import {
     Tooltip
 } from "chart.js";
 import {useEffect, useRef} from "react";
+import resolveColorCss from "@/app/(realApp)/profit/utils/ResolveColorCss";
 
 Chart.register(
     LineController,
@@ -31,7 +32,6 @@ type Props = {
     minimal?: boolean
 }
 
-
 const ProfitGraph = ({ width, height, color, fill = true, minimal = false } : Props) => {
     const canvasRef = useRef<HTMLCanvasElement>(null);
 
@@ -40,13 +40,20 @@ const ProfitGraph = ({ width, height, color, fill = true, minimal = false } : Pr
         const ctx = canvasRef.current.getContext('2d');
         if(!ctx) return;
 
-        const gradient = ctx.createLinearGradient(0, 0, 0, canvasRef.current.height);
+        let finalBorderColor;
 
-        gradient.addColorStop(0, '#397A56');
-        gradient.addColorStop(0.5, '#418F60');
-        gradient.addColorStop(1, '#5DBC75');
+        const resolvedColor = color ? resolveColorCss(color) : undefined;
 
-        const finalBorderColor = color ? color : gradient;
+        if (resolvedColor && !resolvedColor.startsWith('var(')) {
+            finalBorderColor = resolvedColor;
+        } else {
+            const gradient = ctx.createLinearGradient(0, 0, 0, canvasRef.current.height);
+            gradient.addColorStop(0, '#397A56');
+            gradient.addColorStop(0.5, '#418F60');
+            gradient.addColorStop(1, '#5DBC75');
+            finalBorderColor = gradient;
+        }
+
 
         const chartData = {
             labels: ["April", "May", "June"],

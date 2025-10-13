@@ -20,20 +20,23 @@ const SavingsTable = () => {
                 savedPercentage={25}
                 previousSpending={800}
                 currentSpending={600}
+                color={'#4DA1D8'}
             />
             <TableRow
-                month={'April'}
-                savedValue={200}
-                savedPercentage={25}
-                previousSpending={800}
-                currentSpending={600}
+                month={'June'}
+                savedValue={100}
+                savedPercentage={8}
+                previousSpending={1200}
+                currentSpending={1100}
+                color={'var(--pink-graph)'}
             />
             <TableRow
-                month={'April'}
-                savedValue={200}
-                savedPercentage={25}
-                previousSpending={800}
-                currentSpending={600}
+                month={'October'}
+                savedValue={250}
+                savedPercentage={26}
+                previousSpending={950}
+                currentSpending={700}
+                color={'var(--orange-graph)'}
             />
             </tbody>
         </table>

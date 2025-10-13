@@ -58,21 +58,25 @@ const Summary =
                   {currentValue}
               </p>
           </div>
-          {growthPercentage && growthPercentage > 0 ? (
+          {growthPercentage ? (
               <p
                   className={'relative text-[var(--purple-theme)] font-semibold text-[12px]'}
                   style={{ bottom: bottom }}
               >
-                  +{growthPercentage}%
+                  {currentValue && pastValue && currentValue > pastValue
+                      ? `+${growthPercentage}%`
+                      : `-${growthPercentage}%`}
               </p>
           ) : (
               <p className={'text-[12px] ml-1.5 text-nowrap'}>
-                  {pastValue && currentValue && pastValue < currentValue ?
-                      `(${pastValue - currentValue} vs last month)` : pastValue && currentValue && pastValue > currentValue ?
-                          `(+${Math.abs(currentValue - pastValue)} vs last month)` : '(No change)'
-                  }
+                  {pastValue && currentValue && pastValue < currentValue
+                      ? `(+${(currentValue - pastValue)} vs last month)`
+                      : pastValue && currentValue && pastValue > currentValue
+                          ? `(-${(pastValue - currentValue)} vs last month)`
+                          : '(No change)'}
               </p>
           )}
+
       </div>
     </div>
   );

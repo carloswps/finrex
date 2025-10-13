@@ -5,10 +5,11 @@ type Props = {
     savedValue: number,
     savedPercentage: number,
     previousSpending: number,
-    currentSpending: number
+    currentSpending: number,
+    color?: string
 }
 
-const tableRow = ({ month, savedValue, savedPercentage, previousSpending, currentSpending } : Props) => {
+const tableRow = ({ month, savedValue, savedPercentage, previousSpending, currentSpending, color } : Props) => {
     return (
         <tr className={'text-[var(--text-color)] font-semibold'}>
             <td className={'p-3 border-b border-l border-[var(--green-theme)]'}>{month}</td>
@@ -20,7 +21,7 @@ const tableRow = ({ month, savedValue, savedPercentage, previousSpending, curren
                 <ProfitGraph
                     width={'250px'}
                     height={'10px'}
-                    color={'#F2D77D'}
+                    color={color}
                     fill={false}
                     minimal={true}
                 />
