@@ -1,7 +1,6 @@
 'use client'
-import { useEffect, useRef } from "react";
-import { CategoryScale, Chart, LinearScale, LineController, LineElement, PointElement } from "chart.js";
-
+import {useEffect, useRef} from "react";
+import {CategoryScale, Chart, LinearScale, LineController, LineElement, PointElement} from "chart.js";
 
 Chart.register([
     CategoryScale,
@@ -11,12 +10,12 @@ Chart.register([
     PointElement
 ]);
 
-const LastMonth = () => {
+const UsageGraph = () => {
     const canvasRef = useRef<HTMLCanvasElement>(null);
 
     useEffect(() => {
         const ctx = canvasRef.current;
-        if (!ctx) return;
+        if(!ctx) return;
 
         const rootStyles = getComputedStyle(document.documentElement);
 
@@ -33,21 +32,21 @@ const LastMonth = () => {
                         data: [2000, 400, 2010],
                         backgroundColor: blueGraph,
                         borderColor: blueGraph,
-                        borderWidth: 4,
+                        borderWidth: 8,
                         pointRadius: 0
                     },
                     {
                         data: [3000, 800, 1000],
                         backgroundColor: pinkGraph,
                         borderColor: pinkGraph,
-                        borderWidth: 4,
+                        borderWidth: 8,
                         pointRadius: 0
                     },
                     {
                         data: [1000, 200, 500],
                         backgroundColor: orangeGraph,
                         borderColor: orangeGraph,
-                        borderWidth: 4,
+                        borderWidth: 8,
                         pointRadius: 0
                     }
                 ]
@@ -57,18 +56,6 @@ const LastMonth = () => {
                 maintainAspectRatio: false,
                 plugins: {
                     legend: { display: false },
-                },
-                scales: {
-                    x: {
-                        ticks : {
-                            display: false
-                        }
-                    },
-                    y: {
-                        ticks : {
-                            display: false
-                        }
-                    }
                 }
             }
         })
@@ -78,13 +65,14 @@ const LastMonth = () => {
     }, [])
 
     return (
-        <div className={'h-full w-full'}>
+        <div className={'h-[300px]'}>
             <canvas
                 ref={canvasRef}
             >
-            </canvas>
-        </div>
-    );
-};
 
-export default LastMonth;
+            </canvas>
+
+        </div>
+    )
+}
+export default UsageGraph;

@@ -2,6 +2,7 @@ import { loginSchemaType, registerSchemaType } from '@/app/(auth)/login/schemas/
 import { revenueSchemaType } from '@/app/(realApp)/revenue/schemas/revenueSchema';
 import axios from 'axios';
 import { handleError } from '@/api/services/errorHandler';
+import {ProfileFormValues} from "@/app/(realApp)/profile/schemas/profileSchema";
 
 const req = axios.create({
   //baseURL: process.env.NEXT_PUBLIC_URL_FINREX_API,
@@ -53,3 +54,8 @@ export const addRevenueValues = async (data: revenueSchemaType): Promise<revenue
   const result = await req.post('/revenue', data);
   return result.data;
 };
+
+export const addProfileData = async (data: ProfileFormValues) : Promise<ProfileFormValues> => {
+    const result = await req.post('https://jsonplaceholder.typicode.com/posts', data);
+    return result.data;
+}

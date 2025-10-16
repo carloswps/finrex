@@ -1,97 +1,139 @@
-'use client'
-import {useContext, useEffect, useRef} from "react";
+    'use client'
+    import {useContext, useEffect, useRef} from "react";
 
-import {
-    Chart,
-    BarController,
-    BarElement,
-    CategoryScale,
-    LinearScale,
-    Title,
-    Tooltip,
-    Legend,
-    LineController,
-    LineElement,
-    PointElement,
-    ArcElement,
-    DoughnutController
-} from "chart.js";
-import {GraphContext} from "@/app/(realApp)/insights/contexts/GraphContext";
-
-Chart.register(
-    BarController,
-    BarElement,
-    LineController,
-    LineElement,
-    PointElement,
-    DoughnutController,
-    ArcElement,
-    CategoryScale,
-    LinearScale,
-    Title,
-    Tooltip,
-    Legend
-);
-
-type Props = {
-    width?: number;
-    height?: number;
-    margin?: string;
-    chartOptions?: any,
-    chartData?: any
-}
-
-const FormDataGraph = ({ width, height, margin, chartOptions, chartData }: Props) => {
-    const canvasRef = useRef<HTMLCanvasElement>(null);
-    const context = useContext(GraphContext);
+    import {
+        Chart,
+        BarController,
+        BarElement,
+        CategoryScale,
+        LinearScale,
+        Title,
+        Tooltip,
+        Legend,
+        LineController,
+        LineElement,
+        PointElement,
+        ArcElement,
+        DoughnutController
+    } from "chart.js";
+    import {GraphContext} from "@/app/(realApp)/insights/contexts/GraphContext";
 
 
-    useEffect(() => {
-        if(!canvasRef.current || !context) return;
+    Chart.register(
+        BarController,
+        BarElement,
+        LineController,
+        LineElement,
+        PointElement,
+        DoughnutController,
+        ArcElement,
+        CategoryScale,
+        LinearScale,
+        Title,
+        Tooltip,
+        Legend
+    );
 
-        const ctx = canvasRef.current.getContext('2d');
-        if(!ctx) return;
+    type Props = {
+        width?: number;
+        height?: number;
+        margin?: string;
+        chartOptions?: any,
+        chartData?: any,
+        graphType?: 'bar' | 'line' | 'doughnut';
+    }
 
-        let options: any = {responsive: true};
-        if(context?.style === 'doughnut') {
-            options.maintainAspectRatio = false;
-            options.cutout = '60%';
-            options.radius = '80%';
-        }
+    const FormDataGraph = ({ width, height, margin, chartOptions, chartData, graphType }: Props) => {
+        const canvasRef = useRef<HTMLCanvasElement>(null);
+        const context = useContext(GraphContext);
 
-        options={...options, ...chartOptions};
+        useEffect(() => {
+            if(!canvasRef.current || !context) return;
 
-        const myChart = new Chart(ctx, {
-            type: context?.style,
-            data: chartData || {
-                labels: ["Jan", "Feb", "Mar"],
-                datasets: [
-                    {
-                        data: [12, 19, 3, 16, 40],
-                        backgroundColor: "rgba(75, 192, 192, 0.2)",
-                        borderColor: "rgba(75, 192, 192, 1)",
-                        borderWidth: 1,
+            const ctx = canvasRef.current.getContext('2d');
+            if(!ctx) return;
+
+            let options: any = {
+                responsive: true,
+                plugins: {
+                    legend: { display: false }
+                },
+                scales: {
+                    x: {
+                        grid: {
+                            display: false,
+                        },
+                        border: {
+                            display: false
+                        },
+                        ticks : {
+                            display: false
+                        }
                     },
-                ],
-            },
-            options,
-        });
-        return () => {
-            myChart.destroy();
-        }
-    }, [context?.style, chartOptions, chartData])
+                    y: {
+                        grid: {
+                            display: false,
+                        },
+                        border: {
+                            display: false
+                        },
+                        ticks : {
+                            display: false
+                        }
+                    }
+                }
+            };
+            if(context?.style === 'doughnut') {
+                options.maintainAspectRatio = false;
+                options.cutout = '60%';
+                options.radius = '80%';
+            }
 
-    return (
-        <div
-            className={context?.style === 'doughnut' ? 'w-[500px] h-[500px] mx-auto' : 'w-full' }
-            style={context?.style === 'doughnut' ? { height, width, margin } : undefined}
-        >
-            <canvas
-                ref={canvasRef}
+            options={...options, ...chartOptions};
+
+            const rootStyles = getComputedStyle(document.documentElement);
+
+            const blueGraph = rootStyles.getPropertyValue('--blue-graph').trim() || '#4DA1D8';
+            const pinkGraph = rootStyles.getPropertyValue('--pink-graph').trim() || '#F2858E';
+            const orangeGraph = rootStyles.getPropertyValue('--orange-graph').trim() || '#FFB86B';
+            const greenGraph = rootStyles.getPropertyValue('--green-graph').trim() || '#2EBCB3';
+            const yellowGraph = rootStyles.getPropertyValue('--yellow-graph').trim() || '#F6C971';
+
+            const dynamicColors = [blueGraph, pinkGraph, orangeGraph, greenGraph, yellowGraph];
+
+            const myChart = new Chart(ctx, {
+                type: context?.style || graphType || 'bar',
+                data: chartData || {
+                    labels: ["Transportation", "Rent", "Groceries", "Utilities", "Entertainment"],
+                    datasets: [
+                        {
+                            data: [1000, 2000, 3000, 4000, 5000],
+                            backgroundColor: dynamicColors.map(color => `${color}CC`),
+                            borderColor: dynamicColors.map(color => `${color}CC`),
+                            borderWidth: 1,
+                            borderRadius: 5,
+                            pointRadius: 0
+                        },
+                    ],
+                },
+                options,
+            });
+            return () => {
+                myChart.destroy();
+            }
+        }, [context?.style, chartOptions, chartData])
+
+        return (
+            <div
+                className={context?.style === 'doughnut' ? 'w-[500px] h-[500px] mx-auto' : 'w-full' }
+                style={context?.style === 'doughnut' ? { height, width, margin } : undefined}
             >
-            </canvas>
-        </div>
-    )
-}
+                <canvas
+                    ref={canvasRef}
+                >
+                </canvas>
+            </div>
+        )
+    }
 
-export default  FormDataGraph;
+    export default  FormDataGraph;

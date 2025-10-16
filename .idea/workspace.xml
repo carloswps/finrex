@@ -5,36 +5,33 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1c27f75e-0b8a-4582-93d4-eef6baf0216e" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/app/(realApp)/profit/utils/ResolveColorCss.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/api.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/api.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(auth)/login/components/ErrorAlert.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(auth)/login/components/ErrorAlert.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(auth)/login/components/ErrorHandlerInitializer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(auth)/login/components/ErrorHandlerInitializer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(auth)/login/utils/mutations.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(auth)/login/utils/mutations.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(realApp)/goals/components/GoalGraph.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(realApp)/goals/components/GoalGraph.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(realApp)/insights/components/Bar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(realApp)/insights/components/Bar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(realApp)/insights/components/FormDataGraph.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(realApp)/insights/components/FormDataGraph.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/(realApp)/insights/components/GraphExhibition.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(realApp)/insights/components/GraphExhibition.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/TitleAndSubtitle.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/TitleAndSubtitle.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(realApp)/insights/components/LastMonth.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(realApp)/insights/components/LastMonth.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(realApp)/insights/components/RealSpendingGraph.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(realApp)/insights/components/RealSpendingGraph.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(realApp)/insights/contexts/GraphContext.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(realApp)/insights/contexts/GraphContext.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(realApp)/insights/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(realApp)/insights/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(realApp)/profile/components/PersonalForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(realApp)/profile/components/PersonalForm.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(realApp)/profile/components/UsageGraph.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(realApp)/profile/components/UsageGraph.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(realApp)/profile/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(realApp)/profile/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(realApp)/profit/components/ProfitGraph.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(realApp)/profit/components/ProfitGraph.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(realApp)/profit/components/SavingsTable.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(realApp)/profit/components/SavingsTable.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(realApp)/profit/components/TableRow.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(realApp)/profit/components/TableRow.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(realApp)/profit/components/TopEarnMonths.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(realApp)/profit/components/TopEarnMonths.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/Header.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/Summary.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/Summary.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/globals.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="TypeScript File" />
-        <option value="TypeScript JSX File" />
-      </list>
-    </option>
-  </component>
-  <component name="FormatOnSaveOptions">
-    <option name="myRunOnSave" value="true" />
-  </component>
   <component name="Git.Settings">
-    <option name="RECENT_BRANCH_BY_REPOSITORY">
-      <map>
-        <entry key="$PROJECT_DIR$" value="main" />
-      </map>
-    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
@@ -46,17 +43,14 @@
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/vngsp/finrex.git&quot;,
-    &quot;accountId&quot;: &quot;259d9d4e-73b3-4dc6-8508-3388288d8fa5&quot;
+    &quot;accountId&quot;: &quot;462f9c6b-3ab9-4816-bb50-688555df13ef&quot;
   }
 }</component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/src/app/(realApp)/insights/components/GraphExhibition.tsx" root0="SKIP_INSPECTION" />
   </component>
-  <component name="OptimizeOnSaveOptions">
-    <option name="myRunOnSave" value="true" />
-  </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="ProjectErrors" />
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
@@ -72,6 +66,7 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;JavaScript Debug.localhost:3000.executor&quot;: &quot;Debug&quot;,
     &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
@@ -81,38 +76,17 @@
     &quot;js.debugger.nextJs.config.created.client&quot;: &quot;true&quot;,
     &quot;js.debugger.nextJs.config.created.server&quot;: &quot;true&quot;,
     &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/carlos/projects/prodam/pn1006/simplifica-ai&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;npm.Next.js: server-side.executor&quot;: &quot;Run&quot;,
-    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;/home/carlos/.asdf/installs/nodejs/20.19.0/lib/node_modules/prettier&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;settings.javascript.prettier&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
     &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/home/carlos/WebstormProjects/finrex/node_modules/typescript/lib&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\vinic\\OneDrive\\Desktop\\finrex\\node_modules\\typescript\\lib&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="QodanaHighlightedReportService">
-    <option name="localRunNotPublishedPersistedInfo">
-      <LocalReportPersistedInfo>
-        <option name="path" value="/tmp/qodana_output1/qodana.sarif.json" />
-        <option name="reportGuid" value="b9987045-fc74-4ec5-a71d-94eb7f56fb78" />
-        <option name="reportName" value="finrex/qodana/2025-09-17" />
-      </LocalReportPersistedInfo>
-    </option>
-  </component>
-  <component name="QodanaIsSelectedPersistenceService">
-    <option name="selectedOrLoading" value="true" />
-  </component>
-  <component name="QodanaReportsService">
-    <option name="descriptions">
-      <ReportDescription localRun="true" path="/tmp/qodana_output/qodana.sarif.json" reportGuid="1a73ebbe-022f-4888-afc4-5edcad7b9a8f" reportId="finrex/qodana/2025-09-17" />
-      <ReportDescription localRun="true" path="/tmp/qodana_output1/qodana.sarif.json" reportGuid="b9987045-fc74-4ec5-a71d-94eb7f56fb78" reportId="finrex/qodana/2025-09-17" />
-    </option>
-  </component>
   <component name="ReactDesignerToolWindowState">
     <option name="myId2Visible">
       <map>
@@ -128,8 +102,11 @@
       <recent name="C:\Users\vinic\OneDrive\Desktop\finrex\src\app\(realApp)\insights\components" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.Next.js: server-side">
+  <component name="RunManager" selected="JavaScript Debug.localhost:3000">
     <configuration name="Next.js: debug client-side" type="JavascriptDebugType" uri="http://localhost:3000/">
+      <method v="2" />
+    </configuration>
+    <configuration name="localhost:3000" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:3000">
       <method v="2" />
     </configuration>
     <configuration name="Next.js: server-side" type="js.build_tools.npm">
@@ -142,11 +119,16 @@
       <envs />
       <method v="2" />
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JavaScript Debug.localhost:3000" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-b598e85cdad2-JavaScript-WS-252.25557.126" />
+        <option value="bundled-js-predefined-d6986cc7102b-e03c56caf84a-JavaScript-WS-252.23892.411" />
       </set>
     </attachedChunks>
   </component>
@@ -199,71 +181,95 @@
       <workItem from="1756484802548" duration="1189000" />
       <workItem from="1756593137350" duration="3469000" />
       <workItem from="1756675615454" duration="513000" />
-      <workItem from="1756895269604" duration="25000" />
-      <workItem from="1757029659638" duration="634000" />
-      <workItem from="1757030334307" duration="2695000" />
-      <workItem from="1757078064573" duration="107000" />
-      <workItem from="1758025056959" duration="1652000" />
-      <workItem from="1758037063927" duration="333000" />
-      <workItem from="1758037432602" duration="1238000" />
-      <workItem from="1758040683539" duration="2922000" />
-      <workItem from="1758046322482" duration="116000" />
-      <workItem from="1758046727492" duration="40000" />
-      <workItem from="1758046771453" duration="6000" />
-      <workItem from="1758119495574" duration="3408000" />
-      <workItem from="1758122967766" duration="192000" />
-      <workItem from="1758123216462" duration="338000" />
+      <workItem from="1756677538183" duration="4686000" />
+      <workItem from="1756682354787" duration="2776000" />
+      <workItem from="1756743074245" duration="4936000" />
+      <workItem from="1756829980043" duration="6233000" />
+      <workItem from="1756946346884" duration="1131000" />
+      <workItem from="1757011506682" duration="4312000" />
+      <workItem from="1757015894963" duration="1341000" />
+      <workItem from="1757033449669" duration="132000" />
+      <workItem from="1757124134813" duration="266000" />
+      <workItem from="1757125246301" duration="565000" />
+      <workItem from="1757348581001" duration="2917000" />
+      <workItem from="1757430770346" duration="89000" />
+      <workItem from="1757430883594" duration="2772000" />
+      <workItem from="1757516187465" duration="1968000" />
+      <workItem from="1757518221349" duration="2996000" />
+      <workItem from="1757604939280" duration="1861000" />
+      <workItem from="1757612783460" duration="1755000" />
+      <workItem from="1757615144749" duration="38000" />
+      <workItem from="1757727139113" duration="428000" />
+      <workItem from="1757789783792" duration="2496000" />
+      <workItem from="1757793202045" duration="896000" />
+      <workItem from="1757877496576" duration="2648000" />
+      <workItem from="1757951134038" duration="5128000" />
+      <workItem from="1758047940520" duration="2975000" />
+      <workItem from="1758051058511" duration="751000" />
+      <workItem from="1758053411323" duration="307000" />
+      <workItem from="1758116527739" duration="651000" />
+      <workItem from="1758117210487" duration="5290000" />
+      <workItem from="1758221760566" duration="1359000" />
+      <workItem from="1758290818559" duration="2944000" />
+      <workItem from="1758293801611" duration="212000" />
+      <workItem from="1758305477796" duration="2998000" />
+      <workItem from="1758329893979" duration="891000" />
+      <workItem from="1758421200174" duration="2778000" />
+      <workItem from="1758485663089" duration="7479000" />
+      <workItem from="1758493265744" duration="2026000" />
+      <workItem from="1758560377369" duration="1351000" />
+      <workItem from="1758733576349" duration="3834000" />
+      <workItem from="1758737502290" duration="461000" />
+      <workItem from="1758738009643" duration="199000" />
+      <workItem from="1759178733390" duration="3296000" />
+      <workItem from="1759238475957" duration="4339000" />
+      <workItem from="1759246089763" duration="4055000" />
+      <workItem from="1759328442664" duration="240000" />
+      <workItem from="1759342672454" duration="8509000" />
+      <workItem from="1759427433190" duration="4783000" />
+      <workItem from="1759432302632" duration="536000" />
+      <workItem from="1759511163852" duration="2134000" />
+      <workItem from="1759514330826" duration="2753000" />
+      <workItem from="1759692469306" duration="766000" />
+      <workItem from="1759709826400" duration="1603000" />
+      <workItem from="1759773729496" duration="4914000" />
+      <workItem from="1759801383426" duration="896000" />
+      <workItem from="1759802304937" duration="3257000" />
+      <workItem from="1759857219047" duration="19000" />
+      <workItem from="1759939285943" duration="7110000" />
+      <workItem from="1759975860489" duration="582000" />
+      <workItem from="1760375006667" duration="322000" />
     </task>
-    <task id="LOCAL-00001" summary="Refactor codebase for consistent formatting and style; introduce Prettier Tailwind configuration and add Error treatment.">
-      <option name="closed" value="true" />
-      <created>1757032852316</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1757032852317</updated>
-    </task>
-    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="Apply consistent formatting across files and integrate Prettier Tailwind CSS plugin." />
-    <MESSAGE value="Apply consistent formatting across login and insights modules; add TailwindCSS Prettier plugin." />
-    <MESSAGE value="Refactor codebase for consistent formatting and style; introduce Prettier Tailwind configuration and add Error treatment." />
-    <MESSAGE value="Refactor error handling in authentication components; update ErrorAlert and ErrorHandlerInitializer to improve error message display and handling. Add Prettier configuration for consistent code formatting." />
-    <MESSAGE value="Refactor `useLogin` and `useAddRegister` hooks for better structure and readability; update `ErrorAlert` with `z-index` for proper layering; simplify API response handling in `api.ts`." />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactor `useLogin` and `useAddRegister` hooks for better structure and readability; update `ErrorAlert` with `z-index` for proper layering; simplify API response handling in `api.ts`." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/app/(realApp)/insights/components/FormDataGraph.tsx</url>
-          <line>1</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/app/(realApp)/insights/components/FormDataGraph.tsx</url>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/app/(realApp)/insights/components/Calendar.tsx</url>
+          <line>2</line>
           <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/app/(realApp)/goals/components/GoalInfo.tsx</url>
+          <line>73</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/app/(realApp)/profile/components/UsageTimeIcon.tsx</url>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/app/(realApp)/profile/components/PersonalForm.tsx</url>
+          <line>1</line>
+          <option name="timeStamp" value="7" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

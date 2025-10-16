@@ -13,11 +13,7 @@ const GraphExhibition = () => {
   };
 
   return (
-    <div className={'flex gap-10'}>
-      <LineGraph
-        onClick={() => changeGraph('line')}
-        className={`w-13 h-13 cursor-pointer ${ctx?.style === 'line' ? 'text-[var(--yellow-theme)]' : 'text-[var(--desactive-color)] hover:text-[var(--yellow-theme)]'}`}
-      />
+    <div className={'mt-8 flex gap-10'}>
       <BarGraph
         onClick={() => changeGraph('bar')}
         className={`w-13 h-13 cursor-pointer ${ctx?.style === 'bar' ? 'text-[var(--green-theme)]' : 'text-[var(--desactive-color)] hover:text-[var(--green-theme)]'}`}
