@@ -1,3 +1,5 @@
+'use client';
+
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { loginSchema, loginSchemaType, registerSchema, registerSchemaType } from '../schemas/loginSchema';
@@ -9,6 +11,8 @@ import LoginLoad from './LoginLoad';
 import { useAddRegister, useLogin } from '@/app/(auth)/login/utils/mutations';
 import { useRouter } from 'next/navigation';
 import ErrorAlert from '@/app/(auth)/login/components/ErrorAlert';
+import { FcGoogle } from 'react-icons/fc';
+import { handleGoogleLogin } from '@/api/api';
 
 type FormData = loginSchemaType | registerSchemaType;
 
@@ -81,9 +85,18 @@ const FormAction = () => {
 
         <div className={'flex flex-col items-center gap-4'}>
           <LoginBtn hasLoggedIn={isRegisterMode} disabled={mutation.isPending} />
-
-          {mutation.isPending && <LoginLoad label={isRegisterMode ? 'Sign Up' : 'Login'} />}
-          <HaveAccount hasLoggedIn={isRegisterMode} toggleLogged={toggleFormMode} />
+          <div className="flex gap-2.5">
+            {mutation.isPending && <LoginLoad label={isRegisterMode ? 'Sign Up' : 'Login'} />}
+            <HaveAccount hasLoggedIn={isRegisterMode} toggleLogged={toggleFormMode} />
+            <FcGoogle
+              size={18}
+              className={'cursor-pointer'}
+              onClick={() => {
+                handleGoogleLogin();
+                console.log('teste...');
+              }}
+            />
+          </div>
         </div>
       </form>
       {mutation.isError && mutation.error && <ErrorAlert message={mutation.error.message} />}
