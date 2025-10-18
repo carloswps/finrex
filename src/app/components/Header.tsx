@@ -1,4 +1,5 @@
 'use client';
+
 import Insights from '../(realApp)/revenue/components/icons/Insights.svg';
 import RevenueSpending from '../(realApp)/revenue/components/icons/RevenueSpending.svg';
 import Goals from '../(realApp)/revenue/components/icons/Goals.svg';
@@ -6,6 +7,7 @@ import Profit from '../(realApp)/revenue/components/icons/Profit.svg';
 import Link from 'next/link';
 import { useProfilePic } from '@/app/contexts/ProfilePicContext';
 import { usePathname } from 'next/navigation';
+import { paths } from '@/libs/paths';
 
 const Header = () => {
   const { fileUrl } = useProfilePic();
@@ -36,19 +38,19 @@ const Header = () => {
             </li>
             <li className={getLinkClass('/insights')}>
               <Insights className={'h-10 w-10'} />
-              <Link href={'/insights'}>Insights</Link>
+              <Link href={paths.page.insights}>Insights</Link>
             </li>
             <li className={getLinkClass('/revenue')}>
               <RevenueSpending className={'h-10 w-10'} />
-              <Link href={'/revenue'}>Revenue & Spending</Link>
+              <Link href={paths.page.revenue}>Revenue & Spending</Link>
             </li>
             <li className={getLinkClass('/goals')}>
               <Goals className={'h-10 w-10'} />
-              <Link href={'/goals'}>Goals</Link>
+              <Link href={paths.page.goals}>Goals</Link>
             </li>
             <li className={getLinkClass('/profit')}>
               <Profit className={'h-10 w-10'} />
-              <Link href={'/profit'}>Profit</Link>
+              <Link href={paths.page.profit}>Profit</Link>
             </li>
             <li>
               <Link href={'/profile'}>

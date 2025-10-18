@@ -1,5 +1,3 @@
-'use client';
-
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { loginSchema, loginSchemaType, registerSchema, registerSchemaType } from '../schemas/loginSchema';
