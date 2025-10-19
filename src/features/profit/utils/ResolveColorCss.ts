@@ -12,6 +12,7 @@ const resolveCssColor = (cssVarString: string): string => {
       }
     }
   } catch (e) {
+    console.error('Error: ', e);
     return cssVarString;
   }
   return cssVarString;

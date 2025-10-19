@@ -56,7 +56,7 @@ export const handleGoogleLogin = () => {
 };
 
 export const addRevenueValues = async (data: revenueSchemaType): Promise<revenueSchemaType> => {
-  const result = await req.post('/revenue', data);
+  const result = await req.post(paths.api.revenue, data);
   return result.data;
 };
 

@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 
-export function middleware(req: NextRequest, res: NextResponse) {
+export function middleware(req: NextRequest) {
   const token = req.cookies.get('finrex.auth')?.value;
   const { pathname } = req.nextUrl;
 
