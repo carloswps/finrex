@@ -19,24 +19,29 @@ const Page = () => {
       <aside className="mb-5 border-l border-[var(--lines-color)] px-16">
         <div>
           <TitleAndSubtitle title="In Money" subTitle="Real Spending" hasLine={true} />
-            <RealSpendingGraph title={'Transportation'} subTitle={'Bus, car, boat'} value={300} barColor={'blue-graph'} />
-            <RealSpendingGraph title={'Rent'} subTitle={'Apartment, house'} value={1700} barColor={'pink-graph'} />
-            <RealSpendingGraph title={'Groceries'} subTitle={'Food, drinks'} value={400} barColor={'orange-graph'} />
-            <RealSpendingGraph title={'Entertainment'} subTitle={'Movies, concerts'} value={220} barColor={'green-graph'} />
+          <RealSpendingGraph title={'Transportation'} subTitle={'Bus, car, boat'} value={300} barColor={'blue-graph'} />
+          <RealSpendingGraph title={'Rent'} subTitle={'Apartment, house'} value={1700} barColor={'pink-graph'} />
+          <RealSpendingGraph title={'Groceries'} subTitle={'Food, drinks'} value={400} barColor={'orange-graph'} />
+          <RealSpendingGraph
+            title={'Entertainment'}
+            subTitle={'Movies, concerts'}
+            value={220}
+            barColor={'green-graph'}
+          />
         </div>
         <div className="mt-8">
           <TitleAndSubtitle title="Vs Last Month" subTitle="Monthly Comparison" hasLine={true} />
           <LastMonth />
           <Summary
-              title={'Summary'}
-              cubeSize={'23px'}
-              fontSize={'16px'}
-              titleFontSize={'16px'}
-              backgroundColor={'var(--blue-graph)'}
-              arrowDirection={'up'}
-              pastValue={80}
-              currentValue={200}
-              summaryName={'Transport:'}
+            title={'Summary'}
+            cubeSize={'23px'}
+            fontSize={'16px'}
+            titleFontSize={'16px'}
+            backgroundColor={'var(--blue-graph)'}
+            arrowDirection={'up'}
+            pastValue={80}
+            currentValue={200}
+            summaryName={'Transport:'}
           />
           <Summary
             arrowDirection={'down'}
@@ -48,16 +53,16 @@ const Page = () => {
             currentValue={450}
             summaryName={'Rent:'}
           />
-            <Summary
-                arrowDirection={'even'}
-                backgroundColor={'var(--yellow-theme)'}
-                cubeSize={'23px'}
-                fontSize={'16px'}
-                titleFontSize={'16px'}
-                pastValue={300}
-                currentValue={300}
-                summaryName={'Groceries:'}
-            />
+          <Summary
+            arrowDirection={'even'}
+            backgroundColor={'var(--yellow-theme)'}
+            cubeSize={'23px'}
+            fontSize={'16px'}
+            titleFontSize={'16px'}
+            pastValue={300}
+            currentValue={300}
+            summaryName={'Groceries:'}
+          />
         </div>
       </aside>
     </div>

@@ -5,33 +5,30 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1c27f75e-0b8a-4582-93d4-eef6baf0216e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/app/(realApp)/profit/utils/ResolveColorCss.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/libs/paths.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(realApp)/goals/components/GoalGraph.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(realApp)/goals/components/GoalGraph.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(realApp)/insights/components/Bar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(realApp)/insights/components/Bar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(realApp)/insights/components/FormDataGraph.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(realApp)/insights/components/FormDataGraph.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(realApp)/insights/components/GraphExhibition.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(realApp)/insights/components/GraphExhibition.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(realApp)/insights/components/LastMonth.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(realApp)/insights/components/LastMonth.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(realApp)/insights/components/RealSpendingGraph.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(realApp)/insights/components/RealSpendingGraph.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(realApp)/insights/contexts/GraphContext.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(realApp)/insights/contexts/GraphContext.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(realApp)/insights/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(realApp)/insights/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(realApp)/profile/components/PersonalForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(realApp)/profile/components/PersonalForm.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(realApp)/profile/components/UsageGraph.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(realApp)/profile/components/UsageGraph.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(realApp)/profile/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(realApp)/profile/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(realApp)/profit/components/ProfitGraph.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(realApp)/profit/components/ProfitGraph.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(realApp)/profit/components/SavingsTable.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(realApp)/profit/components/SavingsTable.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(realApp)/profit/components/TableRow.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(realApp)/profit/components/TableRow.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(realApp)/profit/components/TopEarnMonths.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(realApp)/profit/components/TopEarnMonths.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/api.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/api.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(auth)/login/components/FormAction.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(auth)/login/components/FormAction.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/components/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/Header.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/Summary.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/Summary.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/globals.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="TypeScript File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
@@ -40,6 +37,9 @@
     &quot;assignee&quot;: &quot;vngsp&quot;
   }
 }</component>
+  <component name="GithubDefaultAccount">
+    <option name="defaultAccountId" value="ef031b65-4221-440e-9b26-79f21424379a" />
+  </component>
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/vngsp/finrex.git&quot;,
@@ -48,6 +48,9 @@
 }</component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/src/app/(realApp)/insights/components/GraphExhibition.tsx" root0="SKIP_INSPECTION" />
+  </component>
+  <component name="OptimizeOnSaveOptions">
+    <option name="myRunOnSave" value="true" />
   </component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
@@ -71,6 +74,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;dev&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;js.debugger.nextJs.config.created.client&quot;: &quot;true&quot;,
@@ -81,9 +85,10 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;/home/carlos/.asdf/installs/nodejs/20.19.0/lib/node_modules/prettier&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;ml.llm.LLMThirdPartyAiProvidersConfigurable&quot;,
     &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\vinic\\OneDrive\\Desktop\\finrex\\node_modules\\typescript\\lib&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/snap/webstorm/529/plugins/javascript-plugin/jsLanguageServicesImpl/external&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -98,11 +103,13 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src" />
+      <recent name="$PROJECT_DIR$/src/features" />
       <recent name="C:\Users\vinic\OneDrive\Desktop\finrex\src\app\components" />
       <recent name="C:\Users\vinic\OneDrive\Desktop\finrex\src\app\(realApp)\insights\components" />
     </key>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.localhost:3000">
+  <component name="RunManager" selected="npm.Next.js: server-side">
     <configuration name="Next.js: debug client-side" type="JavascriptDebugType" uri="http://localhost:3000/">
       <method v="2" />
     </configuration>
@@ -128,7 +135,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-e03c56caf84a-JavaScript-WS-252.23892.411" />
+        <option value="bundled-js-predefined-d6986cc7102b-3aa1da707db6-JavaScript-WS-252.26830.93" />
       </set>
     </attachedChunks>
   </component>
@@ -239,7 +246,21 @@
       <workItem from="1759939285943" duration="7110000" />
       <workItem from="1759975860489" duration="582000" />
       <workItem from="1760375006667" duration="322000" />
+      <workItem from="1760724025877" duration="33000" />
+      <workItem from="1760724343460" duration="97000" />
+      <workItem from="1760724462464" duration="1254000" />
+      <workItem from="1760727094558" duration="3673000" />
+      <workItem from="1760807894140" duration="3543000" />
     </task>
+    <task id="LOCAL-00001" summary="perf: Update the architecture of the project.&#10;Add eslint and prettier for standardizing code writing.&#10;Add icon for login with google (in dev)">
+      <option name="closed" value="true" />
+      <created>1760730708994</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1760730708994</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -248,6 +269,8 @@
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+    <MESSAGE value="perf: Update the architecture of the project.&#10;Add eslint and prettier for standardizing code writing.&#10;Add icon for login with google (in dev)" />
+    <option name="LAST_COMMIT_MESSAGE" value="perf: Update the architecture of the project.&#10;Add eslint and prettier for standardizing code writing.&#10;Add icon for login with google (in dev)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -259,7 +282,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/app/(realApp)/goals/components/GoalInfo.tsx</url>
-          <line>73</line>
+          <line>56</line>
           <option name="timeStamp" value="4" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">

@@ -4,7 +4,7 @@ import Header from '@/app/components/Header';
 export default function RealAppLayout({ children }: { children: ReactNode }) {
   return (
     <div className="h-screen">
-      <div className="px-15 flex-1 overflow-auto">
+      <div className="flex-1 overflow-auto px-15">
         <Header />
         {children}
       </div>

@@ -16,11 +16,11 @@ const GraphExhibition = () => {
     <div className={'mt-8 flex gap-10'}>
       <BarGraph
         onClick={() => changeGraph('bar')}
-        className={`w-13 h-13 cursor-pointer ${ctx?.style === 'bar' ? 'text-[var(--green-theme)]' : 'text-[var(--desactive-color)] hover:text-[var(--green-theme)]'}`}
+        className={`h-13 w-13 cursor-pointer ${ctx?.style === 'bar' ? 'text-[var(--green-theme)]' : 'text-[var(--desactive-color)] hover:text-[var(--green-theme)]'}`}
       />
       <PizzaGraph
         onClick={() => changeGraph('doughnut')}
-        className={`w-13 h-13 cursor-pointer ${ctx?.style === 'doughnut' ? 'text-[var(--purple-theme)]' : 'text-[var(--desactive-color)] hover:text-[var(--purple-theme)]'}`}
+        className={`h-13 w-13 cursor-pointer ${ctx?.style === 'doughnut' ? 'text-[var(--purple-theme)]' : 'text-[var(--desactive-color)] hover:text-[var(--purple-theme)]'}`}
       />
     </div>
   );
