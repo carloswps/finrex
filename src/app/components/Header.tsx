@@ -8,6 +8,7 @@ import Link from 'next/link';
 import { useProfilePic } from '@/app/contexts/ProfilePicContext';
 import { usePathname } from 'next/navigation';
 import { paths } from '@/libs/paths';
+import Image from 'next/image';
 
 const Header = () => {
   const { fileUrl } = useProfilePic();
@@ -34,27 +35,27 @@ const Header = () => {
             className={'m-auto flex w-fit cursor-pointer items-center gap-32 border-b border-[var(--green-theme)] py-8'}
           >
             <li>
-              <img src="/darkLogo.png" alt="logo" className={'w-45'} />
+              <Image src={'/darkLogo.png'} alt={'logo'} width={200} height={50} />
             </li>
-            <li className={getLinkClass('/insights')}>
+            <li className={getLinkClass(paths.page.insights)}>
               <Insights className={'h-10 w-10'} />
               <Link href={paths.page.insights}>Insights</Link>
             </li>
-            <li className={getLinkClass('/revenue')}>
+            <li className={getLinkClass(paths.page.revenue)}>
               <RevenueSpending className={'h-10 w-10'} />
               <Link href={paths.page.revenue}>Revenue & Spending</Link>
             </li>
-            <li className={getLinkClass('/goals')}>
+            <li className={getLinkClass(paths.page.goals)}>
               <Goals className={'h-10 w-10'} />
               <Link href={paths.page.goals}>Goals</Link>
             </li>
-            <li className={getLinkClass('/profit')}>
+            <li className={getLinkClass(paths.page.profit)}>
               <Profit className={'h-10 w-10'} />
               <Link href={paths.page.profit}>Profit</Link>
             </li>
             <li>
               <Link href={'/profile'}>
-                <img src={picSource} alt="Your Profile Picture" className={'h-13 w-13 rounded-full object-cover'} />
+                <Image src={picSource} alt={'Your Profile Picture'} width={45} height={45} />
               </Link>
             </li>
           </ul>

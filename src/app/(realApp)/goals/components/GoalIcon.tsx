@@ -2,19 +2,18 @@
 import UploadIcon from '@/app/(realApp)/goals/components/icons/UploadIcon.svg';
 import { ChangeEvent, useState } from 'react';
 import axios from 'axios';
+import Image from 'next/image';
 
 type Props = {
   goalId: number;
 };
 
 const GoalIcon = ({ goalId }: Props) => {
-  const [selectedFile, setSelectedFile] = useState<File>();
   const [fileUrl, setFileUrl] = useState<string | null>(null);
 
   const handleFileChange = async (e: ChangeEvent<HTMLInputElement>) => {
     if (e.target.files && e.target.files.length > 0) {
       const currentFile = e.target.files[0];
-      setSelectedFile(currentFile);
       setFileUrl(URL.createObjectURL(currentFile));
 
       const formData = new FormData();
@@ -42,7 +41,7 @@ const GoalIcon = ({ goalId }: Props) => {
       <label htmlFor={uniqueId} className={'cursor-pointer'}>
         {fileUrl ? (
           <div className={`absolute h-12 w-12 bg-[url(${fileUrl})]`}>
-            <img src={fileUrl} alt="Ícone de Meta" className={'relative bottom-12 h-full w-full rounded-full'} />
+            <Image src={fileUrl} alt="Ícone de Meta" className="relative bottom-12 h-full w-full rounded-full" />
           </div>
         ) : (
           <div className={`absolute h-12 w-12`}>

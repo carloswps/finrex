@@ -3,13 +3,14 @@ import Cubes from '@/app/(auth)/login/components/Cubes';
 import LinesLogin from '@/app/(auth)/login/components/linesLogin';
 import BarsLogin from '@/app/(auth)/login/components/barsLogin';
 import FormAction from './FormAction';
+import Image from 'next/image';
 
 const LoginForm = () => {
   return (
     <div className={'flex h-screen w-screen justify-center'}>
       <div className={'w-1/2 bg-white p-8'}>
         <div>
-          <img src="/darkLogo.png" alt="" className={'w-40'} />
+          <Image src={'/darkLogo.png'} alt="Logo" width={200} height={100} />
         </div>
         <div className={'mt-24'}>
           <FormAction />

@@ -1,6 +1,5 @@
 'use client';
 import BarGraph from './icons/BarGraph.svg';
-import LineGraph from './icons/LineGraph.svg';
 import PizzaGraph from './icons/PizzaGraph.svg';
 import { useContext } from 'react';
 import { ChartStyle, GraphContext } from '@/app/(realApp)/insights/contexts/GraphContext';

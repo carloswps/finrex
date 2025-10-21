@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 const LinesLogin = () => {
   return (
     <div
@@ -6,8 +8,8 @@ const LinesLogin = () => {
         'shadow-custom top-40 left-200 w-sm rounded-md p-5 font-bold'
       }
     >
-      <img src="/linesAnalytics-removebg-preview.png" alt="" />
-      Get your personal analitics
+      <Image src={'/linesAnalytics-removebg-preview.png'} alt="" width={200} height={40} />
+      Get your personal analytics
     </div>
   );
 };

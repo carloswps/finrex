@@ -2,19 +2,21 @@
 import { useContext, useEffect, useRef } from 'react';
 
 import {
-  Chart,
+  ArcElement,
   BarController,
   BarElement,
   CategoryScale,
-  LinearScale,
-  Title,
-  Tooltip,
+  Chart,
+  ChartData,
+  ChartOptions,
+  DoughnutController,
   Legend,
+  LinearScale,
   LineController,
   LineElement,
   PointElement,
-  ArcElement,
-  DoughnutController,
+  Title,
+  Tooltip,
 } from 'chart.js';
 import { GraphContext } from '@/app/(realApp)/insights/contexts/GraphContext';
 
@@ -37,8 +39,8 @@ type Props = {
   width?: number;
   height?: number;
   margin?: string;
-  chartOptions?: any;
-  chartData?: any;
+  chartOptions?: ChartOptions;
+  chartData?: ChartData<'bar' | 'line' | 'doughnut'>;
   graphType?: 'bar' | 'line' | 'doughnut';
 };
 
@@ -52,7 +54,7 @@ const FormDataGraph = ({ width, height, margin, chartOptions, chartData, graphTy
     const ctx = canvasRef.current.getContext('2d');
     if (!ctx) return;
 
-    let options: any = {
+    let options: ChartOptions & { cutout?: string; radius?: string } = {
       responsive: true,
       plugins: {
         legend: { display: false },
@@ -120,7 +122,7 @@ const FormDataGraph = ({ width, height, margin, chartOptions, chartData, graphTy
     return () => {
       myChart.destroy();
     };
-  }, [context?.style, chartOptions, chartData]);
+  }, [context, graphType, chartOptions, chartData]);
 
   return (
     <div

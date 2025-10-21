@@ -48,7 +48,7 @@ const FormAction = () => {
   };
 
   const handleFormSubmit = (data: FormData) => {
-    mutation.mutate(data as any);
+    mutation.mutate(data);
   };
 
   return (
