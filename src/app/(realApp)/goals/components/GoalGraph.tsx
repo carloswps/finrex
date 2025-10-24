@@ -1,12 +1,13 @@
 import FloatPercent from '@/app/(realApp)/goals/components/FloatPercent';
 import FormDataGraph from '@/app/(realApp)/insights/components/FormDataGraph';
 import { GraphProvider } from '@/app/(realApp)/insights/contexts/GraphContext';
+import { ChartData, ChartOptions } from 'chart.js';
 
 type Props = {
   completePercent?: number;
   remainingPercent?: number;
-  customOptions?: object;
-  customData?: object;
+  customOptions?: ChartOptions;
+  customData?: ChartData<'doughnut'>;
 };
 
 const GoalGraph = ({ completePercent, remainingPercent, customOptions, customData }: Props) => {

@@ -1,7 +1,6 @@
 'use client';
 import ProfilePic from '@/app/(realApp)/profile/components/ProfilePic';
 import UsageTimeIcon from '@/app/(realApp)/profile/components/UsageTimeIcon';
-import { useState } from 'react';
 import UserDatas from '@/app/(realApp)/profile/components/UserDatas';
 import PersonalFormInput from '@/app/(realApp)/profile/components/PersonalFormInput';
 import { useForm } from 'react-hook-form';
@@ -10,18 +9,11 @@ import { ProfileFormValues, profileSchema } from '@/app/(realApp)/profile/schema
 import { useProfileData } from '@/app/(realApp)/profile/utils/mutations';
 
 const PersonalForm = () => {
-  const [isEditing, setIsEditing] = useState(false);
-  const [username, setUsername] = useState('username');
-
   const { handleSubmit, control } = useForm<ProfileFormValues>({
     resolver: zodResolver(profileSchema),
   });
 
   const profileMutation = useProfileData();
-
-  const handleBlur = () => {
-    setIsEditing(false);
-  };
 
   const handleFormSubmit = (data: ProfileFormValues) => {
     profileMutation.mutateAsync(data);
