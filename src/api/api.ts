@@ -1,9 +1,10 @@
-import { loginSchemaType, registerSchemaType } from '@/app/(auth)/login/schemas/loginSchema';
-import { revenueSchemaType } from '@/app/(realApp)/revenue/schemas/revenueSchema';
-import axios from 'axios';
 import { handleError } from '@/api/services/errorHandler';
+import { loginSchemaType, registerSchemaType } from '@/app/(auth)/login/schemas/loginSchema';
 import { ProfileFormValues } from '@/app/(realApp)/profile/schemas/profileSchema';
+import { incomeSchemaType } from '@/app/(realApp)/revenue/schemas/incomeSchema';
+import { spendingSchemaType } from '@/app/(realApp)/revenue/schemas/spendingSchema';
 import { paths } from '@/libs/paths';
+import axios from 'axios';
 
 const req = axios.create({
   baseURL: process.env.NEXT_PUBLIC_URL_FINREX_API,
@@ -55,7 +56,12 @@ export const handleGoogleLogin = () => {
   window.location.href = apiUrl;
 };
 
-export const addRevenueValues = async (data: revenueSchemaType): Promise<revenueSchemaType> => {
+export const addIncomeValues = async (data: incomeSchemaType) => {
+  const result = await req.post(paths.api.revenue, data);
+  return result.data;
+};
+
+export const addSpendingValues = async (data: spendingSchemaType) => {
   const result = await req.post(paths.api.revenue, data);
   return result.data;
 };

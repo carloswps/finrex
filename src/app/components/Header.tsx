@@ -1,14 +1,14 @@
 'use client';
 
-import Insights from '../(realApp)/revenue/components/icons/Insights.svg';
-import RevenueSpending from '../(realApp)/revenue/components/icons/RevenueSpending.svg';
-import Goals from '../(realApp)/revenue/components/icons/Goals.svg';
-import Profit from '../(realApp)/revenue/components/icons/Profit.svg';
-import Link from 'next/link';
 import { useProfilePic } from '@/app/contexts/ProfilePicContext';
-import { usePathname } from 'next/navigation';
 import { paths } from '@/libs/paths';
 import Image from 'next/image';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+import Goals from '../(realApp)/revenue/components/icons/Goals.svg';
+import Insights from '../(realApp)/revenue/components/icons/Insights.svg';
+import Profit from '../(realApp)/revenue/components/icons/Profit.svg';
+import RevenueSpending from '../(realApp)/revenue/components/icons/RevenueSpending.svg';
 
 const Header = () => {
   const { fileUrl } = useProfilePic();
@@ -31,11 +31,9 @@ const Header = () => {
     <header className="mb-9 bg-white">
       <div>
         <nav>
-          <ul
-            className={'m-auto flex w-fit cursor-pointer items-center gap-32 border-b border-[var(--green-theme)] py-8'}
-          >
+          <ul className={'m-auto flex w-fit cursor-pointer items-center gap-32 border-b border-(--green-theme) py-8'}>
             <li>
-              <Image src={'/darkLogo.png'} alt={'logo'} width={200} height={50} />
+              <Image src={'/darkLogo.png'} alt={'logo'} width={180} height={46} />
             </li>
             <li className={getLinkClass(paths.page.insights)}>
               <Insights className={'h-10 w-10'} />
@@ -55,7 +53,7 @@ const Header = () => {
             </li>
             <li>
               <Link href={'/profile'}>
-                <Image src={picSource} alt={'Your Profile Picture'} width={45} height={45} />
+                <img src={picSource} alt="Your Profile Picture" className="h-13 w-13 rounded-full object-cover" />
               </Link>
             </li>
           </ul>

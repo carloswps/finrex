@@ -1,9 +1,9 @@
 'use client';
 import UploadIcon from '@/app/(realApp)/goals/components/icons/UploadIcon.svg';
-import { ChangeEvent } from 'react';
-import axios from 'axios';
 import { useProfilePic } from '@/app/contexts/ProfilePicContext';
+import axios from 'axios';
 import Image from 'next/image';
+import { ChangeEvent } from 'react';
 
 const ProfilePic = () => {
   const { fileUrl, setFileUrl } = useProfilePic();
@@ -51,9 +51,15 @@ const ProfilePic = () => {
 
       <label htmlFor={uniqueId} className={'absolute inset-0 h-full w-full cursor-pointer'}>
         {fileUrl ? (
-          <Image src={fileUrl} alt={'Foto de Perfil'} className={'h-full w-full object-cover'} />
+          <Image
+            src={fileUrl}
+            alt={'Foto de Perfil'}
+            width={100}
+            height={100}
+            className={'w-fulll h-full rounded-full object-cover'}
+          />
         ) : (
-          <div className={'flex h-full w-full items-center justify-center bg-[var(--green-theme)]'}>
+          <div className={'flex h-full w-full items-center justify-center bg-(--green-theme)'}>
             <UploadIcon className={'relative bottom-1 h-12 w-12'} />
           </div>
         )}
