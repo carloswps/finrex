@@ -14,6 +14,10 @@ const api = {
   },
   revenue: '/revenue',
   profile: '/profile-data',
+  transaction: {
+    incomes: '/financial-transactions/incomes',
+    spendings: '/financial-transactions/spendings',
+  },
 };
 
 export const paths = { page, api };

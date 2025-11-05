@@ -1,9 +1,9 @@
-import { incomeItem } from '../types/incomeType';
+import { transactionsItens } from '../types/transactionsItens';
 
-export const incomeData: incomeItem[] = [
-  { name: 'mainIncome', label: 'Main Income' },
-  { name: 'freelance', label: 'Freelance' },
-  { name: 'benefits', label: 'Benefits' },
-  { name: 'businessProfit', label: 'Business Profit' },
-  { name: 'other', label: 'Other' },
+export const incomeData: transactionsItens[] = [
+  { name: 'MainIncome', label: 'Main Income' },
+  { name: 'Freelance', label: 'Freelance' },
+  { name: 'Benefits', label: 'Benefits' },
+  { name: 'BusinessProfit', label: 'Business Profit' },
+  { name: 'Other', label: 'Other' },
 ];

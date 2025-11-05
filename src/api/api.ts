@@ -8,20 +8,20 @@ import axios from 'axios';
 
 const req = axios.create({
   baseURL: process.env.NEXT_PUBLIC_URL_FINREX_API,
+  withCredentials: true,
 });
 
-req.interceptors.request.use(config => {
-  const token = localStorage.getItem('token');
-  if (token) {
-    config.headers.Authorization = `Bearer ${token}`;
-  }
-  return config;
-});
+// req.interceptors.request.use(config => {
+//   const token = localStorage.getItem('finrex.auth');
+//   if (token) {
+//     config.headers.Authorization = `Bearer ${token}`;
+//   }
+//   return config;
+// });
 
 req.interceptors.response.use(
   response => response,
   error => {
-    // Handle error responses
     const message =
       error.response?.data?.Message || error.response?.data?.error || error.message || 'Erro desconhecido';
     handleError(message);
@@ -44,25 +44,25 @@ export const registerUser = async (data: registerSchemaType): Promise<AuthRespon
 
 export const loginUser = async (data: loginSchemaType): Promise<AuthResponse> => {
   const result = await req.post<AuthResponse>(paths.api.auth.login, data);
-
   if (result.data.token) {
-    localStorage.setItem('token', result.data.token);
+    localStorage.setItem('finrex.auth', result.data.token);
   }
   return result.data;
 };
 
 export const handleGoogleLogin = () => {
+  localStorage.removeItem('finrex.auth');
   const apiUrl = `${process.env.NEXT_PUBLIC_URL_FINREX_API}/login-users/google-login`;
   window.location.href = apiUrl;
 };
 
 export const addIncomeValues = async (data: incomeSchemaType) => {
-  const result = await req.post(paths.api.revenue, data);
+  const result = await req.post('/financial-transactions/incomes', data);
   return result.data;
 };
 
 export const addSpendingValues = async (data: spendingSchemaType) => {
-  const result = await req.post(paths.api.revenue, data);
+  const result = await req.post('/financial-transactions/spendings', data);
   return result.data;
 };
 
