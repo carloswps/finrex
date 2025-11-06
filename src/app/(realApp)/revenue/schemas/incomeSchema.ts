@@ -6,5 +6,6 @@ export const incomeSchema = z.object({
   Benefits: z.number().gte(0),
   BusinessProfit: z.number().gte(0),
   Other: z.number().gte(0),
+  Date: z.string(),
 });
 export type incomeSchemaType = z.infer<typeof incomeSchema>;

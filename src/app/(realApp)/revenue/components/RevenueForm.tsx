@@ -13,6 +13,8 @@ type Props = {
 };
 
 const RevenueForm = ({ data, secondData }: Props) => {
+  const { reset } = useForm();
+
   const incomeForm = useForm<incomeSchemaType>({
     resolver: zodResolver(incomeSchema),
     defaultValues: {
@@ -40,30 +42,20 @@ const RevenueForm = ({ data, secondData }: Props) => {
 
   const handleFormsSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('handleFormsSubmit triggered');
 
-    console.log('Income form values:', incomeForm.getValues());
-    console.log('Spending form values:', spendingForm.getValues());
-
-    const incomeValid = await incomeForm.trigger();
-    const spendingValid = await spendingForm.trigger();
-
-    console.log('Validation results:', { incomeValid, spendingValid });
+    const currentDate = new Date().toISOString().split('T')[0];
+    const incomeValid = { ...incomeForm.getValues(), Date: currentDate };
+    const spendingValid = { ...spendingForm.getValues(), Date: currentDate };
 
     if (!incomeValid || !spendingValid) {
-      console.log('Validation failed. Aborting submission.');
-      console.log('Income form errors:', incomeForm.formState.errors);
-      console.log('Spending form errors:', spendingForm.formState.errors);
       return;
     }
 
     try {
-      console.log('Submitting data...');
-      await Promise.all([
-        addIncomeValues.mutateAsync(incomeForm.getValues()),
-        addSpendingValues.mutateAsync(spendingForm.getValues()),
-      ]);
+      await Promise.all([addIncomeValues.mutateAsync(incomeValid), addSpendingValues.mutateAsync(spendingValid)]);
       console.log('Submission successful!');
+      incomeForm.reset();
+      spendingForm.reset();
     } catch (err) {
       console.log('Submission error:', err);
     }

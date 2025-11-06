@@ -1,6 +1,7 @@
 'use client';
 import { useContext, useEffect, useRef } from 'react';
 
+import { GraphContext } from '@/app/(realApp)/insights/contexts/GraphContext';
 import {
   ArcElement,
   BarController,
@@ -18,7 +19,6 @@ import {
   Title,
   Tooltip,
 } from 'chart.js';
-import { GraphContext } from '@/app/(realApp)/insights/contexts/GraphContext';
 
 Chart.register(
   BarController,

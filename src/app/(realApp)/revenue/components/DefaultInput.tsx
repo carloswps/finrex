@@ -28,12 +28,14 @@ function DefaultInput<T extends FieldValues>({ ...props }: DefaultInputProps<T>)
           type="number"
           value={field.value ?? ''}
           className="input-no-spinner mb-4 w-full max-w-md rounded-md border border-[var(--green-theme)] p-3 pl-8 font-bold text-[var(--text-color)] outline-none"
-          onInput={e => {
-            e.currentTarget.value = e.currentTarget.value.replace(/[^0-9]/g, '');
-          }}
           onChange={e => {
             const val = e.target.value;
-            field.onChange(val === '' ? undefined : Number(val));
+            if (val === '') {
+              field.onChange(undefined);
+            } else {
+              const parsed = parseFloat(val.replace(',', '.'));
+              field.onChange(isNaN(parsed) ? undefined : parsed);
+            }
           }}
         />
         {fieldState.error && (

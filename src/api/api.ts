@@ -11,14 +11,6 @@ const req = axios.create({
   withCredentials: true,
 });
 
-// req.interceptors.request.use(config => {
-//   const token = localStorage.getItem('finrex.auth');
-//   if (token) {
-//     config.headers.Authorization = `Bearer ${token}`;
-//   }
-//   return config;
-// });
-
 req.interceptors.response.use(
   response => response,
   error => {
@@ -57,12 +49,12 @@ export const handleGoogleLogin = () => {
 };
 
 export const addIncomeValues = async (data: incomeSchemaType) => {
-  const result = await req.post('/financial-transactions/incomes', data);
+  const result = await req.post(paths.api.transaction.incomes, data);
   return result.data;
 };
 
 export const addSpendingValues = async (data: spendingSchemaType) => {
-  const result = await req.post('/financial-transactions/spendings', data);
+  const result = await req.post(paths.api.transaction.spendings, data);
   return result.data;
 };
 

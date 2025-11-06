@@ -6,6 +6,7 @@ export const spendingSchema = z.object({
   Groceries: z.number().gte(0),
   Utilities: z.number().gte(0),
   Entertainment: z.number().gte(0),
+  Date: z.string(),
 });
 
 export type spendingSchemaType = z.infer<typeof spendingSchema>;
