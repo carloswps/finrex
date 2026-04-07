@@ -1,30 +1,35 @@
-import { addIncomeValues, addSpendingValues, loginUser, registerUser } from '@/api/api';
+import {
+	addIncomeValues,
+	addSpendingValues,
+	loginUser,
+	registerUser,
+} from '@/api/api';
 import { useMutation } from '@tanstack/react-query';
 
 export const useAddRegister = ({ onSuccess }: { onSuccess: () => void }) => {
-  return useMutation({
-    mutationFn: registerUser,
-    onSuccess,
-  });
+	return useMutation({
+		mutationFn: registerUser,
+		onSuccess,
+	});
 };
 
 export const useLogin = ({ onSuccess }: { onSuccess: () => void }) => {
-  return useMutation({
-    mutationFn: loginUser,
-    onSuccess,
-  });
+	return useMutation({
+		mutationFn: loginUser,
+		onSuccess,
+	});
 };
 
 export const useIncomeValues = () => {
-  return useMutation({
-    mutationKey: ['income'],
-    mutationFn: addIncomeValues,
-  });
+	return useMutation({
+		mutationKey: ['income'],
+		mutationFn: addIncomeValues,
+	});
 };
 
 export const useSpendingValues = () => {
-  return useMutation({
-    mutationKey: ['spending'],
-    mutationFn: addSpendingValues,
-  });
+	return useMutation({
+		mutationKey: ['spending'],
+		mutationFn: addSpendingValues,
+	});
 };

@@ -5,13 +5,13 @@ import ErrorHandlerInitializer from '@/app/(auth)/login/components/ErrorHandlerI
 import ErrorAlert from '@/app/(auth)/login/components/ErrorAlert';
 
 const Page = () => {
-  return (
-    <ErrorProvider>
-      <ErrorHandlerInitializer />
-      <ErrorAlert />
-      <LoginForm />
-    </ErrorProvider>
-  );
+	return (
+		<ErrorProvider>
+			<ErrorHandlerInitializer />
+			<ErrorAlert />
+			<LoginForm />
+		</ErrorProvider>
+	);
 };
 
 export default Page;

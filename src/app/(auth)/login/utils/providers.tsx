@@ -7,12 +7,12 @@ import { ProfilePicProvider } from '@/app/contexts/ProfilePicContext';
 
 type Props = { children: ReactNode };
 export const Providers = ({ children }: Props) => {
-  return (
-    <ProfilePicProvider>
-      <QueryClientProvider client={queryClient}>
-        {children}
-        <ReactQueryDevtools initialIsOpen={false} />
-      </QueryClientProvider>
-    </ProfilePicProvider>
-  );
+	return (
+		<ProfilePicProvider>
+			<QueryClientProvider client={queryClient}>
+				{children}
+				<ReactQueryDevtools initialIsOpen={false} />
+			</QueryClientProvider>
+		</ProfilePicProvider>
+	);
 };

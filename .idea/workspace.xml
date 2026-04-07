@@ -5,10 +5,94 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1c27f75e-0b8a-4582-93d4-eef6baf0216e" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/biome.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.ai/mcp/mcp.json" beforeDir="false" afterPath="$PROJECT_DIR$/.ai/mcp/mcp.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.eslintrc.json" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/prettier.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/prettier.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.prettierrc" beforeDir="false" afterPath="$PROJECT_DIR$/.prettierrc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CLAUDE.md" beforeDir="false" afterPath="$PROJECT_DIR$/CLAUDE.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/next.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/postcss.config.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/postcss.config.mjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/api.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/api.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/services/errorHandler.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/services/errorHandler.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(auth)/login/components/Cubes.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(auth)/login/components/Cubes.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(auth)/login/components/ErrorAlert.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(auth)/login/components/ErrorAlert.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(auth)/login/components/ErrorHandlerInitializer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(auth)/login/components/ErrorHandlerInitializer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(auth)/login/components/FormAction.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(auth)/login/components/FormAction.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(auth)/login/components/HaveAccount.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(auth)/login/components/HaveAccount.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(auth)/login/components/LoginBtn.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(auth)/login/components/LoginBtn.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(auth)/login/components/LoginForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(auth)/login/components/LoginForm.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(auth)/login/components/LoginInputs.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(auth)/login/components/LoginInputs.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(auth)/login/components/LoginLoad.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(auth)/login/components/LoginLoad.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(auth)/login/components/barsLogin.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(auth)/login/components/barsLogin.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(auth)/login/components/linesLogin.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(auth)/login/components/linesLogin.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(auth)/login/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(auth)/login/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(auth)/login/schemas/loginSchema.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(auth)/login/schemas/loginSchema.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(auth)/login/utils/mutations.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(auth)/login/utils/mutations.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(auth)/login/utils/providers.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(auth)/login/utils/providers.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(realApp)/goals/components/AddNewGoal.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(realApp)/goals/components/AddNewGoal.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(realApp)/goals/components/EditGoal.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(realApp)/goals/components/EditGoal.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(realApp)/goals/components/ExcludeGoal.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(realApp)/goals/components/ExcludeGoal.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(realApp)/goals/components/FloatPercent.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(realApp)/goals/components/FloatPercent.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(realApp)/goals/components/GoalGraph.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(realApp)/goals/components/GoalGraph.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(realApp)/goals/components/GoalIcon.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(realApp)/goals/components/GoalIcon.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(realApp)/goals/components/GoalInfo.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(realApp)/goals/components/GoalInfo.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(realApp)/goals/components/Goals.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(realApp)/goals/components/Goals.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(realApp)/goals/hooks/usePersistedState.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(realApp)/goals/hooks/usePersistedState.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(realApp)/goals/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(realApp)/goals/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(realApp)/insights/components/Bar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(realApp)/insights/components/Bar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(realApp)/insights/components/Calendar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(realApp)/insights/components/Calendar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(realApp)/insights/components/CalendarLogicWrapper.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(realApp)/insights/components/CalendarLogicWrapper.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(realApp)/insights/components/CalendarShowBtn.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(realApp)/insights/components/CalendarShowBtn.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(realApp)/insights/components/FormDataContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(realApp)/insights/components/FormDataContainer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(realApp)/insights/components/FormDataGraph.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(realApp)/insights/components/FormDataGraph.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(realApp)/insights/components/GraphExhibition.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(realApp)/insights/components/GraphExhibition.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(realApp)/insights/components/LastMonth.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(realApp)/insights/components/LastMonth.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(realApp)/insights/components/RealSpendingGraph.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(realApp)/insights/components/RealSpendingGraph.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(realApp)/insights/contexts/AlertErrorContext.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(realApp)/insights/contexts/AlertErrorContext.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(realApp)/insights/contexts/CalendarContext.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(realApp)/insights/contexts/CalendarContext.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(realApp)/insights/contexts/GraphContext.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(realApp)/insights/contexts/GraphContext.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(realApp)/insights/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(realApp)/insights/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(realApp)/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(realApp)/layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(realApp)/profile/components/PersonalForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(realApp)/profile/components/PersonalForm.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(realApp)/profile/components/PersonalFormInput.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(realApp)/profile/components/PersonalFormInput.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(realApp)/profile/components/ProfilePic.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(realApp)/profile/components/ProfilePic.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(realApp)/profile/components/UsageGraph.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(realApp)/profile/components/UsageGraph.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(realApp)/profile/components/UsageTimeIcon.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(realApp)/profile/components/UsageTimeIcon.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(realApp)/profile/components/UserDatas.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(realApp)/profile/components/UserDatas.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(realApp)/profile/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(realApp)/profile/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(realApp)/profile/schemas/profileSchema.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(realApp)/profile/schemas/profileSchema.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(realApp)/profile/utils/mutations.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(realApp)/profile/utils/mutations.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(realApp)/revenue/components/DefaultInput.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(realApp)/revenue/components/DefaultInput.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(realApp)/revenue/components/Revenue.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(realApp)/revenue/components/Revenue.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(realApp)/revenue/components/RevenueForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(realApp)/revenue/components/RevenueForm.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(realApp)/revenue/data/incomeData.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(realApp)/revenue/data/incomeData.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(realApp)/revenue/data/spendingData.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(realApp)/revenue/data/spendingData.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(realApp)/revenue/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(realApp)/revenue/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(realApp)/revenue/schemas/incomeSchema.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(realApp)/revenue/schemas/incomeSchema.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(realApp)/revenue/schemas/revenueSchema.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(realApp)/revenue/schemas/revenueSchema.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(realApp)/revenue/schemas/spendingSchema.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(realApp)/revenue/schemas/spendingSchema.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(realApp)/revenue/types/transactionsItens.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(realApp)/revenue/types/transactionsItens.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/Header.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/Summary.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/Summary.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/TitleAndSubtitle.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/TitleAndSubtitle.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/contexts/ProfilePicContext.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/contexts/ProfilePicContext.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/globals.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/profit/ProfitPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/profit/ProfitPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/profit/components/GrowthIndicator.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/profit/components/GrowthIndicator.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/profit/components/ProfitGraph.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/profit/components/ProfitGraph.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/profit/components/SavingsTable.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/profit/components/SavingsTable.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/profit/components/TableRow.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/profit/components/TableRow.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/profit/components/TopEarnMonths.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/profit/components/TopEarnMonths.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/profit/utils/ResolveColorCss.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/profit/utils/ResolveColorCss.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/libs/paths.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/libs/paths.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/middleware.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/middleware.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/types/svg.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/svg.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,9 +137,6 @@
     <commands />
     <urls />
   </component>
-  <component name="OptimizeOnSaveOptions">
-    <option name="myRunOnSave" value="true" />
-  </component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="ProjectErrors" />
   </component>
@@ -96,9 +177,9 @@
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "prettierjs.PrettierConfiguration.Package": "/home/carlos/.asdf/installs/nodejs/20.19.0/lib/node_modules/prettier",
-    "settings.editor.selected.configurable": "watcher.settings",
+    "settings.editor.selected.configurable": "Settings.Biome",
     "to.speed.mode.migration.done": "true",
-    "ts.external.directory.path": "/snap/webstorm/541/plugins/javascript-plugin/jsLanguageServicesImpl/external",
+    "ts.external.directory.path": "/snap/webstorm/593/plugins/javascript-plugin/jsLanguageServicesImpl/external",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>

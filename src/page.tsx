@@ -4,12 +4,12 @@ import { ErrorProvider } from '@/app/(realApp)/insights/contexts/AlertErrorConte
 import ErrorHandlerInitializer from '@/app/(auth)/login/components/ErrorHandlerInitializer';
 
 const Page = () => {
-  return (
-    <ErrorProvider>
-      <ErrorHandlerInitializer />
-      <LoginForm />
-    </ErrorProvider>
-  );
+	return (
+		<ErrorProvider>
+			<ErrorHandlerInitializer />
+			<LoginForm />
+		</ErrorProvider>
+	);
 };
 
 export default Page;

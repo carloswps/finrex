@@ -6,14 +6,14 @@ import FullCalendar from '@fullcalendar/react';
 import dayGridPlugin from '@fullcalendar/daygrid';
 
 const Calendar = () => {
-  const ctx = useContext(CalendarContext);
+	const ctx = useContext(CalendarContext);
 
-  if (!ctx?.showCalendar) return null;
+	if (!ctx?.showCalendar) return null;
 
-  return (
-    <>
-      <style>
-        {`
+	return (
+		<>
+			<style>
+				{`
                     .fc .fc-button {
                         background-color: #A25BAE;
                         color: white;
@@ -49,13 +49,17 @@ const Calendar = () => {
                         color: #000; 
                     }
                 `}
-      </style>
+			</style>
 
-      <div className="absolute z-10 mt-2 h-auto w-96 rounded-lg border border-gray-200 bg-white p-4 shadow-xl">
-        <FullCalendar plugins={[dayGridPlugin]} initialView="dayGridMonth" titleFormat={() => ''} />
-      </div>
-    </>
-  );
+			<div className="absolute z-10 mt-2 h-auto w-96 rounded-lg border border-gray-200 bg-white p-4 shadow-xl">
+				<FullCalendar
+					plugins={[dayGridPlugin]}
+					initialView="dayGridMonth"
+					titleFormat={() => ''}
+				/>
+			</div>
+		</>
+	);
 };
 
 export default Calendar;

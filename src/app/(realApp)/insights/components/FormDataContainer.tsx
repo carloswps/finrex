@@ -6,24 +6,24 @@ import { CalendarProvider } from '@/app/(realApp)/insights/contexts/CalendarCont
 import CalendarLogicWrapper from '@/app/(realApp)/insights/components/CalendarLogicWrapper';
 
 type Props = {
-  graphSelection: boolean;
-  showCalendar?: boolean;
+	graphSelection: boolean;
+	showCalendar?: boolean;
 };
 
 const FormDataContainer = ({ graphSelection, showCalendar }: Props) => {
-  return (
-    <div className={'mt-10'}>
-      {showCalendar && (
-        <CalendarProvider>
-          <CalendarLogicWrapper />
-        </CalendarProvider>
-      )}
-      <GraphProvider>
-        <FormDataGraph />
-        {graphSelection && <GraphExhibition />}
-      </GraphProvider>
-    </div>
-  );
+	return (
+		<div className={'mt-10'}>
+			{showCalendar && (
+				<CalendarProvider>
+					<CalendarLogicWrapper />
+				</CalendarProvider>
+			)}
+			<GraphProvider>
+				<FormDataGraph />
+				{graphSelection && <GraphExhibition />}
+			</GraphProvider>
+		</div>
+	);
 };
 
 export default FormDataContainer;

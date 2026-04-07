@@ -39,7 +39,3 @@ Authentication is enforced by `src/middleware.ts`, which checks for a `finrex.au
 - SVG files are imported as React components via `@svgr/webpack` (type declarations in `src/types/svg.d.ts`).
 - The global `QueryClient` is a singleton at `src/app/(auth)/login/utils/queryClient.ts` and wrapped in `src/app/(auth)/login/utils/providers.tsx` alongside `ProfilePicContext`.
 - Token for auth is stored in `localStorage` as `finrex.auth` and also expected as a cookie by the middleware.
-
-### Prettier config (`.prettierrc`)
-
-Single quotes, semi-colons, 120 print width, 2-space tabs, `es5` trailing commas, `prettier-plugin-tailwindcss` for class sorting.
