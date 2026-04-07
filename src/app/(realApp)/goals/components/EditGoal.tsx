@@ -1,5 +1,5 @@
-import EditIcon from '@/app/(realApp)/goals/components/icons/EditIcon.svg';
 import React from 'react';
+import EditIcon from '@/app/(realApp)/goals/components/icons/EditIcon.svg';
 
 type Props = {
 	onClick: () => void;

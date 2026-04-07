@@ -1,9 +1,9 @@
 'use client';
-import UploadIcon from '@/app/(realApp)/goals/components/icons/UploadIcon.svg';
-import { useProfilePic } from '@/app/contexts/ProfilePicContext';
 import axios from 'axios';
 import Image from 'next/image';
-import { ChangeEvent } from 'react';
+import type { ChangeEvent } from 'react';
+import UploadIcon from '@/app/(realApp)/goals/components/icons/UploadIcon.svg';
+import { useProfilePic } from '@/app/contexts/ProfilePicContext';
 
 const ProfilePic = () => {
 	const { fileUrl, setFileUrl } = useProfilePic();

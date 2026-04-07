@@ -1,7 +1,7 @@
+import type { ChartData, ChartOptions } from 'chart.js';
 import FloatPercent from '@/app/(realApp)/goals/components/FloatPercent';
 import FormDataGraph from '@/app/(realApp)/insights/components/FormDataGraph';
 import { GraphProvider } from '@/app/(realApp)/insights/contexts/GraphContext';
-import { ChartData, ChartOptions } from 'chart.js';
 
 type Props = {
 	completePercent?: number;

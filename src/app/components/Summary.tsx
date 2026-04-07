@@ -1,6 +1,6 @@
 import EvenArrow from '@/app/(realApp)/insights/components/icons/EvenArrow.svg';
-import TripleUpArrow from '@/features/profit/components/icons/TripleUpArrow.svg';
 import DownArrow from '@/app/(realApp)/insights/components/icons/UpArrow.svg';
+import TripleUpArrow from '@/features/profit/components/icons/TripleUpArrow.svg';
 
 type Props = {
 	title?: string;

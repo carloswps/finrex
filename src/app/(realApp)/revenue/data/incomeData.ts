@@ -1,4 +1,4 @@
-import { transactionsItens } from '../types/transactionsItens';
+import type { transactionsItens } from '../types/transactionsItens';
 
 export const incomeData: transactionsItens[] = [
 	{ name: 'MainIncome', label: 'Main Income' },

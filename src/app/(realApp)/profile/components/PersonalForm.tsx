@@ -1,12 +1,12 @@
 'use client';
+import { zodResolver } from '@hookform/resolvers/zod';
+import { useForm } from 'react-hook-form';
+import PersonalFormInput from '@/app/(realApp)/profile/components/PersonalFormInput';
 import ProfilePic from '@/app/(realApp)/profile/components/ProfilePic';
 import UsageTimeIcon from '@/app/(realApp)/profile/components/UsageTimeIcon';
 import UserDatas from '@/app/(realApp)/profile/components/UserDatas';
-import PersonalFormInput from '@/app/(realApp)/profile/components/PersonalFormInput';
-import { useForm } from 'react-hook-form';
-import { zodResolver } from '@hookform/resolvers/zod';
 import {
-	ProfileFormValues,
+	type ProfileFormValues,
 	profileSchema,
 } from '@/app/(realApp)/profile/schemas/profileSchema';
 import { useProfileData } from '@/app/(realApp)/profile/utils/mutations';

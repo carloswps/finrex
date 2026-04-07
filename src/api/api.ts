@@ -1,13 +1,13 @@
+import axios from 'axios';
 import { handleError } from '@/api/services/errorHandler';
-import {
+import type {
 	loginSchemaType,
 	registerSchemaType,
 } from '@/app/(auth)/login/schemas/loginSchema';
-import { ProfileFormValues } from '@/app/(realApp)/profile/schemas/profileSchema';
-import { incomeSchemaType } from '@/app/(realApp)/revenue/schemas/incomeSchema';
-import { spendingSchemaType } from '@/app/(realApp)/revenue/schemas/spendingSchema';
+import type { ProfileFormValues } from '@/app/(realApp)/profile/schemas/profileSchema';
+import type { incomeSchemaType } from '@/app/(realApp)/revenue/schemas/incomeSchema';
+import type { spendingSchemaType } from '@/app/(realApp)/revenue/schemas/spendingSchema';
 import { paths } from '@/libs/paths';
-import axios from 'axios';
 
 const req = axios.create({
 	baseURL: process.env.NEXT_PUBLIC_URL_FINREX_API,

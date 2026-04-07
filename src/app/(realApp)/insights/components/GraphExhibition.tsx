@@ -1,11 +1,11 @@
 'use client';
-import BarGraph from './icons/BarGraph.svg';
-import PizzaGraph from './icons/PizzaGraph.svg';
 import { useContext } from 'react';
 import {
-	ChartStyle,
+	type ChartStyle,
 	GraphContext,
 } from '@/app/(realApp)/insights/contexts/GraphContext';
+import BarGraph from './icons/BarGraph.svg';
+import PizzaGraph from './icons/PizzaGraph.svg';
 
 const GraphExhibition = () => {
 	const ctx = useContext(GraphContext);

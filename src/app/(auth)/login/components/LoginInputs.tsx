@@ -1,6 +1,6 @@
-import { useController, UseControllerProps } from 'react-hook-form';
-import { loginSchemaType } from '@/app/(auth)/login/schemas/loginSchema';
 import { useState } from 'react';
+import { type UseControllerProps, useController } from 'react-hook-form';
+import type { loginSchemaType } from '@/app/(auth)/login/schemas/loginSchema';
 import HideIcon from './icons/HideIcon.svg';
 import ShowIcon from './icons/ShowIcon.svg';
 

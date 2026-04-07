@@ -1,9 +1,9 @@
 'use client';
 
 import { useContext } from 'react';
-import { CalendarContext } from '@/app/(realApp)/insights/contexts/CalendarContext';
-import CalendarShowBtn from '@/app/(realApp)/insights/components/CalendarShowBtn';
 import Calendar from '@/app/(realApp)/insights/components/Calendar';
+import CalendarShowBtn from '@/app/(realApp)/insights/components/CalendarShowBtn';
+import { CalendarContext } from '@/app/(realApp)/insights/contexts/CalendarContext';
 
 const CalendarLogicWrapper = () => {
 	const ctx = useContext(CalendarContext);

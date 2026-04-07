@@ -1,5 +1,5 @@
-import { useController, UseControllerProps } from 'react-hook-form';
-import { ProfileFormValues } from '@/app/(realApp)/profile/schemas/profileSchema';
+import { type UseControllerProps, useController } from 'react-hook-form';
+import type { ProfileFormValues } from '@/app/(realApp)/profile/schemas/profileSchema';
 
 type profileInputProps = UseControllerProps<ProfileFormValues> & {
 	placeholder: string;

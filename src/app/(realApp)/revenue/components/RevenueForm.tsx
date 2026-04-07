@@ -1,13 +1,16 @@
+import { zodResolver } from '@hookform/resolvers/zod';
+import { useForm } from 'react-hook-form';
 import {
 	useIncomeValues,
 	useSpendingValues,
 } from '@/app/(auth)/login/utils/mutations';
 import TitleAndSubtitle from '@/app/components/TitleAndSubtitle';
-import { zodResolver } from '@hookform/resolvers/zod';
-import { useForm } from 'react-hook-form';
-import { incomeSchema, incomeSchemaType } from '../schemas/incomeSchema';
-import { spendingSchema, spendingSchemaType } from '../schemas/spendingSchema';
-import { transactionsItens } from '../types/transactionsItens';
+import { incomeSchema, type incomeSchemaType } from '../schemas/incomeSchema';
+import {
+	spendingSchema,
+	type spendingSchemaType,
+} from '../schemas/spendingSchema';
+import type { transactionsItens } from '../types/transactionsItens';
 import DefaultInput from './DefaultInput';
 
 type Props = {

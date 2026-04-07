@@ -1,9 +1,9 @@
 'use client';
+import CalendarLogicWrapper from '@/app/(realApp)/insights/components/CalendarLogicWrapper';
 import FormDataGraph from '@/app/(realApp)/insights/components/FormDataGraph';
 import GraphExhibition from '@/app/(realApp)/insights/components/GraphExhibition';
-import { GraphProvider } from '@/app/(realApp)/insights/contexts/GraphContext';
 import { CalendarProvider } from '@/app/(realApp)/insights/contexts/CalendarContext';
-import CalendarLogicWrapper from '@/app/(realApp)/insights/components/CalendarLogicWrapper';
+import { GraphProvider } from '@/app/(realApp)/insights/contexts/GraphContext';
 
 type Props = {
 	graphSelection: boolean;

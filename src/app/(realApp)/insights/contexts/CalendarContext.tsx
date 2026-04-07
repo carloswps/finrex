@@ -1,5 +1,5 @@
 'use client';
-import { createContext, ReactNode, useState } from 'react';
+import { createContext, type ReactNode, useState } from 'react';
 
 type CalendarContextType = {
 	showCalendar: boolean;

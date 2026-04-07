@@ -1,5 +1,4 @@
 'use client';
-import { useEffect, useRef } from 'react';
 import {
 	CategoryScale,
 	Chart,
@@ -8,6 +7,7 @@ import {
 	LineElement,
 	PointElement,
 } from 'chart.js';
+import { useEffect, useRef } from 'react';
 
 Chart.register([
 	CategoryScale,

@@ -1,7 +1,7 @@
 import PersonalForm from '@/app/(realApp)/profile/components/PersonalForm';
 import UsageGraph from '@/app/(realApp)/profile/components/UsageGraph';
-import TitleAndSubtitle from '@/app/components/TitleAndSubtitle';
 import Summary from '@/app/components/Summary';
+import TitleAndSubtitle from '@/app/components/TitleAndSubtitle';
 
 const Page = () => {
 	return (

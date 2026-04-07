@@ -1,7 +1,7 @@
 'use client';
-import Goals from '@/app/(realApp)/goals/components/Goals';
+import { useEffect, useState } from 'react';
 import AddNewGoal from '@/app/(realApp)/goals/components/AddNewGoal';
-import { useState, useEffect } from 'react';
+import Goals from '@/app/(realApp)/goals/components/Goals';
 import TitleAndSubtitle from '@/app/components/TitleAndSubtitle';
 
 type GoalType = {

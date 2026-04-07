@@ -1,9 +1,9 @@
 'use client';
+import Image from 'next/image';
+import BarsLogin from '@/app/(auth)/login/components/barsLogin';
 import Cubes from '@/app/(auth)/login/components/Cubes';
 import LinesLogin from '@/app/(auth)/login/components/linesLogin';
-import BarsLogin from '@/app/(auth)/login/components/barsLogin';
 import FormAction from './FormAction';
-import Image from 'next/image';
 
 const LoginForm = () => {
 	return (

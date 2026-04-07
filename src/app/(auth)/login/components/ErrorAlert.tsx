@@ -1,5 +1,5 @@
-import { useAlertError } from '@/app/(realApp)/insights/contexts/AlertErrorContext';
 import { useEffect } from 'react';
+import { useAlertError } from '@/app/(realApp)/insights/contexts/AlertErrorContext';
 
 const ErrorAlert = ({ message }: { message?: string }) => {
 	const { error, setError } = useAlertError();

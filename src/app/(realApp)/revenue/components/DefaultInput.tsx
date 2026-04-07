@@ -1,7 +1,7 @@
 import {
-	FieldValues,
+	type FieldValues,
+	type UseControllerProps,
 	useController,
-	UseControllerProps,
 } from 'react-hook-form';
 import Edit from './icons/Edit.svg';
 import Money from './icons/Money.svg';

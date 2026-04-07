@@ -1,18 +1,20 @@
 import TripleUpArrow from '@/features/profit/components/icons/TripleUpArrow.svg';
+import { Typography } from '@mui/material';
 
 type Props = {
-	month: string;
-	percentage: number;
+  month: string;
+  percentage: number;
 };
 
 const GrowthIndicator = ({ month, percentage }: Props) => {
-	return (
-		<div className={'flex items-center gap-2'}>
-			<h2 className={'text-xl'}>{month}</h2>
-			<h4 className={'text-2xl font-bold'}>+{percentage}%</h4>
-			<TripleUpArrow className={'h-8 w-8 text-[var(--green-theme)]'} />
-		</div>
-	);
+  return (
+    <div className={'flex items-center gap-2'}>
+      <h2 className={'text-xl'}>{month}</h2>
+      <h4 className={'text-2xl font-bold'}>+{percentage}%</h4>
+      <TripleUpArrow className={'h-8 w-8 text-[var(--green-theme)]'} />
+      <Typography></Typography>
+    </div>
+  );
 };
 
 export default GrowthIndicator;

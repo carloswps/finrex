@@ -1,8 +1,8 @@
 'use client';
-import UploadIcon from '@/app/(realApp)/goals/components/icons/UploadIcon.svg';
-import { ChangeEvent, useState } from 'react';
 import axios from 'axios';
 import Image from 'next/image';
+import { type ChangeEvent, useState } from 'react';
+import UploadIcon from '@/app/(realApp)/goals/components/icons/UploadIcon.svg';
 
 type Props = {
 	goalId: number;

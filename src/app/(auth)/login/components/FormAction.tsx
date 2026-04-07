@@ -1,21 +1,21 @@
+import { zodResolver } from '@hookform/resolvers/zod';
+import { useRouter } from 'next/navigation';
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
-import {
-	loginSchema,
-	loginSchemaType,
-	registerSchema,
-	registerSchemaType,
-} from '../schemas/loginSchema';
-import { zodResolver } from '@hookform/resolvers/zod';
-import { LoginInputs } from './LoginInputs';
-import LoginBtn from './LoginBtn';
-import HaveAccount from './HaveAccount';
-import LoginLoad from './LoginLoad';
-import { useAddRegister, useLogin } from '@/app/(auth)/login/utils/mutations';
-import { useRouter } from 'next/navigation';
-import ErrorAlert from '@/app/(auth)/login/components/ErrorAlert';
 import { FcGoogle } from 'react-icons/fc';
 import { handleGoogleLogin } from '@/api/api';
+import ErrorAlert from '@/app/(auth)/login/components/ErrorAlert';
+import { useAddRegister, useLogin } from '@/app/(auth)/login/utils/mutations';
+import {
+	loginSchema,
+	type loginSchemaType,
+	registerSchema,
+	type registerSchemaType,
+} from '../schemas/loginSchema';
+import HaveAccount from './HaveAccount';
+import LoginBtn from './LoginBtn';
+import { LoginInputs } from './LoginInputs';
+import LoginLoad from './LoginLoad';
 
 type FormData = loginSchemaType | registerSchemaType;
 

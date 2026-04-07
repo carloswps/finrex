@@ -1,10 +1,11 @@
 'use client';
 
-import { useProfilePic } from '@/app/contexts/ProfilePicContext';
-import { paths } from '@/libs/paths';
+import { Box } from '@mui/system';
 import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { useProfilePic } from '@/app/contexts/ProfilePicContext';
+import { paths } from '@/libs/paths';
 import Goals from '../(realApp)/revenue/components/icons/Goals.svg';
 import Insights from '../(realApp)/revenue/components/icons/Insights.svg';
 import Profit from '../(realApp)/revenue/components/icons/Profit.svg';

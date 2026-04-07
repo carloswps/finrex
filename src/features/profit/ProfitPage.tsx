@@ -1,7 +1,7 @@
 import TitleAndSubtitle from '@/app/components/TitleAndSubtitle';
-import TopEarnMonths from '@/features/profit/components/TopEarnMonths';
 import ProfitGraph from '@/features/profit/components/ProfitGraph';
 import SavingsTable from '@/features/profit/components/SavingsTable';
+import TopEarnMonths from '@/features/profit/components/TopEarnMonths';
 
 const Page = () => {
 	return (

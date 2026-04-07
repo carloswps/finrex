@@ -1,5 +1,5 @@
-import CalendarArrow from '@/app/(realApp)/insights/components/icons/CalendarArrow.svg';
 import { useContext } from 'react';
+import CalendarArrow from '@/app/(realApp)/insights/components/icons/CalendarArrow.svg';
 import { CalendarContext } from '@/app/(realApp)/insights/contexts/CalendarContext';
 
 const CalendarShowBtn = () => {

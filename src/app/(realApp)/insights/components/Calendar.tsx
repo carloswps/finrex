@@ -1,9 +1,9 @@
 'use client';
 
+import dayGridPlugin from '@fullcalendar/daygrid';
+import FullCalendar from '@fullcalendar/react';
 import { useContext } from 'react';
 import { CalendarContext } from '@/app/(realApp)/insights/contexts/CalendarContext';
-import FullCalendar from '@fullcalendar/react';
-import dayGridPlugin from '@fullcalendar/daygrid';
 
 const Calendar = () => {
 	const ctx = useContext(CalendarContext);

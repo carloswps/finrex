@@ -1,10 +1,10 @@
+import { useMutation } from '@tanstack/react-query';
 import {
 	addIncomeValues,
 	addSpendingValues,
 	loginUser,
 	registerUser,
 } from '@/api/api';
-import { useMutation } from '@tanstack/react-query';
 
 export const useAddRegister = ({ onSuccess }: { onSuccess: () => void }) => {
 	return useMutation({
