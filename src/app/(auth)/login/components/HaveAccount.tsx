@@ -1,18 +1,27 @@
+import { Typography } from '@mui/material';
+
 type Props = {
 	hasLoggedIn: boolean;
 	toggleLogged: () => void;
 };
 const HaveAccount = ({ hasLoggedIn, toggleLogged }: Props) => {
 	return (
-		<p
+		<Typography
 			onClick={toggleLogged}
-			className={'cursor-pointer text-[0.77rem] font-bold'}
+			variant={'caption'}
+			fontWeight={'bold'}
+			sx={{ cursor: 'pointer' }}
 		>
 			{!hasLoggedIn ? `Don't have an account?` : 'Already have an account?'}
-			<span className={'ml-1 text-[var(--purple-theme)]'}>
-				{!hasLoggedIn ? `Sign Up` : 'Login'}
-			</span>
-		</p>
+			<Typography
+				component={'span' as const}
+				variant={'caption'}
+				fontWeight={'bold'}
+				sx={{ cursor: 'pointer', ml: 0.5, color: 'purple.main' }}
+			>
+				{!hasLoggedIn ? 'Sign up' : 'Login'}
+			</Typography>
+		</Typography>
 	);
 };
 

@@ -1,3 +1,5 @@
+import { Button, Typography } from '@mui/material';
+
 type Props = {
 	hasLoggedIn: boolean;
 	disabled?: boolean;
@@ -5,17 +7,31 @@ type Props = {
 
 const LoginBtn = ({ hasLoggedIn, disabled }: Props) => {
 	return (
-		<button
-			type={'submit'}
+		<Button
+			type="submit"
 			disabled={disabled}
-			className={`p-4 font-bold text-[var(--text-color)] ${
-				disabled
-					? 'cursor-not-allowed bg-gradient-to-r from-[var(--green-end)] via-[var(--btngreen-middle)] to-[var(--btngreen-end)] opacity-70'
-					: 'cursor-pointer bg-gradient-to-r from-[var(--green-end)] via-[var(--btngreen-middle)] to-[var(--btngreen-end)]'
-			} w-1/2 rounded-md text-xl`}
+			fullWidth
+			sx={{
+				background: 'linear-gradient(to right,#5dbc75, #87d9a0, #b2ecc0)',
+				color: 'text.primary',
+				fontWeight: 'bold',
+				fontSize: '1.25rem',
+				borderRadius: 2,
+				'&:hover': {
+					opacity: 0.9,
+					background: 'linear-gradient(to right,#5dbc75, #87d9a0, #b2ecc0)',
+				},
+				'&.Mui-disabled': {
+					opacity: 0.7,
+					background: 'linear-gradient(to right,#5dbc75, #87d9a0, #b2ecc0)',
+					color: 'text.primary',
+				},
+			}}
 		>
-			{!hasLoggedIn ? 'Login' : 'Sign up'}
-		</button>
+			<Typography color={'textPrimary'} variant={'button'}>
+				{!hasLoggedIn ? 'Login' : 'Sign up'}
+			</Typography>
+		</Button>
 	);
 };
 

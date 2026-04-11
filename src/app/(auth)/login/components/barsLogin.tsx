@@ -1,4 +1,5 @@
 const BarsLogin = () => {
+	const teste = 0;
 	return (
 		<div
 			className={

@@ -1,3 +1,4 @@
+import { Alert, Box } from '@mui/material';
 import { useEffect } from 'react';
 import { useAlertError } from '@/app/(realApp)/insights/contexts/AlertErrorContext';
 
@@ -15,14 +16,15 @@ const ErrorAlert = ({ message }: { message?: string }) => {
 	if (!message) return null;
 
 	return (
-		<div
-			className={
-				'absolute top-100 left-160 h-12 w-auto min-w-[200px] bg-[var(--red-theme)]' +
-				' z-40 flex items-center justify-center rounded-md border px-4 py-2 text-center text-nowrap'
-			}
-		>
-			{message}
-		</div>
+		<Box sx={{ position: 'absolute', top: 400, left: 640, zIndex: 40 }}>
+			<Alert
+				severity={'error'}
+				variant={'filled'}
+				sx={{ whiteSpace: 'nowrap' }}
+			>
+				{message}
+			</Alert>
+		</Box>
 	);
 };
 

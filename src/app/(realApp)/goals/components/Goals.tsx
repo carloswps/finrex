@@ -6,6 +6,7 @@ import GoalGraph from '@/app/(realApp)/goals/components/GoalGraph';
 import GoalIcon from '@/app/(realApp)/goals/components/GoalIcon';
 import GoalInfo from '@/app/(realApp)/goals/components/GoalInfo';
 import { usePersistedState } from '@/app/(realApp)/goals/hooks/usePersistedState';
+import { Box, Card, TextField, Typography } from '@mui/material';
 
 type Props = {
 	goalId: number;
@@ -70,35 +71,55 @@ const Goals = ({ goalId, onExclude, goalName }: Props) => {
 	}, [isEditing]);
 
 	return (
-		<div
-			className={
-				'mb-8 flex h-108 w-64 flex-col rounded-md border-2 border-[var(--green-theme)] px-5 py-6'
-			}
+		<Card
 			ref={ref}
+			variant="outlined"
+			sx={{
+				mb: 4,
+				width: 256,
+				height: 432,
+				display: 'flex',
+				flexDirection: 'column',
+				borderColor: 'primary.main',
+				borderWidth: 2,
+				px: 2.5,
+				py: 3,
+			}}
 		>
-			<div className={'relative flex items-center gap-4'}>
+			<Box
+				sx={{
+					position: 'relative',
+					display: 'flex',
+					alignItems: 'center',
+					gap: 2,
+				}}
+			>
 				<GoalIcon goalId={goalId} />
 				{isEditing ? (
-					<input
-						type="text"
-						maxLength={8}
+					<TextField
+						variant="standard"
 						value={goalNameState}
 						onChange={(e) => setGoalNameState(e.target.value)}
 						autoFocus
-						className="bg-transparent text-xl font-bold text-[var(--text-color)] outline-none"
+						inputProps={{ maxLength: 8 }}
+						sx={{
+							'& input': {
+								fontSize: '1.25rem',
+								fontWeight: 'bold',
+								color: 'text.primary',
+							},
+						}}
 					/>
 				) : (
-					<>
-						<h3 className="text-xl font-bold text-[var(--text-color)]">
-							{goalNameState}
-						</h3>
-					</>
+					<Typography variant="h6" color="text.primary" fontWeight="bold">
+						{goalNameState}
+					</Typography>
 				)}
-				<div className={'absolute top-1 right-3 mb-4 ml-2'}>
+				<Box sx={{ position: 'absolute', top: 4, right: 12 }}>
 					{isEditing && <ExcludeGoal onClick={() => onExclude(goalId)} />}
 					<EditGoal onClick={() => setIsEditing(true)} />
-				</div>
-			</div>
+				</Box>
+			</Box>
 			<GoalGraph
 				completePercent={completePercent}
 				remainingPercent={remainingPercent}
@@ -114,8 +135,7 @@ const Goals = ({ goalId, onExclude, goalName }: Props) => {
 				savedPrice={savedPrice}
 				setSavedPrice={setSavedPrice}
 			/>
-		</div>
+		</Card>
 	);
 };
-
 export default Goals;

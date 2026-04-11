@@ -1,20 +1,35 @@
+import { Box, CircularProgress, Typography } from '@mui/material';
+
 type Props = {
 	label: string;
 };
 const LoginLoad = ({ label }: Props) => {
 	return (
-		<div
-			className={
-				'fixed inset-0 z-50 flex items-center justify-center bg-white/80'
-			}
+		<Box
+			sx={{
+				position: 'fixed',
+				inset: 0,
+				zIndex: 50,
+				display: 'flex',
+				alignItems: 'center',
+				justifyContent: 'center',
+				bgcolor: 'rgba(255,255,255,0.8)',
+			}}
 		>
-			<div>
-				<div className="flex flex-col items-center gap-4">
-					<div className="h-12 w-12 animate-spin rounded-full border-6 border-dotted border-[var(--green-theme)] border-t-transparent" />
-					<p className="text-sm text-[var(--green-theme)]">{label}</p>
-				</div>
-			</div>
-		</div>
+			<Box
+				sx={{
+					display: 'flex',
+					flexDirection: 'column',
+					alignItems: 'center',
+					gap: 2,
+				}}
+			>
+				<CircularProgress sx={{ color: 'primary.main' }} size={48} />
+				<Typography variant={'caption'} sx={{ color: 'textSecondary' }}>
+					{label}
+				</Typography>
+			</Box>
+		</Box>
 	);
 };
 
