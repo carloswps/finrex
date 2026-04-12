@@ -1,7 +1,7 @@
 'use client';
-import ErrorHandlerInitializer from '@/app/(auth)/login/components/ErrorHandlerInitializer';
-import LoginForm from '@/app/(auth)/login/components/LoginForm';
-import { ErrorProvider } from '@/app/(realApp)/insights/contexts/AlertErrorContext';
+import ErrorHandlerInitializer from '@/features/auth/components/ErrorHandlerInitializer';
+import LoginForm from '@/features/auth/components/LoginForm';
+import { ErrorProvider } from '@/features/insights/contexts/AlertErrorContext';
 
 const Page = () => {
 	return (

@@ -1,4 +1,4 @@
-import TitleAndSubtitle from '@/app/components/TitleAndSubtitle';
+import TitleAndSubtitle from '@/shared/components/TitleAndSubtitle';
 import ProfitGraph from '@/features/profit/components/ProfitGraph';
 import SavingsTable from '@/features/profit/components/SavingsTable';
 import TopEarnMonths from '@/features/profit/components/TopEarnMonths';

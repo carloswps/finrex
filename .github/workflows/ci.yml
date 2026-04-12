@@ -21,7 +21,7 @@ jobs:
           cache: npm
 
       - run: npm ci
-      - run: npm run lint
+      - run: npm run biome:check
       - run: npm tsx --noEmit
       - run: npm run build
         env:

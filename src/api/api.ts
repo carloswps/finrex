@@ -3,10 +3,10 @@ import { handleError } from '@/api/services/errorHandler';
 import type {
 	loginSchemaType,
 	registerSchemaType,
-} from '@/app/(auth)/login/schemas/loginSchema';
-import type { ProfileFormValues } from '@/app/(realApp)/profile/schemas/profileSchema';
-import type { incomeSchemaType } from '@/app/(realApp)/revenue/schemas/incomeSchema';
-import type { spendingSchemaType } from '@/app/(realApp)/revenue/schemas/spendingSchema';
+} from '@/features/auth/schemas/loginSchema';
+import type { ProfileFormValues } from '@/features/profile/schemas/profileSchema';
+import type { incomeSchemaType } from '@/features/revenue/schemas/incomeSchema';
+import type { spendingSchemaType } from '@/features/revenue/schemas/spendingSchema';
 import { paths } from '@/libs/paths';
 
 const req = axios.create({
