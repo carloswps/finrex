@@ -1,5 +1,6 @@
 'use client';
-import BookMarkIcon from '@/app/(realApp)/goals/components/icons/BookMarkIcon.svg';
+import { Bookmark } from '@mui/icons-material';
+import { Box, Card, Typography } from '@mui/material';
 
 type Props = {
 	onAddGoal: () => void;
@@ -7,19 +8,43 @@ type Props = {
 
 const AddNewGoal = ({ onAddGoal }: Props) => {
 	return (
-		<div
-			className={
-				'mb-8 flex h-108 w-64 flex-col items-center justify-center rounded-md border-2 border-[var(--green-theme)] px-5 py-6'
-			}
+		<Card
+			variant={'outlined'}
+			sx={{
+				mb: 4,
+				width: 256,
+				height: 432,
+				display: 'flex',
+				flexDirection: 'column',
+				alignItems: 'center',
+				justifyContent: 'center',
+				borderColor: 'primary.main',
+				borderWidth: 2,
+				cursor: 'pointer',
+				'&:hover': {
+					borderColor: 'primary.main',
+					borderWidth: 2,
+				},
+			}}
 		>
-			<div
-				className={'mb-9 rounded-full bg-[var(--green-theme)]/40 p-7'}
+			<Box
 				onClick={onAddGoal}
+				sx={{
+					mb: 4.5,
+					borderRadius: '50%',
+					border: '2px dashed var(--lines-color)',
+					bgcolor: 'rgba(93,188,117,0.4)',
+					p: 3.5,
+					cursor: 'pointer',
+					display: 'flex',
+				}}
 			>
-				<BookMarkIcon className={'h-16 w-16'} />
-			</div>
-			<h2 className={'text-2xl text-[var(--green-theme)]'}>Add new goal</h2>
-		</div>
+				<Bookmark style={{ width: 64, height: 64 }} />
+				<Typography variant="h6" color="text.primary" fontWeight="bold">
+					Add New Goal
+				</Typography>
+			</Box>
+		</Card>
 	);
 };
 

@@ -1,17 +1,12 @@
-import { zodResolver } from '@hookform/resolvers/zod';
-import { useForm } from 'react-hook-form';
-import {
-	useIncomeValues,
-	useSpendingValues,
-} from '@/app/(auth)/login/utils/mutations';
+import {zodResolver} from '@hookform/resolvers/zod';
+import {Box} from '@mui/material';
+import {useForm} from 'react-hook-form';
+import {useIncomeValues, useSpendingValues,} from '@/app/(auth)/login/utils/mutations';
+import DefaultInput from '@/app/(realApp)/revenue/components/DefaultInput';
 import TitleAndSubtitle from '@/app/components/TitleAndSubtitle';
-import { incomeSchema, type incomeSchemaType } from '../schemas/incomeSchema';
-import {
-	spendingSchema,
-	type spendingSchemaType,
-} from '../schemas/spendingSchema';
-import type { transactionsItens } from '../types/transactionsItens';
-import DefaultInput from './DefaultInput';
+import {incomeSchema, type incomeSchemaType} from '../schemas/incomeSchema';
+import {spendingSchema, type spendingSchemaType,} from '../schemas/spendingSchema';
+import type {transactionsItens} from '../types/transactionsItens';
 
 type Props = {
 	data: transactionsItens[];
@@ -19,8 +14,6 @@ type Props = {
 };
 
 const RevenueForm = ({ data, secondData }: Props) => {
-	const { reset } = useForm();
-
 	const incomeForm = useForm<incomeSchemaType>({
 		resolver: zodResolver(incomeSchema),
 		defaultValues: {
@@ -71,40 +64,43 @@ const RevenueForm = ({ data, secondData }: Props) => {
 	};
 
 	return (
-		<form onSubmit={handleFormsSubmit}>
-			<div className="grid grid-cols-2">
-				<div className="mr-22 border-r border-[var(--lines-color)]">
-					<TitleAndSubtitle title="Monthly Income" subTitle="Log your income" />
+		<Box component="form" onSubmit={handleFormsSubmit}>
+			<Box
+				sx={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: 2 }}
+			>
+				<Box>
+					<TitleAndSubtitle
+						title={'Monthly Income'}
+						subTitle={'Log your income'}
+					/>
 					{data.map((input) => (
 						<DefaultInput
 							key={input.name}
 							name={input.name as keyof incomeSchemaType}
-							control={incomeForm.control}
 							label={input.label}
+							control={incomeForm.control}
 							inputIcon
 						/>
 					))}
-				</div>
-
-				<div className="pl-6">
+				</Box>
+				<Box sx={{ pl: 3 }}>
 					<TitleAndSubtitle
-						title="Monthly Spending"
-						subTitle="Record your expenses"
+						title={'Monthly Spending'}
+						subTitle={'Record your expenses'}
 					/>
 					{secondData.map((input) => (
 						<DefaultInput
 							key={input.name}
-							name={input.name as keyof spendingSchemaType}
-							control={spendingForm.control}
+							name={input.name as keyof incomeSchemaType}
 							label={input.label}
+							control={incomeForm.control}
 							inputIcon
 						/>
 					))}
-				</div>
-			</div>
-
-			<input type="submit" className="hidden" />
-		</form>
+				</Box>
+			</Box>
+			<input type="submit" style={{ display: 'none' }} />
+		</Box>
 	);
 };
 

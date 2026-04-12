@@ -1,4 +1,5 @@
 'use client';
+import { Box, Card, TextField, Typography } from '@mui/material';
 import { useEffect, useRef, useState } from 'react';
 import EditGoal from '@/app/(realApp)/goals/components/EditGoal';
 import ExcludeGoal from '@/app/(realApp)/goals/components/ExcludeGoal';
@@ -6,7 +7,6 @@ import GoalGraph from '@/app/(realApp)/goals/components/GoalGraph';
 import GoalIcon from '@/app/(realApp)/goals/components/GoalIcon';
 import GoalInfo from '@/app/(realApp)/goals/components/GoalInfo';
 import { usePersistedState } from '@/app/(realApp)/goals/hooks/usePersistedState';
-import { Box, Card, TextField, Typography } from '@mui/material';
 
 type Props = {
 	goalId: number;
@@ -101,7 +101,6 @@ const Goals = ({ goalId, onExclude, goalName }: Props) => {
 						value={goalNameState}
 						onChange={(e) => setGoalNameState(e.target.value)}
 						autoFocus
-						inputProps={{ maxLength: 8 }}
 						sx={{
 							'& input': {
 								fontSize: '1.25rem',

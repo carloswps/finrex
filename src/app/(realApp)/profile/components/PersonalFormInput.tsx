@@ -1,4 +1,5 @@
-import { type UseControllerProps, useController } from 'react-hook-form';
+import { TextField } from '@mui/material';
+import { useController, type UseControllerProps } from 'react-hook-form';
 import type { ProfileFormValues } from '@/app/(realApp)/profile/schemas/profileSchema';
 
 type profileInputProps = UseControllerProps<ProfileFormValues> & {
@@ -19,22 +20,41 @@ const PersonalFormInput = (props: profileInputProps) => {
 
 		if (isNumeric) {
 			const numValue = parseFloat(value);
-			value = isNaN(numValue) ? null : numValue;
+			value = Number.isNaN(numValue) ? null : numValue;
 		}
 
 		field.onChange(value);
 	};
 
 	return (
-		<input
+		<TextField
 			onChange={handleChange}
 			onBlur={field.onBlur}
 			name={field.name}
-			ref={field.ref}
+			inputRef={field.ref}
 			value={field.value ?? ''}
 			type={isNumeric ? 'number' : 'text'}
-			className={`input-no-spinner mb-3.5 w-[80%] max-w-lg rounded-md border p-2.5 font-bold text-[var(--text-color)] placeholder-[var(--desactive-color)] outline-none ${fieldState.invalid ? 'border-[var(--red-theme)]' : 'border-[var(--green-theme)]'} `}
 			placeholder={props.placeholder}
+			error={fieldState.invalid}
+			size="small"
+			sx={{
+				mb: 1.75,
+				width: '80%',
+				maxWidth: 'lg',
+				'& .MuiOutlinedInput-root fieldset': {
+					borderColor: fieldState.invalid ? 'error.main' : 'primary.main',
+				},
+				'& input': { fontWeight: 'bold', color: 'text.primary' },
+				'& input::placeholder': { color: 'text.disabled', opacity: 1 },
+				'& input[type=number]': {
+					MozAppearance: 'textfield',
+				},
+				'& input[type=number]::-webkit-outer-spin-button, & input[type=number]::-webkit-inner-spin-button':
+					{
+						WebkitAppearance: 'none',
+						margin: 0,
+					},
+			}}
 		/>
 	);
 };

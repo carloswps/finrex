@@ -1,3 +1,4 @@
+import { IconButton } from '@mui/material';
 import ExcludeIcon from '@/app/(realApp)/goals/components/icons/ExcludeIcon.svg';
 
 type Props = {
@@ -6,9 +7,9 @@ type Props = {
 
 const ExcludeGoal = ({ onClick }: Props) => {
 	return (
-		<button onClick={onClick}>
+		<IconButton onClick={onClick} size="small">
 			<ExcludeIcon />
-		</button>
+		</IconButton>
 	);
 };
 

@@ -8,9 +8,9 @@ export function middleware(req: NextRequest) {
 		return NextResponse.redirect(new URL('/goals', req.url));
 	}
 
-	if (!token && pathname !== '/login') {
+	/*if (!token && pathname !== '/login') {
 		return NextResponse.redirect(new URL('/login', req.url));
-	}
+	}*/
 
 	return NextResponse.next();
 }

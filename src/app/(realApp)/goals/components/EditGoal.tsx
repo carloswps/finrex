@@ -1,5 +1,5 @@
-import React from 'react';
-import EditIcon from '@/app/(realApp)/goals/components/icons/EditIcon.svg';
+import { Edit } from '@mui/icons-material';
+import { IconButton } from '@mui/material';
 
 type Props = {
 	onClick: () => void;
@@ -7,9 +7,9 @@ type Props = {
 
 const EditGoal = ({ onClick }: Props) => {
 	return (
-		<button onClick={onClick}>
-			<EditIcon />
-		</button>
+		<IconButton onClick={onClick} size="small">
+			<Edit />
+		</IconButton>
 	);
 };
 

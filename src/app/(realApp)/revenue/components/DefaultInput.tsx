@@ -1,10 +1,10 @@
+import { Edit, Money } from '@mui/icons-material';
+import { Box, InputAdornment, TextField, Typography } from '@mui/material';
 import {
 	type FieldValues,
-	type UseControllerProps,
 	useController,
+	type UseControllerProps,
 } from 'react-hook-form';
-import Edit from './icons/Edit.svg';
-import Money from './icons/Money.svg';
 
 type DefaultInputProps<T extends FieldValues> = UseControllerProps<T> & {
 	label: string;
@@ -19,44 +19,76 @@ function DefaultInput<T extends FieldValues>({
 	const { field, fieldState } = useController(props);
 
 	return (
-		<div className="flex max-h-[94px] flex-col">
-			<label className="text-lg font-bold text-[var(--text-color)]">
-				<span className="flex items-center gap-2">
-					{props.label}
-					{props.labelIcon && <Edit className="h-4 w-4" />}
-				</span>
-				{props.legend && (
-					<p className="-mt-1 text-[12px] font-light text-[var(--lines-color)]">
-						{props.legend}
-					</p>
-				)}
-			</label>
+		<Box sx={{ display: 'flex', flexDirection: 'column', maxHeight: 94 }}>
+			<Typography
+				component="label"
+				sx={{
+					fontSize: '1.125rem',
+					fontWeight: 'bold',
+					color: 'text.primary',
+					display: 'flex',
+					alignItems: 'center',
+					gap: 1,
+				}}
+			>
+				{props.label}
+				{props.labelIcon && <Edit style={{ width: 16, height: 16 }} />}
+			</Typography>
+			{props.legend && (
+				<Typography
+					variant="caption"
+					sx={{ mt: -0.5, fontWeight: 300, color: 'text.secondary' }}
+				>
+					{props.legend}
+				</Typography>
+			)}
+			<TextField
+				type="number"
+				value={field.value ?? ''}
+				error={!!fieldState.error}
+				helperText={fieldState.error?.message}
+				onChange={(e) => {
+					const val = e.target.value;
+					if (val === '') {
+						field.onChange(undefined);
+					} else {
+						const parsed = parseFloat(val.replace(',', '.'));
 
-			<div className="relative flex items-center">
-				{props.inputIcon && (
-					<Money className="absolute bottom-[30px] ml-2 h-5 w-5 text-[var(--desactive-color)]" />
-				)}
-				<input
-					type="number"
-					value={field.value ?? ''}
-					className="input-no-spinner mb-4 w-full max-w-md rounded-md border border-[var(--green-theme)] p-3 pl-8 font-bold text-[var(--text-color)] outline-none"
-					onChange={(e) => {
-						const val = e.target.value;
-						if (val === '') {
-							field.onChange(undefined);
-						} else {
-							const parsed = parseFloat(val.replace(',', '.'));
-							field.onChange(isNaN(parsed) ? undefined : parsed);
-						}
-					}}
-				/>
-				{fieldState.error && (
-					<p className="-mt-6 ml-2 font-semibold text-[var(--text-color)]">
-						{fieldState.error.message}
-					</p>
-				)}
-			</div>
-		</div>
+						field.onChange(Number.isNaN(parsed) ? undefined : parsed);
+					}
+				}}
+				slotProps={{
+					input: {
+						startAdornment: props.inputIcon ? (
+							<InputAdornment position="start">
+								<Box
+									sx={{
+										color: 'text.disabled',
+										display: 'flex',
+									}}
+								>
+									<Money style={{ width: 20, height: 20 }} />
+								</Box>
+							</InputAdornment>
+						) : undefined,
+					},
+				}}
+				sx={{
+					mb: 2,
+					maxWidth: 'md',
+					'& .MuiOutlinedInput-rootfieldset': { borderColor: 'primary.main' },
+					'& input': { fontWeight: 'bold', color: 'text.primary' },
+					'& input[type=number]': {
+						MozAppearance: 'textfield',
+					},
+					'&input[type=number]::-webkit-outer-spin-button, &input[type=number]::-webkit-inner-spin-button':
+						{
+							WebkitAppearance: 'none',
+							margin: 0,
+						},
+				}}
+			/>
+		</Box>
 	);
 }
 
