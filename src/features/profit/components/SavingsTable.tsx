@@ -1,49 +1,50 @@
-import TableRow from '@/features/profit/components/TableRow';
+import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow } from '@mui/material';
+import ProfitTableRow from '@/features/profit/components/ProfitTableRow';
+
+const cellSx = { color: 'primary.main', fontWeight: 600 };
 
 const SavingsTable = () => {
 	return (
-		<table
-			className={
-				'mb-12 w-11/12 border-separate border-spacing-0 text-center text-lg'
-			}
-		>
-			<thead>
-				<tr className={'bg-[var(--desactive-color)] text-[var(--green-theme)]'}>
-					<th className={'rounded-tl-md p-3'}>Month</th>
-					<th className={'p-3'}>Saved ($)</th>
-					<th className={'p-3'}>Saved (%)</th>
-					<th className={'p-3'}>Previous Spending ($)</th>
-					<th className={'p-3'}>Current Spending ($)</th>
-					<th className={'rounded-tr-md p-3'}>3-Month Avg Spending ($)</th>
-				</tr>
-			</thead>
-			<tbody>
-				<TableRow
-					month={'April'}
-					savedValue={200}
-					savedPercentage={25}
-					previousSpending={800}
-					currentSpending={600}
-					color={'#4DA1D8'}
-				/>
-				<TableRow
-					month={'June'}
-					savedValue={100}
-					savedPercentage={8}
-					previousSpending={1200}
-					currentSpending={1100}
-					color={'var(--pink-graph)'}
-				/>
-				<TableRow
-					month={'October'}
-					savedValue={250}
-					savedPercentage={26}
-					previousSpending={950}
-					currentSpending={700}
-					color={'var(--orange-graph)'}
-				/>
-			</tbody>
-		</table>
+		<TableContainer sx={{ mb: 6, width: '91.666667%' }}>
+			<Table sx={{ borderCollapse: 'separate', borderSpacing: 0, textAlign: 'center' }}>
+				<TableHead>
+					<TableRow sx={{ bgcolor: 'text.disabled' }}>
+						<TableCell sx={cellSx}>Month</TableCell>
+						<TableCell sx={cellSx}>Saved ($)</TableCell>
+						<TableCell sx={cellSx}>Saved (%)</TableCell>
+						<TableCell sx={cellSx}>Previous Spending ($)</TableCell>
+						<TableCell sx={cellSx}>Current Spending ($)</TableCell>
+						<TableCell sx={cellSx}>3-Month Avg Spending ($)</TableCell>
+					</TableRow>
+				</TableHead>
+				<TableBody>
+					<ProfitTableRow
+						month={'April'}
+						savedValue={200}
+						savedPercentage={25}
+						previousSpending={800}
+						currentSpending={600}
+						color={'#4DA1D8'}
+					/>
+					<ProfitTableRow
+						month={'June'}
+						savedValue={100}
+						savedPercentage={8}
+						previousSpending={1200}
+						currentSpending={1100}
+						color={'#e879a0'}
+					/>
+					<ProfitTableRow
+						month={'October'}
+						savedValue={250}
+						savedPercentage={26}
+						previousSpending={950}
+						currentSpending={700}
+						color={'#f7a14d'}
+					/>
+				</TableBody>
+			</Table>
+		</TableContainer>
 	);
 };
 
