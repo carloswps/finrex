@@ -1,4 +1,5 @@
 'use client';
+import { Stack, Box } from '@mui/material';
 import { useContext } from 'react';
 import {
 	type ChartStyle,
@@ -15,16 +16,32 @@ const GraphExhibition = () => {
 	};
 
 	return (
-		<div className={'mt-8 flex gap-10'}>
-			<BarGraph
+		<Stack direction="row" sx={{ mt: 4, gap: 10 }}>
+			<Box
 				onClick={() => changeGraph('bar')}
-				className={`h-13 w-13 cursor-pointer ${ctx?.style === 'bar' ? 'text-[var(--green-theme)]' : 'text-[var(--desactive-color)] hover:text-[var(--green-theme)]'}`}
-			/>
-			<PizzaGraph
+				sx={{
+					height: 52,
+					width: 52,
+					cursor: 'pointer',
+					color: ctx?.style === 'bar' ? 'primary.main' : 'text.disabled',
+					'&:hover': { color: 'primary.main' },
+				}}
+			>
+				<BarGraph />
+			</Box>
+			<Box
 				onClick={() => changeGraph('doughnut')}
-				className={`h-13 w-13 cursor-pointer ${ctx?.style === 'doughnut' ? 'text-[var(--purple-theme)]' : 'text-[var(--desactive-color)] hover:text-[var(--purple-theme)]'}`}
-			/>
-		</div>
+				sx={{
+					height: 52,
+					width: 52,
+					cursor: 'pointer',
+					color: ctx?.style === 'doughnut' ? 'purple.main' : 'text.disabled',
+					'&:hover': { color: 'purple.main' },
+				}}
+			>
+				<PizzaGraph />
+			</Box>
+		</Stack>
 	);
 };
 

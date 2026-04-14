@@ -1,5 +1,6 @@
 'use client';
 
+import { Box } from '@mui/material';
 import dayGridPlugin from '@fullcalendar/daygrid';
 import FullCalendar from '@fullcalendar/react';
 import { useContext } from 'react';
@@ -26,7 +27,7 @@ const Calendar = () => {
                     .fc .fc-button:hover {
                         background-color: rgba(162,91,174, 0.8);
                     }
-                    
+
                     .fc .fc-button:disabled {
                         background-color: #A25BAE;
                         cursor: not-allowed;
@@ -38,26 +39,39 @@ const Calendar = () => {
                     }
 
                     .fc .fc-daygrid-day-frame {
-                        background-color: #fff; 
+                        background-color: #fff;
                     }
 
                     .fc .fc-daygrid-day-number {
-                        color: #000; 
+                        color: #000;
                     }
 
                     .fc .fc-col-header-cell-cushion {
-                        color: #000; 
+                        color: #000;
                     }
                 `}
 			</style>
 
-			<div className="absolute z-10 mt-2 h-auto w-96 rounded-lg border border-gray-200 bg-white p-4 shadow-xl">
+			<Box
+				sx={{
+					position: 'absolute',
+					zIndex: 10,
+					mt: 1,
+					width: 384,
+					borderRadius: 2,
+					border: 1,
+					borderColor: 'grey.200',
+					bgcolor: 'background.paper',
+					p: 2,
+					boxShadow: 3,
+				}}
+			>
 				<FullCalendar
 					plugins={[dayGridPlugin]}
 					initialView="dayGridMonth"
 					titleFormat={() => ''}
 				/>
-			</div>
+			</Box>
 		</>
 	);
 };

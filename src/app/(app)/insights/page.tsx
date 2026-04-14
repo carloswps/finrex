@@ -1,3 +1,4 @@
+import { Box } from '@mui/material';
 import FromDataGraph from '@/features/insights/components/FormDataContainer';
 import LastMonth from '@/features/insights/components/LastMonth';
 import RealSpendingGraph from '@/features/insights/components/RealSpendingGraph';
@@ -6,21 +7,21 @@ import TitleAndSubtitle from '@/shared/components/TitleAndSubtitle';
 
 const Page = () => {
 	return (
-		<div className="grid grid-cols-3 items-start gap-4">
-			<div className="col-span-2 row-start-1">
-				<div>
+		<Box sx={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', alignItems: 'start', gap: 2 }}>
+			<Box sx={{ gridColumn: 'span 2', gridRow: '1' }}>
+				<Box>
 					<TitleAndSubtitle
 						title="Your Profit"
 						subTitle="From savings to success"
 					/>
-				</div>
-				<div className="row-span-2">
+				</Box>
+				<Box sx={{ gridRow: 'span 2' }}>
 					<FromDataGraph graphSelection={true} showCalendar={true} />
-				</div>
-			</div>
+				</Box>
+			</Box>
 
-			<aside className="mb-5 border-l border-[var(--lines-color)] px-16">
-				<div>
+			<Box component="aside" sx={{ mb: 2.5, borderLeft: 1, borderColor: 'text.disabled', px: 8 }}>
+				<Box>
 					<TitleAndSubtitle
 						title="In Money"
 						subTitle="Real Spending"
@@ -30,28 +31,28 @@ const Page = () => {
 						title={'Transportation'}
 						subTitle={'Bus, car, boat'}
 						value={300}
-						barColor={'blue-graph'}
+						barColor={'#4DA1D8'}
 					/>
 					<RealSpendingGraph
 						title={'Rent'}
 						subTitle={'Apartment, house'}
 						value={1700}
-						barColor={'pink-graph'}
+						barColor={'#F2858E'}
 					/>
 					<RealSpendingGraph
 						title={'Groceries'}
 						subTitle={'Food, drinks'}
 						value={400}
-						barColor={'orange-graph'}
+						barColor={'#FFB86B'}
 					/>
 					<RealSpendingGraph
 						title={'Entertainment'}
 						subTitle={'Movies, concerts'}
 						value={220}
-						barColor={'green-graph'}
+						barColor={'#2EBCB3'}
 					/>
-				</div>
-				<div className="mt-8">
+				</Box>
+				<Box sx={{ mt: 4 }}>
 					<TitleAndSubtitle
 						title="Vs Last Month"
 						subTitle="Monthly Comparison"
@@ -63,7 +64,7 @@ const Page = () => {
 						cubeSize={'23px'}
 						fontSize={'16px'}
 						titleFontSize={'16px'}
-						backgroundColor={'var(--blue-graph)'}
+						backgroundColor={'#4DA1D8'}
 						arrowDirection={'up'}
 						pastValue={80}
 						currentValue={200}
@@ -71,7 +72,7 @@ const Page = () => {
 					/>
 					<Summary
 						arrowDirection={'down'}
-						backgroundColor={'var(--pink-graph)'}
+						backgroundColor={'#F2858E'}
 						cubeSize={'23px'}
 						fontSize={'16px'}
 						titleFontSize={'16px'}
@@ -81,7 +82,7 @@ const Page = () => {
 					/>
 					<Summary
 						arrowDirection={'even'}
-						backgroundColor={'var(--yellow-theme)'}
+						backgroundColor={'#f2d77d'}
 						cubeSize={'23px'}
 						fontSize={'16px'}
 						titleFontSize={'16px'}
@@ -89,9 +90,9 @@ const Page = () => {
 						currentValue={300}
 						summaryName={'Groceries:'}
 					/>
-				</div>
-			</aside>
-		</div>
+				</Box>
+			</Box>
+		</Box>
 	);
 };
 

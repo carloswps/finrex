@@ -1,15 +1,24 @@
+import { Box, Typography } from '@mui/material';
+
 const BarsLogin = () => {
-	const teste = 0;
 	return (
-		<div
-			className={
-				'absolute border-3 border-[var(--yellow-theme)] ' +
-				'top-89 left-265 h-50 w-50 rounded-md font-bold'
-			}
+		<Box
+			sx={{
+				position: 'absolute',
+				top: 356,
+				left: 1060,
+				height: 200,
+				width: 200,
+				border: 3,
+				borderColor: 'yellow.main',
+				borderRadius: '6px',
+			}}
 		>
 			<img src="/barAnalytic-removebg-preview.png" alt="" />
-			<p className={'relative bottom-6 ml-1 text-sm'}>Track Your Progrees</p>
-		</div>
+			<Typography variant="body2" sx={{ position: 'relative', bottom: 24, ml: 0.5 }}>
+				Track Your Progrees
+			</Typography>
+		</Box>
 	);
 };
 

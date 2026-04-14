@@ -1,3 +1,4 @@
+import { Stack, Typography } from '@mui/material';
 import { useContext } from 'react';
 import CalendarArrow from './icons/CalendarArrow.svg';
 import { CalendarContext } from '@/features/insights/contexts/CalendarContext';
@@ -10,15 +11,19 @@ const CalendarShowBtn = () => {
 	};
 
 	return (
-		<button
-			className={
-				'flex items-center gap-2 text-2xl font-semibold text-[var(--text-color)]'
-			}
+		<Stack
+			component="button"
+			direction="row"
+			alignItems="center"
+			gap={1}
 			onClick={handleGraphBtn}
+			sx={{ background: 'none', border: 'none', cursor: 'pointer', p: 0 }}
 		>
-			From August to September
-			<CalendarArrow className={'h-6 w-6'} />
-		</button>
+			<Typography variant="h5" fontWeight={600} color="text.primary">
+				From August to September
+			</Typography>
+			<CalendarArrow style={{ height: 24, width: 24 }} />
+		</Stack>
 	);
 };
 

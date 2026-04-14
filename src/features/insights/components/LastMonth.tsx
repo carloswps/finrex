@@ -1,4 +1,5 @@
 'use client';
+import { Box } from '@mui/material';
 import {
 	CategoryScale,
 	Chart,
@@ -24,14 +25,9 @@ const LastMonth = () => {
 		const ctx = canvasRef.current;
 		if (!ctx) return;
 
-		const rootStyles = getComputedStyle(document.documentElement);
-
-		const blueGraph =
-			rootStyles.getPropertyValue('--blue-graph').trim() || '#4DA1D8';
-		const pinkGraph =
-			rootStyles.getPropertyValue('--pink-graph').trim() || '#F2858E';
-		const orangeGraph =
-			rootStyles.getPropertyValue('--orange-graph').trim() || '#FFB86B';
+		const blueGraph = '#4DA1D8';
+		const pinkGraph = '#F2858E';
+		const orangeGraph = '#FFB86B';
 
 		const myChart = new Chart(ctx, {
 			type: 'line',
@@ -87,9 +83,9 @@ const LastMonth = () => {
 	}, []);
 
 	return (
-		<div className={'h-full w-full'}>
+		<Box sx={{ height: '100%', width: '100%' }}>
 			<canvas ref={canvasRef}></canvas>
-		</div>
+		</Box>
 	);
 };
 

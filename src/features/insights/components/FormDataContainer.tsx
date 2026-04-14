@@ -1,4 +1,5 @@
 'use client';
+import { Box } from '@mui/material';
 import CalendarLogicWrapper from '@/features/insights/components/CalendarLogicWrapper';
 import FormDataGraph from '@/features/insights/components/FormDataGraph';
 import GraphExhibition from '@/features/insights/components/GraphExhibition';
@@ -12,7 +13,7 @@ type Props = {
 
 const FormDataContainer = ({ graphSelection, showCalendar }: Props) => {
 	return (
-		<div className={'mt-10'}>
+		<Box sx={{ mt: 5 }}>
 			{showCalendar && (
 				<CalendarProvider>
 					<CalendarLogicWrapper />
@@ -22,7 +23,7 @@ const FormDataContainer = ({ graphSelection, showCalendar }: Props) => {
 				<FormDataGraph />
 				{graphSelection && <GraphExhibition />}
 			</GraphProvider>
-		</div>
+		</Box>
 	);
 };
 

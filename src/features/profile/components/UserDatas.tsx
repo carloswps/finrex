@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Box, InputBase, Typography } from '@mui/material';
 
 const UserDatas = () => {
 	const [isEditing, setIsEditing] = useState(false);
@@ -9,25 +10,31 @@ const UserDatas = () => {
 	};
 
 	return (
-		<div>
+		<Box>
 			{isEditing ? (
-				<input
-					type="text"
-					maxLength={12}
-					className={'max-w-32 text-xl font-bold text-[var(--text-color)]'}
-					onChange={(event) => setUsername(event.target.value)}
+				<InputBase
+					autoFocus
+					value={username}
+					inputProps={{ maxLength: 12 }}
+					onChange={(e) => setUsername(e.target.value)}
 					onBlur={handleBlur}
+					sx={{ maxWidth: 128, fontSize: '1.25rem', fontWeight: 700, color: 'text.primary' }}
 				/>
 			) : (
-				<h2
-					className={'text-xl font-bold text-[var(--text-color)]'}
+				<Typography
+					variant="h6"
+					fontWeight={700}
+					color="text.primary"
 					onClick={() => setIsEditing(true)}
+					sx={{ cursor: 'pointer' }}
 				>
 					{username}
-				</h2>
+				</Typography>
 			)}
-			<p className={'text-sm text-[var(--lines-color)]'}>Elijah@gmail.com</p>
-		</div>
+			<Typography variant="body2" color="text.disabled">
+				Elijah@gmail.com
+			</Typography>
+		</Box>
 	);
 };
 

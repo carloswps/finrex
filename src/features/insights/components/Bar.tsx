@@ -1,14 +1,11 @@
+import { Box } from '@mui/material';
+
 type Props = {
-	width: string;
-	barColor: string;
+	color: string;
 };
-const Bar = ({ width, barColor }: Props) => {
-	return (
-		<div
-			style={{ backgroundColor: `var(--${barColor})` }}
-			className={`${width} mx-7 h-1`}
-		></div>
-	);
+
+const Bar = ({ color }: Props) => {
+	return <Box sx={{ flex: 1, mx: 3.5, height: 4, bgcolor: color }} />;
 };
 
 export default Bar;

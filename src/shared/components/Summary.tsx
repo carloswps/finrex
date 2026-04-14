@@ -1,3 +1,4 @@
+import { Box, Stack, Typography } from '@mui/material';
 import EvenArrow from '@/features/insights/components/icons/EvenArrow.svg';
 import DownArrow from '@/features/insights/components/icons/UpArrow.svg';
 import TripleUpArrow from '@/features/profit/components/icons/TripleUpArrow.svg';
@@ -32,63 +33,61 @@ const Summary = ({
 	currentValue,
 }: Props) => {
 	return (
-		<div className={'my-4 text-[var(--text-color)]'}>
-			<h3 className={'bold mb-3 text-[var(--purple-theme)]'}>{title}</h3>
-			<div className={'flex items-center gap-1 text-sm'}>
-				<div
-					className={'mr-1 w-5 rounded-md'}
-					style={{
-						backgroundColor: backgroundColor,
+		<Box sx={{ my: 2, color: 'text.primary' }}>
+			<Typography fontWeight={700} color="purple.main" sx={{ mb: 1.5 }}>
+				{title}
+			</Typography>
+			<Stack direction="row" alignItems="center" gap={0.5} sx={{ fontSize: '0.875rem' }}>
+				<Box
+					sx={{
+						mr: 0.5,
+						borderRadius: '6px',
+						bgcolor: backgroundColor,
 						height: cubeSize,
 						width: cubeSize,
 					}}
-				></div>
-				<h4 className={'font-semibold'} style={{ fontSize: titleFontSize }}>
+				/>
+				<Typography fontWeight={600} style={{ fontSize: titleFontSize }}>
 					{summaryName}
-				</h4>
-				<div className={'flex items-center gap-1'}>
-					<p className={'font-bold'} style={{ fontSize: fontSize }}>
+				</Typography>
+				<Stack direction="row" alignItems="center" gap={0.5}>
+					<Typography fontWeight={700} style={{ fontSize: fontSize }}>
 						{pastValue}
-					</p>
+					</Typography>
 					{arrowDirection === 'even' ? (
 						<EvenArrow style={{ height: arrowSize, width: arrowSize }} />
 					) : arrowDirection === 'up' ? (
-						<TripleUpArrow
-							className={'text-[var(--green-theme)]'}
-							style={{ height: arrowSize, width: arrowSize }}
-						/>
+						<Box sx={{ color: 'primary.main', display: 'flex' }}>
+							<TripleUpArrow style={{ height: arrowSize, width: arrowSize }} />
+						</Box>
 					) : arrowDirection === 'down' ? (
-						<DownArrow
-							className={'text-[var(--red-theme)]'}
-							style={{ height: arrowSize, width: arrowSize }}
-						/>
+						<Box sx={{ color: 'error.main', display: 'flex' }}>
+							<DownArrow style={{ height: arrowSize, width: arrowSize }} />
+						</Box>
 					) : null}
-					<p className={'font-bold'} style={{ fontSize: fontSize }}>
+					<Typography fontWeight={700} style={{ fontSize: fontSize }}>
 						{currentValue}
-					</p>
-				</div>
+					</Typography>
+				</Stack>
 				{growthPercentage ? (
-					<p
-						className={
-							'relative text-[12px] font-semibold text-[var(--purple-theme)]'
-						}
-						style={{ bottom: bottom }}
+					<Typography
+						sx={{ position: 'relative', fontSize: 12, fontWeight: 600, color: 'purple.main', bottom: bottom }}
 					>
 						{currentValue && pastValue && currentValue > pastValue
 							? `+${growthPercentage}%`
 							: `-${growthPercentage}%`}
-					</p>
+					</Typography>
 				) : (
-					<p className={'ml-1.5 text-[12px] text-nowrap'}>
+					<Typography sx={{ ml: 0.75, fontSize: 12, textWrap: 'nowrap' }}>
 						{pastValue && currentValue && pastValue < currentValue
 							? `(+${currentValue - pastValue} vs last month)`
 							: pastValue && currentValue && pastValue > currentValue
 								? `(-${pastValue - currentValue} vs last month)`
 								: '(No change)'}
-					</p>
+					</Typography>
 				)}
-			</div>
-		</div>
+			</Stack>
+		</Box>
 	);
 };
 

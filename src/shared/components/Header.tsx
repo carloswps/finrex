@@ -1,80 +1,86 @@
 'use client';
 
+import { Box, Stack } from '@mui/material';
 import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { useProfilePic } from '@/shared/contexts/ProfilePicContext';
-import { paths } from '@/libs/paths';
 import Goals from '@/features/revenue/components/icons/Goals.svg';
 import Insights from '@/features/revenue/components/icons/Insights.svg';
 import Profit from '@/features/revenue/components/icons/Profit.svg';
 import RevenueSpending from '@/features/revenue/components/icons/RevenueSpending.svg';
+import { paths } from '@/libs/paths';
+import { useProfilePic } from '@/shared/contexts/ProfilePicContext';
+
+const navLinks = [
+	{ path: paths.page.insights, label: 'Insights', Icon: Insights },
+	{ path: paths.page.revenue, label: 'Revenue & Spending', Icon: RevenueSpending },
+	{ path: paths.page.goals, label: 'Goals', Icon: Goals },
+	{ path: paths.page.profit, label: 'Profit', Icon: Profit },
+];
 
 const Header = () => {
 	const { fileUrl } = useProfilePic();
-
 	const picSource = fileUrl || '/user.png';
 	const pathName = usePathname();
 
-	const activeColor = 'var(--text-color)';
-	const desactiveColor = 'var(--desactive-color)';
-
-	const getLinkClass = (path: string) => {
-		const isActive = pathName.startsWith(path);
-
-		const colorClass = isActive
-			? `text-[${activeColor}]`
-			: `text-[${desactiveColor}]`;
-
-		return `flex items-center gap-2 text-xl text-nowrap hover:text-[${activeColor}] ${colorClass}`;
-	};
-
 	return (
-		<header className="mb-9 bg-white">
-			<div>
-				<nav>
-					<ul
-						className={
-							'm-auto flex w-fit cursor-pointer items-center gap-32 border-b border-(--green-theme) py-8'
-						}
-					>
-						<li>
-							<Image
-								src={'/darkLogo.png'}
-								alt={'logo'}
-								width={180}
-								height={46}
+		<Box component="header" sx={{ mb: 4.5, bgcolor: 'background.default' }}>
+			<nav>
+				<Stack
+					component="ul"
+					direction="row"
+					alignItems="center"
+					sx={{
+						mx: 'auto',
+						width: 'fit-content',
+						gap: 16,
+						borderBottom: 1,
+						borderColor: 'primary.main',
+						py: 4,
+						pl: 0,
+						listStyle: 'none',
+						cursor: 'pointer',
+					}}
+				>
+					<Box component="li">
+						<Image src={'/darkLogo.png'} alt={'logo'} width={180} height={46} />
+					</Box>
+					{navLinks.map(({ path, label, Icon }) => {
+						const isActive = pathName.startsWith(path);
+						return (
+							<Box
+								key={path}
+								component="li"
+								sx={{
+									display: 'flex',
+									alignItems: 'center',
+									gap: 1,
+									fontSize: '1.25rem',
+									textWrap: 'nowrap',
+									color: isActive ? 'text.primary' : 'text.disabled',
+									'&:hover': { color: 'text.primary' },
+								}}
+							>
+								<Icon style={{ height: 40, width: 40 }} />
+								<Link href={path} style={{ color: 'inherit', textDecoration: 'none' }}>
+									{label}
+								</Link>
+							</Box>
+						);
+					})}
+					<Box component="li">
+						<Link href={'/profile'}>
+							<Box
+								component="img"
+								src={picSource}
+								alt="Your Profile Picture"
+								sx={{ height: 52, width: 52, borderRadius: '50%', objectFit: 'cover' }}
 							/>
-						</li>
-						<li className={getLinkClass(paths.page.insights)}>
-							<Insights className={'h-10 w-10'} />
-							<Link href={paths.page.insights}>Insights</Link>
-						</li>
-						<li className={getLinkClass(paths.page.revenue)}>
-							<RevenueSpending className={'h-10 w-10'} />
-							<Link href={paths.page.revenue}>Revenue & Spending</Link>
-						</li>
-						<li className={getLinkClass(paths.page.goals)}>
-							<Goals className={'h-10 w-10'} />
-							<Link href={paths.page.goals}>Goals</Link>
-						</li>
-						<li className={getLinkClass(paths.page.profit)}>
-							<Profit className={'h-10 w-10'} />
-							<Link href={paths.page.profit}>Profit</Link>
-						</li>
-						<li>
-							<Link href={'/profile'}>
-								<img
-									src={picSource}
-									alt="Your Profile Picture"
-									className="h-13 w-13 rounded-full object-cover"
-								/>
-							</Link>
-						</li>
-					</ul>
-				</nav>
-			</div>
-		</header>
+						</Link>
+					</Box>
+				</Stack>
+			</nav>
+		</Box>
 	);
 };
 

@@ -32,7 +32,7 @@ const AddNewGoal = ({ onAddGoal }: Props) => {
 				sx={{
 					mb: 4.5,
 					borderRadius: '50%',
-					border: '2px dashed var(--lines-color)',
+					border: '2px dashed #d1d8e0',
 					bgcolor: 'rgba(93,188,117,0.4)',
 					p: 3.5,
 					cursor: 'pointer',

@@ -1,3 +1,4 @@
+import { Box, Stack } from '@mui/material';
 import PersonalForm from '@/features/profile/components/PersonalForm';
 import UsageGraph from '@/features/profile/components/UsageGraph';
 import Summary from '@/shared/components/Summary';
@@ -5,17 +6,17 @@ import TitleAndSubtitle from '@/shared/components/TitleAndSubtitle';
 
 const Page = () => {
 	return (
-		<div className={'flex'}>
-			<div className={'w-1/3'}>
+		<Stack direction="row">
+			<Box sx={{ width: '33.33%' }}>
 				<PersonalForm />
-			</div>
-			<div className={'mt-8 -ml-12 w-2/3'}>
+			</Box>
+			<Box sx={{ mt: 4, ml: -6, width: '66.67%' }}>
 				<TitleAndSubtitle
 					title={'Usage Over Time'}
 					subTitle={'Track your progress and engagement with the platform'}
 				/>
 				<UsageGraph />
-				<div className={'ml-2'}>
+				<Box sx={{ ml: 1 }}>
 					<Summary
 						pastValue={400}
 						currentValue={400}
@@ -24,7 +25,7 @@ const Page = () => {
 						bottom={'20px'}
 						fontSize={'18px'}
 						titleFontSize={'20px'}
-						backgroundColor={'var(--blue-graph)'}
+						backgroundColor={'#4DA1D8'}
 						cubeSize={'24px'}
 						arrowDirection={'even'}
 						arrowSize={'28px'}
@@ -37,7 +38,7 @@ const Page = () => {
 						bottom={'20px'}
 						fontSize={'18px'}
 						titleFontSize={'20px'}
-						backgroundColor={'var(--pink-graph)'}
+						backgroundColor={'#F2858E'}
 						cubeSize={'24px'}
 						arrowDirection={'up'}
 						arrowSize={'28px'}
@@ -50,14 +51,14 @@ const Page = () => {
 						bottom={'20px'}
 						fontSize={'18px'}
 						titleFontSize={'20px'}
-						backgroundColor={'var(--orange-graph)'}
+						backgroundColor={'#FFB86B'}
 						cubeSize={'24px'}
 						arrowDirection={'down'}
 						arrowSize={'28px'}
 					/>
-				</div>
-			</div>
-		</div>
+				</Box>
+			</Box>
+		</Stack>
 	);
 };
 

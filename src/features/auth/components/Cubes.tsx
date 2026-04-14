@@ -1,61 +1,37 @@
+import { Box } from '@mui/material';
+import type { CSSProperties } from 'react';
+
+const ORANGE = '#f7a14d';
+
+type CubeProps = { top: number; left: number; size: number; radius: number; opacity: number };
+
+const Cube = ({ top, left, size, radius, opacity }: CubeProps) => (
+	<Box sx={{ position: 'absolute', top, left, height: size, width: size, borderRadius: `${radius}px`, bgcolor: ORANGE, opacity }} />
+);
+
 type Props = {
-	position: string;
-	relativeY: string;
-	relativeX: string;
+	position: CSSProperties['position'];
+	top?: number;
+	left?: number;
 	rotate?: string;
 };
-const Cubes = ({ position, relativeY, relativeX, rotate }: Props) => {
+
+const Cubes = ({ position, top, left, rotate }: Props) => {
 	return (
-		<div className={`${position} ${relativeY} ${relativeX} ${rotate}`}>
-			<div
-				className="absolute top-0 left-0 h-11 w-11 rounded-[6px] opacity-70"
-				style={{ backgroundColor: 'var(--cubes-orange)' }}
-			/>
-			<div
-				className="absolute top-[22px] left-[65px] h-6 w-6 rounded-[3px] opacity-70"
-				style={{ backgroundColor: 'var(--cubes-orange)' }}
-			/>
-			<div
-				className="absolute top-[70px] left-[22px] h-9 w-8 rounded-[6px] opacity-60"
-				style={{ backgroundColor: 'var(--cubes-orange)' }}
-			/>
-			<div
-				className="absolute top-[62px] left-[90px] h-9 w-9 rounded-[6px] opacity-60"
-				style={{ backgroundColor: 'var(--cubes-orange)' }}
-			/>
-			<div
-				className="absolute top-[125px] left-[10px] h-3 w-4 rounded-[3px] opacity-30"
-				style={{ backgroundColor: 'var(--cubes-orange)' }}
-			/>
-			<div
-				className="absolute top-[10px] left-[115px] h-5 w-5 rounded-[3px] opacity-70"
-				style={{ backgroundColor: 'var(--cubes-orange)' }}
-			/>
-			<div
-				className="absolute top-[90px] left-[68px] h-4 w-4 rounded-[3px] opacity-60"
-				style={{ backgroundColor: 'var(--cubes-orange)' }}
-			/>
-			<div
-				className="absolute top-[40px] left-[140px] h-5 w-5 rounded-[3px] opacity-60"
-				style={{ backgroundColor: 'var(--cubes-orange)' }}
-			/>
-			<div
-				className="absolute top-[40px] left-[105px] h-4 w-4 rounded-[3px] opacity-60"
-				style={{ backgroundColor: 'var(--cubes-orange)' }}
-			/>
-			<div
-				className="absolute top-[55px] left-[2px] h-3 w-3 rounded-[3px] opacity-70"
-				style={{ backgroundColor: 'var(--cubes-orange)' }}
-			/>
-			<div
-				className="absolute top-[115px] left-[68px] h-4 w-4 rounded-[3px] opacity-30"
-				style={{ backgroundColor: 'var(--cubes-orange)' }}
-			/>
-			<div
-				className="absolute top-[105px] left-[125px] h-5 w-5 rounded-[3px] opacity-60"
-				style={{ backgroundColor: 'var(--cubes-orange)' }}
-			/>
-		</div>
+		<Box sx={{ position, top, left, transform: rotate }}>
+			<Cube top={0}   left={0}   size={44} radius={6} opacity={0.7} />
+			<Cube top={22}  left={65}  size={24} radius={3} opacity={0.7} />
+			<Cube top={70}  left={22}  size={36} radius={6} opacity={0.6} />
+			<Cube top={62}  left={90}  size={36} radius={6} opacity={0.6} />
+			<Cube top={125} left={10}  size={12} radius={3} opacity={0.3} />
+			<Cube top={10}  left={115} size={20} radius={3} opacity={0.7} />
+			<Cube top={90}  left={68}  size={16} radius={3} opacity={0.6} />
+			<Cube top={40}  left={140} size={20} radius={3} opacity={0.6} />
+			<Cube top={40}  left={105} size={16} radius={3} opacity={0.6} />
+			<Cube top={55}  left={2}   size={12} radius={3} opacity={0.7} />
+			<Cube top={115} left={68}  size={16} radius={3} opacity={0.3} />
+			<Cube top={105} left={125} size={20} radius={3} opacity={0.6} />
+		</Box>
 	);
 };
 

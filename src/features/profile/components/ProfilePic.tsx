@@ -1,4 +1,5 @@
 'use client';
+import { Box } from '@mui/material';
 import axios from 'axios';
 import Image from 'next/image';
 import type { ChangeEvent } from 'react';
@@ -41,21 +42,46 @@ const ProfilePic = () => {
 	const uniqueId = 'profile-pic-upl';
 
 	return (
-		<div
-			className={
-				'relative -mt-6 mb-4 flex h-24 w-24 items-center justify-center overflow-hidden rounded-full bg-gray-200'
-			}
+		<Box
+			sx={{
+				position: 'relative',
+				mt: -3,
+				mb: 2,
+				display: 'flex',
+				height: 96,
+				width: 96,
+				alignItems: 'center',
+				justifyContent: 'center',
+				overflow: 'hidden',
+				borderRadius: '50%',
+				bgcolor: 'grey.200',
+			}}
 		>
-			<input
+			<Box
+				component="input"
 				id={uniqueId}
-				className={'absolute inset-0 h-full w-full cursor-pointer opacity-0'}
-				type={'file'}
+				type="file"
 				onChange={handleFileChange}
+				sx={{
+					position: 'absolute',
+					inset: 0,
+					height: '100%',
+					width: '100%',
+					cursor: 'pointer',
+					opacity: 0,
+				}}
 			/>
 
-			<label
+			<Box
+				component="label"
 				htmlFor={uniqueId}
-				className={'absolute inset-0 h-full w-full cursor-pointer'}
+				sx={{
+					position: 'absolute',
+					inset: 0,
+					height: '100%',
+					width: '100%',
+					cursor: 'pointer',
+				}}
 			>
 				{fileUrl ? (
 					<Image
@@ -63,19 +89,31 @@ const ProfilePic = () => {
 						alt={'Foto de Perfil'}
 						width={100}
 						height={100}
-						className={'w-fulll h-full rounded-full object-cover'}
+						style={{
+							width: '100%',
+							height: '100%',
+							borderRadius: '50%',
+							objectFit: 'cover',
+						}}
 					/>
 				) : (
-					<div
-						className={
-							'flex h-full w-full items-center justify-center bg-(--green-theme)'
-						}
+					<Box
+						sx={{
+							display: 'flex',
+							height: '100%',
+							width: '100%',
+							alignItems: 'center',
+							justifyContent: 'center',
+							bgcolor: 'primary.main',
+						}}
 					>
-						<UploadIcon className={'relative bottom-1 h-12 w-12'} />
-					</div>
+						<UploadIcon
+							style={{ position: 'relative', bottom: 4, height: 48, width: 48 }}
+						/>
+					</Box>
 				)}
-			</label>
-		</div>
+			</Box>
+		</Box>
 	);
 };
 

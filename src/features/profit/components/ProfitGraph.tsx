@@ -1,4 +1,5 @@
 'use client';
+import { Box } from '@mui/material';
 import {
 	CategoryScale,
 	Chart,
@@ -132,9 +133,9 @@ const ProfitGraph = ({
 	}, [color, fill, minimal]);
 
 	return (
-		<div style={{ width, height }} className={'relative w-full'}>
+		<Box sx={{ position: 'relative', width: '100%' }} style={{ width, height }}>
 			<canvas ref={canvasRef}></canvas>
-		</div>
+		</Box>
 	);
 };
 

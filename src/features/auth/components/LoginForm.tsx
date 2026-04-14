@@ -1,4 +1,5 @@
 'use client';
+import { Box, Stack, Typography } from '@mui/material';
 import Image from 'next/image';
 import BarsLogin from './barsLogin';
 import Cubes from './Cubes';
@@ -7,46 +8,37 @@ import FormAction from './FormAction';
 
 const LoginForm = () => {
 	return (
-		<div className={'flex h-screen w-screen justify-center'}>
-			<div className={'w-1/2 bg-white p-8'}>
-				<div>
+		<Stack direction="row" sx={{ height: '100vh', width: '100vw', justifyContent: 'center' }}>
+			<Box sx={{ width: '50%', bgcolor: 'background.paper', p: 8 }}>
+				<Box>
 					<Image src={'/darkLogo.png'} alt="Logo" width={200} height={100} />
-				</div>
-				<div className={'mt-24'}>
+				</Box>
+				<Box sx={{ mt: 12 }}>
 					<FormAction />
-				</div>
-			</div>
-			<div className={'btn-gradient flex w-full flex-col'}>
-				<div className={'flex flex-col items-center justify-center'}>
-					<Cubes
-						position={'fixed'}
-						relativeY={'-top-1'}
-						relativeX={'left-132'}
-					/>
+				</Box>
+			</Box>
+			<Stack className="btn-gradient" sx={{ width: '100%', flexDirection: 'column' }}>
+				<Stack alignItems="center" justifyContent="center">
+					<Cubes position="fixed" top={-4} left={528} />
 					<LinesLogin />
 					<BarsLogin />
-					<Cubes
-						position={'fixed'}
-						relativeY={'top-178'}
-						relativeX={'left-384'}
-						rotate={'rotate-180'}
-					/>
-				</div>
-				<div
-					className={
-						'relative top-143 flex flex-col items-center justify-center'
-					}
+					<Cubes position="fixed" top={712} left={1536} rotate="rotate(180deg)" />
+				</Stack>
+				<Stack
+					alignItems="center"
+					justifyContent="center"
+					sx={{ position: 'relative', top: '35.75rem' }}
 				>
-					<h3 className={'mb-2 text-xl font-bold'}>
+					<Typography variant="h6" fontWeight={700} sx={{ mb: 1 }}>
 						Change the way you Manage Your Money
-					</h3>
-					<p className={'w-60 text-center'}>
+					</Typography>
+					<Typography sx={{ width: '15rem', textAlign: 'center' }}>
 						Welcome to Finrex — your smart tool for organizing and tracking your
 						finances with ease.
-					</p>
-				</div>
-			</div>
-		</div>
+					</Typography>
+				</Stack>
+			</Stack>
+		</Stack>
 	);
 };
 

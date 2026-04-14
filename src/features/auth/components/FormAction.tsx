@@ -1,3 +1,4 @@
+import { Box, Stack, Typography } from '@mui/material';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useRouter } from 'next/navigation';
 import { useState } from 'react';
@@ -57,21 +58,22 @@ const FormAction = () => {
 	};
 
 	return (
-		<div>
-			<div className={'w-sm border-b-1 border-[var(--lines-color)] pb-4'}>
-				<h2 className={'text-3xl font-bold text-[var(--text-color)]'}>
+		<Box>
+			<Box sx={{ width: '24rem', borderBottom: 1, borderColor: 'text.disabled', pb: 4 }}>
+				<Typography variant="h5" fontWeight={700} color="text.primary" sx={{ fontSize: '1.875rem' }}>
 					{!isRegisterMode ? 'Welcome Back' : 'Welcome to Finrex'}
-				</h2>
-				<h4 className={'-mt-2 font-bold text-[var(--green-theme)]'}>
+				</Typography>
+				<Typography fontWeight={700} color="primary.main" sx={{ mt: -1 }}>
 					{!isRegisterMode
 						? 'Glad to see you again!'
 						: `Let's create your account`}
-				</h4>
-			</div>
+				</Typography>
+			</Box>
 
-			<form
+			<Box
+				component="form"
 				onSubmit={handleSubmit(handleFormSubmit)}
-				className={'mt-8 flex max-w-sm flex-col text-[var(--text-color)]'}
+				sx={{ mt: 4, maxWidth: '24rem', display: 'flex', flexDirection: 'column', color: 'text.primary' }}
 			>
 				<LoginInputs
 					name={'email'}
@@ -88,12 +90,12 @@ const FormAction = () => {
 					inputType={'password'}
 				/>
 
-				<div className={'flex flex-col items-center gap-4'}>
+				<Stack alignItems="center" gap={2}>
 					<LoginBtn
 						hasLoggedIn={isRegisterMode}
 						disabled={mutation.isPending}
 					/>
-					<div className="flex gap-2.5">
+					<Stack direction="row" gap={1.25}>
 						{mutation.isPending && (
 							<LoginLoad label={isRegisterMode ? 'Sign Up' : 'Login'} />
 						)}
@@ -101,21 +103,22 @@ const FormAction = () => {
 							hasLoggedIn={isRegisterMode}
 							toggleLogged={toggleFormMode}
 						/>
-						<FcGoogle
-							size={18}
-							className={'cursor-pointer'}
-							onClick={() => {
-								handleGoogleLogin();
-								console.log('teste...');
-							}}
-						/>
-					</div>
-				</div>
-			</form>
+						<Box component="span" sx={{ cursor: 'pointer', display: 'flex', alignItems: 'center' }}>
+							<FcGoogle
+								size={18}
+								onClick={() => {
+									handleGoogleLogin();
+									console.log('teste...');
+								}}
+							/>
+						</Box>
+					</Stack>
+				</Stack>
+			</Box>
 			{mutation.isError && mutation.error && (
 				<ErrorAlert message={mutation.error.message} />
 			)}
-		</div>
+		</Box>
 	);
 };
 

@@ -1,3 +1,5 @@
+import { Box, Typography } from '@mui/material';
+
 type Props = {
 	color?: string;
 	percent?: number;
@@ -5,6 +7,7 @@ type Props = {
 	orientationX: number;
 	orientationY: number;
 };
+
 const FloatPercent = ({
 	color,
 	percent,
@@ -12,26 +15,31 @@ const FloatPercent = ({
 	orientationX,
 	orientationY,
 }: Props) => {
-	const dinamycStyle: React.CSSProperties = {
-		top: orientationY,
-		left: orientationX,
-		position: 'absolute',
-		color: color ?? 'var(--lines-color)',
-	};
 	return (
-		<div
-			className="absolute flex flex-col items-center justify-center text-sm"
-			style={dinamycStyle}
+		<Box
+			sx={{
+				position: 'absolute',
+				top: orientationY,
+				left: orientationX,
+				display: 'flex',
+				flexDirection: 'column',
+				alignItems: 'center',
+				justifyContent: 'center',
+				color: color,
+			}}
 		>
-			<p className="mb-1">{percent}%</p>
-			<div
-				className="h-[1px] w-4"
-				style={{
-					background: color ?? 'var(--lines-color)',
+			<Typography variant="body2" sx={{ mb: 0.5 }}>
+				{percent}%
+			</Typography>
+			<Box
+				sx={{
+					height: '1px',
+					width: 16,
+					background: color,
 					transform: `rotate(${barRotation ?? 0}deg)`,
 				}}
-			></div>
-		</div>
+			/>
+		</Box>
 	);
 };
 

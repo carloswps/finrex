@@ -1,4 +1,5 @@
 'use client';
+import { Box } from '@mui/material';
 import {
 	CategoryScale,
 	Chart,
@@ -24,14 +25,9 @@ const UsageGraph = () => {
 		const ctx = canvasRef.current;
 		if (!ctx) return;
 
-		const rootStyles = getComputedStyle(document.documentElement);
-
-		const blueGraph =
-			rootStyles.getPropertyValue('--blue-graph').trim() || '#4DA1D8';
-		const pinkGraph =
-			rootStyles.getPropertyValue('--pink-graph').trim() || '#F2858E';
-		const orangeGraph =
-			rootStyles.getPropertyValue('--orange-graph').trim() || '#FFB86B';
+		const blueGraph = '#4DA1D8';
+		const pinkGraph = '#F2858E';
+		const orangeGraph = '#FFB86B';
 
 		const myChart = new Chart(ctx, {
 			type: 'line',
@@ -75,9 +71,10 @@ const UsageGraph = () => {
 	}, []);
 
 	return (
-		<div className={'h-[300px]'}>
+		<Box sx={{ height: 300 }}>
 			<canvas ref={canvasRef}></canvas>
-		</div>
+		</Box>
 	);
 };
+
 export default UsageGraph;

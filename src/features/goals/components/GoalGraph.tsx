@@ -1,3 +1,4 @@
+import { Box } from '@mui/material';
 import type { ChartData, ChartOptions } from 'chart.js';
 import FloatPercent from '@/features/goals/components/FloatPercent';
 import FormDataGraph from '@/features/insights/components/FormDataGraph';
@@ -18,10 +19,10 @@ const GoalGraph = ({
 }: Props) => {
 	return (
 		<GraphProvider initialStyle={'doughnut'}>
-			<div className="relative flex items-center justify-center">
+			<Box sx={{ position: 'relative', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
 				<FloatPercent
 					percent={completePercent}
-					color={'var(--green-theme)'}
+					color={'#5dbc75'}
 					barRotation={130}
 					orientationX={165}
 					orientationY={10}
@@ -34,12 +35,12 @@ const GoalGraph = ({
 				/>
 				<FloatPercent
 					percent={remainingPercent}
-					color={'var(--lines-color)'}
+					color={'#d1d8e0'}
 					barRotation={60}
 					orientationX={5}
 					orientationY={20}
 				/>
-			</div>
+			</Box>
 		</GraphProvider>
 	);
 };

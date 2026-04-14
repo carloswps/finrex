@@ -1,3 +1,4 @@
+import { Box, Stack, Typography } from '@mui/material';
 import Bar from '@/features/insights/components/Bar';
 
 type Props = {
@@ -6,18 +7,19 @@ type Props = {
 	value: number;
 	barColor?: string;
 };
+
 const RealSpendingGraph = ({ title, subTitle, value, barColor }: Props) => {
 	return (
-		<div className={'my-4 flex items-center text-[var(--text-color)]'}>
-			<div>
-				<h4 className={'text-sm font-semibold'}>{title}</h4>
-				<h6 className={'-mt-1.5 text-sm text-nowrap text-[var(--lines-color)]'}>
+		<Stack direction="row" alignItems="center" sx={{ my: 2, color: 'text.primary' }}>
+			<Box>
+				<Typography variant="body2" fontWeight={600}>{title}</Typography>
+				<Typography variant="body2" color="text.disabled" sx={{ mt: -0.75, textWrap: 'nowrap' }}>
 					{subTitle}
-				</h6>
-			</div>
-			<Bar width={'w-full'} barColor={barColor || 'red'} />
-			<p className={'font-bold'}>${value}</p>
-		</div>
+				</Typography>
+			</Box>
+			<Bar color={barColor || '#ff0000'} />
+			<Typography fontWeight={700}>${value}</Typography>
+		</Stack>
 	);
 };
 

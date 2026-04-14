@@ -38,9 +38,9 @@ export const LoginInputs = (props: LoginInputProps) => {
 								edge="end"
 							>
 								{isHidden ? (
-									<HideIcon className="h-6 w-6" style={{ color: '#bdc5ce' }} />
+									<HideIcon style={{ height: 24, width: 24, color: '#bdc5ce' }} />
 								) : (
-									<ShowIcon className="h-6 w-6" style={{ color: '#bdc5ce' }} />
+									<ShowIcon style={{ height: 24, width: 24, color: '#bdc5ce' }} />
 								)}
 							</IconButton>
 						</InputAdornment>

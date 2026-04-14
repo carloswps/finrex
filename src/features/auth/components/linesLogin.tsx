@@ -1,13 +1,24 @@
+import { Box, Typography } from '@mui/material';
+
 const LinesLogin = () => {
 	return (
-		<div
-			className={
-				'shadow-custom absolute top-40 left-200 w-sm rounded-md bg-(--white-login) p-5 font-bold text-(--green-theme)'
-			}
+		<Box
+			sx={{
+				position: 'absolute',
+				top: 160,
+				left: 800,
+				width: 384,
+				borderRadius: '6px',
+				bgcolor: 'background.default',
+				p: 2.5,
+				boxShadow: 3,
+			}}
 		>
 			<img src="/linesAnalytics-removebg-preview.png" alt="" />
-			Get your personal analitics
-		</div>
+			<Typography fontWeight={700} color="primary.main">
+				Get your personal analitics
+			</Typography>
+		</Box>
 	);
 };
 

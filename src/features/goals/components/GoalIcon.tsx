@@ -1,4 +1,5 @@
 'use client';
+import { Box } from '@mui/material';
 import axios from 'axios';
 import Image from 'next/image';
 import { type ChangeEvent, useState } from 'react';
@@ -39,30 +40,33 @@ const GoalIcon = ({ goalId }: Props) => {
 	const uniqueId = `goal-icon-upload-${goalId}`;
 
 	return (
-		<div className={'rounded-full bg-[var(--green-theme)]/15 p-3'}>
-			<input
+		<Box sx={{ borderRadius: '50%', bgcolor: 'rgba(93,188,117,0.15)', p: 1.5 }}>
+			<Box
+				component="input"
 				id={uniqueId}
-				className={'h-12 w-12 cursor-pointer opacity-0'}
-				type={'file'}
+				type="file"
 				onChange={handleFileChange}
+				sx={{ height: 48, width: 48, cursor: 'pointer', opacity: 0 }}
 			/>
 
-			<label htmlFor={uniqueId} className={'cursor-pointer'}>
+			<Box component="label" htmlFor={uniqueId} sx={{ cursor: 'pointer' }}>
 				{fileUrl ? (
-					<div className={`absolute h-12 w-12 bg-[url(${fileUrl})]`}>
+					<Box sx={{ position: 'absolute', height: 48, width: 48 }}>
 						<Image
 							src={fileUrl}
 							alt="Ícone de Meta"
-							className="relative bottom-12 h-full w-full rounded-full"
+							width={48}
+							height={48}
+							style={{ position: 'relative', bottom: 48, width: '100%', height: '100%', borderRadius: '50%', objectFit: 'cover' }}
 						/>
-					</div>
+					</Box>
 				) : (
-					<div className={`absolute h-12 w-12`}>
-						<UploadIcon className={'relative bottom-12 h-12 w-12'} />
-					</div>
+					<Box sx={{ position: 'absolute', height: 48, width: 48 }}>
+						<UploadIcon style={{ position: 'relative', bottom: 48, height: 48, width: 48 }} />
+					</Box>
 				)}
-			</label>
-		</div>
+			</Box>
+		</Box>
 	);
 };
 

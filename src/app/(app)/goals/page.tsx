@@ -1,4 +1,5 @@
 'use client';
+import { Box } from '@mui/material';
 import { useEffect, useState } from 'react';
 import AddNewGoal from '@/features/goals/components/AddNewGoal';
 import Goals from '@/features/goals/components/Goals';
@@ -49,24 +50,24 @@ const Page = () => {
 	};
 
 	return (
-		<div>
+		<Box>
 			<TitleAndSubtitle
 				title={'Personal Goals'}
 				subTitle={'From savings to success'}
 			/>
-			<div className="flex flex-wrap gap-y-8">
+			<Box sx={{ display: 'flex', flexWrap: 'wrap', rowGap: 4 }}>
 				{goals.map((goal) => (
-					<div key={goal.id} className={'flex w-1/4 justify-between'}>
+					<Box key={goal.id} sx={{ display: 'flex', width: '25%', justifyContent: 'space-between' }}>
 						<Goals
 							goalId={goal.id}
 							goalName={goal.name}
 							onExclude={handleExcludeGoal}
 						/>
-					</div>
+					</Box>
 				))}
 				<AddNewGoal onAddGoal={handleAddGoal} />
-			</div>
-		</div>
+			</Box>
+		</Box>
 	);
 };
 

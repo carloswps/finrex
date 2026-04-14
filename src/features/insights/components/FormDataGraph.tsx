@@ -16,6 +16,7 @@ import {
 	Title,
 	Tooltip,
 } from 'chart.js';
+import { Box } from '@mui/material';
 import { useContext, useEffect, useRef } from 'react';
 import { GraphContext } from '@/features/insights/contexts/GraphContext';
 
@@ -98,26 +99,7 @@ const FormDataGraph = ({
 
 		options = { ...options, ...chartOptions };
 
-		const rootStyles = getComputedStyle(document.documentElement);
-
-		const blueGraph =
-			rootStyles.getPropertyValue('--blue-graph').trim() || '#4DA1D8';
-		const pinkGraph =
-			rootStyles.getPropertyValue('--pink-graph').trim() || '#F2858E';
-		const orangeGraph =
-			rootStyles.getPropertyValue('--orange-graph').trim() || '#FFB86B';
-		const greenGraph =
-			rootStyles.getPropertyValue('--green-graph').trim() || '#2EBCB3';
-		const yellowGraph =
-			rootStyles.getPropertyValue('--yellow-graph').trim() || '#F6C971';
-
-		const dynamicColors = [
-			blueGraph,
-			pinkGraph,
-			orangeGraph,
-			greenGraph,
-			yellowGraph,
-		];
+		const dynamicColors = ['#4DA1D8', '#F2858E', '#FFB86B', '#2EBCB3', '#F6C971'];
 
 		const myChart = new Chart(ctx, {
 			type: context?.style || graphType || 'bar',
@@ -148,16 +130,15 @@ const FormDataGraph = ({
 	}, [context, graphType, chartOptions, chartData]);
 
 	return (
-		<div
-			className={
-				context?.style === 'doughnut' ? 'mx-auto h-[500px] w-[500px]' : 'w-full'
-			}
-			style={
-				context?.style === 'doughnut' ? { height, width, margin } : undefined
+		<Box
+			sx={
+				context?.style === 'doughnut'
+					? { mx: 'auto', height: height ?? 500, width: width ?? 500, margin }
+					: { width: '100%' }
 			}
 		>
 			<canvas ref={canvasRef}></canvas>
-		</div>
+		</Box>
 	);
 };
 
