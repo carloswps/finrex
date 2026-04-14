@@ -5,36 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1c27f75e-0b8a-4582-93d4-eef6baf0216e" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/next.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(app)/goals/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(app)/goals/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(app)/insights/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(app)/insights/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/auth/components/Cubes.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/auth/components/Cubes.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/auth/components/FormAction.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/auth/components/FormAction.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/auth/components/LoginForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/auth/components/LoginForm.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/auth/components/LoginInputs.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/auth/components/LoginInputs.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/auth/components/barsLogin.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/auth/components/barsLogin.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/auth/components/linesLogin.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/auth/components/linesLogin.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/goals/components/GoalGraph.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/goals/components/GoalGraph.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/goals/components/GoalIcon.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/goals/components/GoalIcon.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/insights/components/Calendar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/insights/components/Calendar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/insights/components/CalendarShowBtn.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/insights/components/CalendarShowBtn.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/insights/components/FormDataGraph.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/insights/components/FormDataGraph.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/insights/components/GraphExhibition.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/insights/components/GraphExhibition.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/insights/components/RealSpendingGraph.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/insights/components/RealSpendingGraph.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/profile/components/PersonalFormInput.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/profile/components/PersonalFormInput.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/profile/components/UsageTimeIcon.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/profile/components/UsageTimeIcon.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/profile/components/UserDatas.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/profile/components/UserDatas.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/profit/ProfitPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/profit/ProfitPage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/profit/components/GrowthIndicator.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/profit/components/GrowthIndicator.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/profit/components/ProfitGraph.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/profit/components/ProfitGraph.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/profit/components/SavingsTable.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/profit/components/SavingsTable.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/profit/utils/ResolveColorCss.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/profit/utils/ResolveColorCss.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/revenue/components/DefaultInput.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/revenue/components/DefaultInput.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/revenue/components/RevenueForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/revenue/components/RevenueForm.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/shared/components/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/shared/components/Header.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/shared/components/Summary.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/shared/components/Summary.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/shared/providers/providers.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/shared/providers/providers.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/workflows/ci.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/ci.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -311,7 +282,7 @@
       <workItem from="1775947147018" duration="8535000" />
       <workItem from="1776041470645" duration="2376000" />
       <workItem from="1776174422674" duration="8000" />
-      <workItem from="1776188140653" duration="3318000" />
+      <workItem from="1776188140653" duration="3660000" />
     </task>
     <task id="LOCAL-00001" summary="perf: Update the architecture of the project.&#10;Add eslint and prettier for standardizing code writing.&#10;Add icon for login with google (in dev)">
       <option name="closed" value="true" />
@@ -369,7 +340,15 @@
       <option name="project" value="LOCAL" />
       <updated>1776190610473</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Run Biome.js check">
+      <option name="closed" value="true" />
+      <created>1776191530343</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1776191530343</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -396,7 +375,8 @@
     <MESSAGE value="Migrate Architecture for Feature-Based." />
     <MESSAGE value="Remove shelved patch file to clean up unnecessary IDE-related changes." />
     <MESSAGE value="Refactor app components to adopt Material UI&#10;&#10;Replaced custom HTML and CSS with Material UI components across multiple app sections, enhancing code readability, styling consistency, and theming. Updated navigation, layouts, and feature-specific components with `Box`, `Typography`, and other MUI components." />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactor app components to adopt Material UI&#10;&#10;Replaced custom HTML and CSS with Material UI components across multiple app sections, enhancing code readability, styling consistency, and theming. Updated navigation, layouts, and feature-specific components with `Box`, `Typography`, and other MUI components." />
+    <MESSAGE value="Run Biome.js check" />
+    <option name="LAST_COMMIT_MESSAGE" value="Run Biome.js check" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
