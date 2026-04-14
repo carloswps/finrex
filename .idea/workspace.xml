@@ -5,7 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1c27f75e-0b8a-4582-93d4-eef6baf0216e" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.github/workflows/ci.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/ci.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/profit/components/GrowthIndicator.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/profit/components/GrowthIndicator.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -282,7 +283,7 @@
       <workItem from="1775947147018" duration="8535000" />
       <workItem from="1776041470645" duration="2376000" />
       <workItem from="1776174422674" duration="8000" />
-      <workItem from="1776188140653" duration="3660000" />
+      <workItem from="1776188140653" duration="4088000" />
     </task>
     <task id="LOCAL-00001" summary="perf: Update the architecture of the project.&#10;Add eslint and prettier for standardizing code writing.&#10;Add icon for login with google (in dev)">
       <option name="closed" value="true" />
@@ -348,7 +349,23 @@
       <option name="project" value="LOCAL" />
       <updated>1776191530343</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Update CI workflow">
+      <option name="closed" value="true" />
+      <created>1776191818267</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1776191818267</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Update CI workflow to use.">
+      <option name="closed" value="true" />
+      <created>1776192052229</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1776192052229</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -376,7 +393,9 @@
     <MESSAGE value="Remove shelved patch file to clean up unnecessary IDE-related changes." />
     <MESSAGE value="Refactor app components to adopt Material UI&#10;&#10;Replaced custom HTML and CSS with Material UI components across multiple app sections, enhancing code readability, styling consistency, and theming. Updated navigation, layouts, and feature-specific components with `Box`, `Typography`, and other MUI components." />
     <MESSAGE value="Run Biome.js check" />
-    <option name="LAST_COMMIT_MESSAGE" value="Run Biome.js check" />
+    <MESSAGE value="Update CI workflow" />
+    <MESSAGE value="Update CI workflow to use." />
+    <option name="LAST_COMMIT_MESSAGE" value="Update CI workflow to use." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

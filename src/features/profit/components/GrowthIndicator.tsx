@@ -1,4 +1,4 @@
-import { Stack, Typography } from '@mui/material';
+import {Stack, Typography} from '@mui/material';
 import TripleUpArrow from '@/features/profit/components/icons/TripleUpArrow.svg';
 
 type Props = {
@@ -11,7 +11,7 @@ const GrowthIndicator = ({ month, percentage }: Props) => {
 		<Stack direction={'row'} alignItems={'center'} spacing={1}>
 			<Typography variant="h6">{month}</Typography>
 			<Typography variant="h5">+{percentage}%</Typography>
-			<TripleUpArrow sx={{ width: 32, height: 32, color: 'primary.main' }} />
+			<TripleUpArrow />
 		</Stack>
 	);
 };
