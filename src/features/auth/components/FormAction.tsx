@@ -1,18 +1,18 @@
-import { Box, Stack, Typography } from '@mui/material';
 import { zodResolver } from '@hookform/resolvers/zod';
+import { Box, Stack, Typography } from '@mui/material';
 import { useRouter } from 'next/navigation';
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { FcGoogle } from 'react-icons/fc';
 import { handleGoogleLogin } from '@/api/api';
 import ErrorAlert from '@/features/auth/components/ErrorAlert';
-import { useAddRegister, useLogin } from '@/features/auth/utils/mutations';
 import {
 	loginSchema,
 	type loginSchemaType,
 	registerSchema,
 	type registerSchemaType,
 } from '@/features/auth/schemas/loginSchema';
+import { useAddRegister, useLogin } from '@/features/auth/utils/mutations';
 import HaveAccount from './HaveAccount';
 import LoginBtn from './LoginBtn';
 import { LoginInputs } from './LoginInputs';
@@ -59,8 +59,20 @@ const FormAction = () => {
 
 	return (
 		<Box>
-			<Box sx={{ width: '24rem', borderBottom: 1, borderColor: 'text.disabled', pb: 4 }}>
-				<Typography variant="h5" fontWeight={700} color="text.primary" sx={{ fontSize: '1.875rem' }}>
+			<Box
+				sx={{
+					width: '24rem',
+					borderBottom: 1,
+					borderColor: 'text.disabled',
+					pb: 4,
+				}}
+			>
+				<Typography
+					variant="h5"
+					fontWeight={700}
+					color="text.primary"
+					sx={{ fontSize: '1.875rem' }}
+				>
 					{!isRegisterMode ? 'Welcome Back' : 'Welcome to Finrex'}
 				</Typography>
 				<Typography fontWeight={700} color="primary.main" sx={{ mt: -1 }}>
@@ -73,7 +85,13 @@ const FormAction = () => {
 			<Box
 				component="form"
 				onSubmit={handleSubmit(handleFormSubmit)}
-				sx={{ mt: 4, maxWidth: '24rem', display: 'flex', flexDirection: 'column', color: 'text.primary' }}
+				sx={{
+					mt: 4,
+					maxWidth: '24rem',
+					display: 'flex',
+					flexDirection: 'column',
+					color: 'text.primary',
+				}}
 			>
 				<LoginInputs
 					name={'email'}
@@ -103,7 +121,10 @@ const FormAction = () => {
 							hasLoggedIn={isRegisterMode}
 							toggleLogged={toggleFormMode}
 						/>
-						<Box component="span" sx={{ cursor: 'pointer', display: 'flex', alignItems: 'center' }}>
+						<Box
+							component="span"
+							sx={{ cursor: 'pointer', display: 'flex', alignItems: 'center' }}
+						>
 							<FcGoogle
 								size={18}
 								onClick={() => {

@@ -57,12 +57,26 @@ const GoalIcon = ({ goalId }: Props) => {
 							alt="Ícone de Meta"
 							width={48}
 							height={48}
-							style={{ position: 'relative', bottom: 48, width: '100%', height: '100%', borderRadius: '50%', objectFit: 'cover' }}
+							style={{
+								position: 'relative',
+								bottom: 48,
+								width: '100%',
+								height: '100%',
+								borderRadius: '50%',
+								objectFit: 'cover',
+							}}
 						/>
 					</Box>
 				) : (
 					<Box sx={{ position: 'absolute', height: 48, width: 48 }}>
-						<UploadIcon style={{ position: 'relative', bottom: 48, height: 48, width: 48 }} />
+						<UploadIcon
+							style={{
+								position: 'relative',
+								bottom: 48,
+								height: 48,
+								width: 48,
+							}}
+						/>
 					</Box>
 				)}
 			</Box>

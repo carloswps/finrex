@@ -1,4 +1,5 @@
 import { Box, Typography } from '@mui/material';
+import Image from 'next/image';
 
 const BarsLogin = () => {
 	return (
@@ -14,8 +15,11 @@ const BarsLogin = () => {
 				borderRadius: '6px',
 			}}
 		>
-			<img src="/barAnalytic-removebg-preview.png" alt="" />
-			<Typography variant="body2" sx={{ position: 'relative', bottom: 24, ml: 0.5 }}>
+			<Image src="/barAnalytic-removebg-preview.png" alt="" />
+			<Typography
+				variant="body2"
+				sx={{ position: 'relative', bottom: 24, ml: 0.5 }}
+			>
 				Track Your Progrees
 			</Typography>
 		</Box>

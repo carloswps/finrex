@@ -1,5 +1,5 @@
-import { useState } from 'react';
 import { Box, InputBase, Typography } from '@mui/material';
+import { useState } from 'react';
 
 const UserDatas = () => {
 	const [isEditing, setIsEditing] = useState(false);
@@ -18,7 +18,12 @@ const UserDatas = () => {
 					inputProps={{ maxLength: 12 }}
 					onChange={(e) => setUsername(e.target.value)}
 					onBlur={handleBlur}
-					sx={{ maxWidth: 128, fontSize: '1.25rem', fontWeight: 700, color: 'text.primary' }}
+					sx={{
+						maxWidth: 128,
+						fontSize: '1.25rem',
+						fontWeight: 700,
+						color: 'text.primary',
+					}}
 				/>
 			) : (
 				<Typography

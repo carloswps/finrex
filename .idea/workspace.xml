@@ -6,38 +6,35 @@
   <component name="ChangeListManager">
     <list default="true" id="1c27f75e-0b8a-4582-93d4-eef6baf0216e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/next.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/(app)/goals/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(app)/goals/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(app)/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(app)/layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(app)/profile/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(app)/profile/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(app)/insights/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(app)/insights/page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/features/auth/components/Cubes.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/auth/components/Cubes.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/features/auth/components/FormAction.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/auth/components/FormAction.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/features/auth/components/LoginForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/auth/components/LoginForm.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/features/auth/components/LoginInputs.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/auth/components/LoginInputs.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/features/auth/components/barsLogin.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/auth/components/barsLogin.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/features/auth/components/linesLogin.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/auth/components/linesLogin.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/goals/components/AddNewGoal.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/goals/components/AddNewGoal.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/goals/components/FloatPercent.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/goals/components/FloatPercent.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/features/goals/components/GoalGraph.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/goals/components/GoalGraph.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/features/goals/components/GoalIcon.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/goals/components/GoalIcon.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/insights/components/Bar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/insights/components/Bar.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/features/insights/components/Calendar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/insights/components/Calendar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/insights/components/CalendarLogicWrapper.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/insights/components/CalendarLogicWrapper.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/features/insights/components/CalendarShowBtn.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/insights/components/CalendarShowBtn.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/insights/components/FormDataContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/insights/components/FormDataContainer.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/features/insights/components/FormDataGraph.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/insights/components/FormDataGraph.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/features/insights/components/GraphExhibition.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/insights/components/GraphExhibition.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/insights/components/LastMonth.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/insights/components/LastMonth.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/features/insights/components/RealSpendingGraph.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/insights/components/RealSpendingGraph.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/profile/components/ProfilePic.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/profile/components/ProfilePic.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/profile/components/UsageGraph.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/profile/components/UsageGraph.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/profile/components/PersonalFormInput.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/profile/components/PersonalFormInput.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/features/profile/components/UsageTimeIcon.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/profile/components/UsageTimeIcon.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/features/profile/components/UserDatas.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/profile/components/UserDatas.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/features/profit/ProfitPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/profit/ProfitPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/profit/components/GrowthIndicator.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/profit/components/GrowthIndicator.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/features/profit/components/ProfitGraph.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/profit/components/ProfitGraph.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/revenue/components/Revenue.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/revenue/components/Revenue.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/profit/components/SavingsTable.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/profit/components/SavingsTable.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/profit/utils/ResolveColorCss.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/profit/utils/ResolveColorCss.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/revenue/components/DefaultInput.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/revenue/components/DefaultInput.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/revenue/components/RevenueForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/revenue/components/RevenueForm.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/shared/components/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/shared/components/Header.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/shared/components/Summary.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/shared/components/Summary.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/shared/components/TitleAndSubtitle.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/shared/components/TitleAndSubtitle.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/shared/providers/providers.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/shared/providers/providers.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,39 +97,39 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;JavaScript Debug.localhost:3000.executor&quot;: &quot;Debug&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
-    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
-    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultAutoModeForALLUsers.v1&quot;: &quot;true&quot;,
-    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;dev&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;javascript.preferred.runtime.type.id&quot;: &quot;node&quot;,
-    &quot;js.debugger.nextJs.config.created.client&quot;: &quot;true&quot;,
-    &quot;js.debugger.nextJs.config.created.server&quot;: &quot;true&quot;,
-    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/carlos/WebstormProjects/finrex/public&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;/home/carlos/.asdf/installs/nodejs/20.19.0/lib/node_modules/prettier&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;terminal&quot;,
-    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/snap/webstorm/593/plugins/javascript-plugin/jsLanguageServicesImpl/external&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "JavaScript Debug.localhost:3000.executor": "Debug",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.MCP Project settings loaded": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultAutoModeForALLUsers.v1": "true",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "git-widget-placeholder": "dev",
+    "ignore.virus.scanning.warn.message": "true",
+    "javascript.preferred.runtime.type.id": "node",
+    "js.debugger.nextJs.config.created.client": "true",
+    "js.debugger.nextJs.config.created.server": "true",
+    "junie.onboarding.icon.badge.shown": "true",
+    "last_opened_file_path": "/home/carlos/WebstormProjects/finrex/public",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.standard": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.standard": "",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "prettierjs.PrettierConfiguration.Package": "/home/carlos/.asdf/installs/nodejs/20.19.0/lib/node_modules/prettier",
+    "settings.editor.selected.configurable": "Settings.Biome",
+    "to.speed.mode.migration.done": "true",
+    "ts.external.directory.path": "/snap/webstorm/593/plugins/javascript-plugin/jsLanguageServicesImpl/external",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="ReactDesignerToolWindowState">
     <option name="myId2Visible">
       <map>
@@ -314,7 +311,7 @@
       <workItem from="1775947147018" duration="8535000" />
       <workItem from="1776041470645" duration="2376000" />
       <workItem from="1776174422674" duration="8000" />
-      <workItem from="1776188140653" duration="2405000" />
+      <workItem from="1776188140653" duration="3318000" />
     </task>
     <task id="LOCAL-00001" summary="perf: Update the architecture of the project.&#10;Add eslint and prettier for standardizing code writing.&#10;Add icon for login with google (in dev)">
       <option name="closed" value="true" />
@@ -364,7 +361,15 @@
       <option name="project" value="LOCAL" />
       <updated>1776043828387</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Refactor app components to adopt Material UI&#10;&#10;Replaced custom HTML and CSS with Material UI components across multiple app sections, enhancing code readability, styling consistency, and theming. Updated navigation, layouts, and feature-specific components with `Box`, `Typography`, and other MUI components.">
+      <option name="closed" value="true" />
+      <created>1776190610473</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1776190610473</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -390,7 +395,8 @@
     <MESSAGE value="Refactor realApp components to use Material UI&#10;&#10;Refactored multiple components within the realApp section to replace custom HTML and CSS with Material UI components such as `Box`, `Typography`, `TextField`, `Card`, and `IconButton`. Enhanced styling consistency and simplified the UI codebase by utilizing MUI's theming capabilities. Updated `.idea/compiler.xml` to enable memory auto-increase." />
     <MESSAGE value="Migrate Architecture for Feature-Based." />
     <MESSAGE value="Remove shelved patch file to clean up unnecessary IDE-related changes." />
-    <option name="LAST_COMMIT_MESSAGE" value="Remove shelved patch file to clean up unnecessary IDE-related changes." />
+    <MESSAGE value="Refactor app components to adopt Material UI&#10;&#10;Replaced custom HTML and CSS with Material UI components across multiple app sections, enhancing code readability, styling consistency, and theming. Updated navigation, layouts, and feature-specific components with `Box`, `Typography`, and other MUI components." />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactor app components to adopt Material UI&#10;&#10;Replaced custom HTML and CSS with Material UI components across multiple app sections, enhancing code readability, styling consistency, and theming. Updated navigation, layouts, and feature-specific components with `Box`, `Typography`, and other MUI components." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

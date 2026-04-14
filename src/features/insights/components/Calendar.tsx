@@ -1,8 +1,8 @@
 'use client';
 
-import { Box } from '@mui/material';
 import dayGridPlugin from '@fullcalendar/daygrid';
 import FullCalendar from '@fullcalendar/react';
+import { Box } from '@mui/material';
 import { useContext } from 'react';
 import { CalendarContext } from '@/features/insights/contexts/CalendarContext';
 

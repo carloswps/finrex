@@ -57,7 +57,14 @@ const Page = () => {
 			/>
 			<Box sx={{ display: 'flex', flexWrap: 'wrap', rowGap: 4 }}>
 				{goals.map((goal) => (
-					<Box key={goal.id} sx={{ display: 'flex', width: '25%', justifyContent: 'space-between' }}>
+					<Box
+						key={goal.id}
+						sx={{
+							display: 'flex',
+							width: '25%',
+							justifyContent: 'space-between',
+						}}
+					>
 						<Goals
 							goalId={goal.id}
 							goalName={goal.name}

@@ -1,4 +1,11 @@
-import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow } from '@mui/material';
+import {
+	Table,
+	TableBody,
+	TableCell,
+	TableContainer,
+	TableHead,
+	TableRow,
+} from '@mui/material';
 import ProfitTableRow from '@/features/profit/components/ProfitTableRow';
 
 const cellSx = { color: 'primary.main', fontWeight: 600 };
@@ -6,7 +13,13 @@ const cellSx = { color: 'primary.main', fontWeight: 600 };
 const SavingsTable = () => {
 	return (
 		<TableContainer sx={{ mb: 6, width: '91.666667%' }}>
-			<Table sx={{ borderCollapse: 'separate', borderSpacing: 0, textAlign: 'center' }}>
+			<Table
+				sx={{
+					borderCollapse: 'separate',
+					borderSpacing: 0,
+					textAlign: 'center',
+				}}
+			>
 				<TableHead>
 					<TableRow sx={{ bgcolor: 'text.disabled' }}>
 						<TableCell sx={cellSx}>Month</TableCell>

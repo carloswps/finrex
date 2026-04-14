@@ -1,5 +1,5 @@
 const resolveCssColor = (cssVarString: string): string => {
-	if (!cssVarString || !cssVarString.startsWith('var(')) {
+	if (!cssVarString?.startsWith('var(')) {
 		return cssVarString;
 	}
 	try {

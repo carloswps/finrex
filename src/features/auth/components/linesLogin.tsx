@@ -1,4 +1,5 @@
 import { Box, Typography } from '@mui/material';
+import Image from 'next/image';
 
 const LinesLogin = () => {
 	return (
@@ -14,7 +15,13 @@ const LinesLogin = () => {
 				boxShadow: 3,
 			}}
 		>
-			<img src="/linesAnalytics-removebg-preview.png" alt="" />
+			<Image
+				src="/linesAnalytics-removebg-preview.png"
+				alt=""
+				width={340}
+				height={200}
+				style={{ width: '100%', height: 'auto' }}
+			/>
 			<Typography fontWeight={700} color="primary.main">
 				Get your personal analitics
 			</Typography>

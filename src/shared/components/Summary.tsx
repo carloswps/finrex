@@ -37,7 +37,12 @@ const Summary = ({
 			<Typography fontWeight={700} color="purple.main" sx={{ mb: 1.5 }}>
 				{title}
 			</Typography>
-			<Stack direction="row" alignItems="center" gap={0.5} sx={{ fontSize: '0.875rem' }}>
+			<Stack
+				direction="row"
+				alignItems="center"
+				gap={0.5}
+				sx={{ fontSize: '0.875rem' }}
+			>
 				<Box
 					sx={{
 						mr: 0.5,
@@ -71,7 +76,13 @@ const Summary = ({
 				</Stack>
 				{growthPercentage ? (
 					<Typography
-						sx={{ position: 'relative', fontSize: 12, fontWeight: 600, color: 'purple.main', bottom: bottom }}
+						sx={{
+							position: 'relative',
+							fontSize: 12,
+							fontWeight: 600,
+							color: 'purple.main',
+							bottom: bottom,
+						}}
 					>
 						{currentValue && pastValue && currentValue > pastValue
 							? `+${growthPercentage}%`

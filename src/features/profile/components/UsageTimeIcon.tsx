@@ -24,7 +24,12 @@ const UsageTimeIcon = ({ monthsUsed, positionY, positionX }: Props) => {
 			}}
 		>
 			<Typography
-				sx={{ fontSize: 12, fontWeight: 700, textWrap: 'nowrap', color: 'purple.main' }}
+				sx={{
+					fontSize: 12,
+					fontWeight: 700,
+					textWrap: 'nowrap',
+					color: 'purple.main',
+				}}
 			>
 				{monthsUsed} months
 			</Typography>

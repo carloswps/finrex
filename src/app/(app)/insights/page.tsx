@@ -7,7 +7,14 @@ import TitleAndSubtitle from '@/shared/components/TitleAndSubtitle';
 
 const Page = () => {
 	return (
-		<Box sx={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', alignItems: 'start', gap: 2 }}>
+		<Box
+			sx={{
+				display: 'grid',
+				gridTemplateColumns: 'repeat(3, 1fr)',
+				alignItems: 'start',
+				gap: 2,
+			}}
+		>
 			<Box sx={{ gridColumn: 'span 2', gridRow: '1' }}>
 				<Box>
 					<TitleAndSubtitle
@@ -20,7 +27,10 @@ const Page = () => {
 				</Box>
 			</Box>
 
-			<Box component="aside" sx={{ mb: 2.5, borderLeft: 1, borderColor: 'text.disabled', px: 8 }}>
+			<Box
+				component="aside"
+				sx={{ mb: 2.5, borderLeft: 1, borderColor: 'text.disabled', px: 8 }}
+			>
 				<Box>
 					<TitleAndSubtitle
 						title="In Money"

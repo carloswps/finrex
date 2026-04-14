@@ -13,7 +13,11 @@ import { useProfilePic } from '@/shared/contexts/ProfilePicContext';
 
 const navLinks = [
 	{ path: paths.page.insights, label: 'Insights', Icon: Insights },
-	{ path: paths.page.revenue, label: 'Revenue & Spending', Icon: RevenueSpending },
+	{
+		path: paths.page.revenue,
+		label: 'Revenue & Spending',
+		Icon: RevenueSpending,
+	},
 	{ path: paths.page.goals, label: 'Goals', Icon: Goals },
 	{ path: paths.page.profit, label: 'Profit', Icon: Profit },
 ];
@@ -62,7 +66,10 @@ const Header = () => {
 								}}
 							>
 								<Icon style={{ height: 40, width: 40 }} />
-								<Link href={path} style={{ color: 'inherit', textDecoration: 'none' }}>
+								<Link
+									href={path}
+									style={{ color: 'inherit', textDecoration: 'none' }}
+								>
 									{label}
 								</Link>
 							</Box>
@@ -70,11 +77,13 @@ const Header = () => {
 					})}
 					<Box component="li">
 						<Link href={'/profile'}>
-							<Box
-								component="img"
+							<Image
+								unoptimized
 								src={picSource}
 								alt="Your Profile Picture"
-								sx={{ height: 52, width: 52, borderRadius: '50%', objectFit: 'cover' }}
+								width={52}
+								height={52}
+								style={{ borderRadius: '50%', objectFit: 'cover' }}
 							/>
 						</Link>
 					</Box>

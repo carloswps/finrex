@@ -10,10 +10,20 @@ type Props = {
 
 const RealSpendingGraph = ({ title, subTitle, value, barColor }: Props) => {
 	return (
-		<Stack direction="row" alignItems="center" sx={{ my: 2, color: 'text.primary' }}>
+		<Stack
+			direction="row"
+			alignItems="center"
+			sx={{ my: 2, color: 'text.primary' }}
+		>
 			<Box>
-				<Typography variant="body2" fontWeight={600}>{title}</Typography>
-				<Typography variant="body2" color="text.disabled" sx={{ mt: -0.75, textWrap: 'nowrap' }}>
+				<Typography variant="body2" fontWeight={600}>
+					{title}
+				</Typography>
+				<Typography
+					variant="body2"
+					color="text.disabled"
+					sx={{ mt: -0.75, textWrap: 'nowrap' }}
+				>
 					{subTitle}
 				</Typography>
 			</Box>

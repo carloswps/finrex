@@ -1,6 +1,6 @@
 import { IconButton, InputAdornment, TextField } from '@mui/material';
 import { useState } from 'react';
-import { useController, type UseControllerProps } from 'react-hook-form';
+import { type UseControllerProps, useController } from 'react-hook-form';
 import type { loginSchemaType } from '@/features/auth/schemas/loginSchema';
 import HideIcon from './icons/HideIcon.svg';
 import ShowIcon from './icons/ShowIcon.svg';
@@ -38,9 +38,13 @@ export const LoginInputs = (props: LoginInputProps) => {
 								edge="end"
 							>
 								{isHidden ? (
-									<HideIcon style={{ height: 24, width: 24, color: '#bdc5ce' }} />
+									<HideIcon
+										style={{ height: 24, width: 24, color: '#bdc5ce' }}
+									/>
 								) : (
-									<ShowIcon style={{ height: 24, width: 24, color: '#bdc5ce' }} />
+									<ShowIcon
+										style={{ height: 24, width: 24, color: '#bdc5ce' }}
+									/>
 								)}
 							</IconButton>
 						</InputAdornment>

@@ -47,7 +47,7 @@ const ProfitGraph = ({
 		const ctx = canvasRef.current.getContext('2d');
 		if (!ctx) return;
 
-		let finalBorderColor;
+		let finalBorderColor: string | CanvasGradient;
 
 		const resolvedColor = color ? resolveColorCss(color) : undefined;
 

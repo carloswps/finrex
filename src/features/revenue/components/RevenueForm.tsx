@@ -1,12 +1,18 @@
-import {zodResolver} from '@hookform/resolvers/zod';
-import {Box} from '@mui/material';
-import {useForm} from 'react-hook-form';
-import {useIncomeValues, useSpendingValues,} from '@/features/auth/utils/mutations';
+import { zodResolver } from '@hookform/resolvers/zod';
+import { Box } from '@mui/material';
+import { useForm } from 'react-hook-form';
+import {
+	useIncomeValues,
+	useSpendingValues,
+} from '@/features/auth/utils/mutations';
 import DefaultInput from '@/features/revenue/components/DefaultInput';
 import TitleAndSubtitle from '@/shared/components/TitleAndSubtitle';
-import {incomeSchema, type incomeSchemaType} from '../schemas/incomeSchema';
-import {spendingSchema, type spendingSchemaType,} from '../schemas/spendingSchema';
-import type {transactionsItens} from '../types/transactionsItens';
+import { incomeSchema, type incomeSchemaType } from '../schemas/incomeSchema';
+import {
+	spendingSchema,
+	type spendingSchemaType,
+} from '../schemas/spendingSchema';
+import type { transactionsItens } from '../types/transactionsItens';
 
 type Props = {
 	data: transactionsItens[];

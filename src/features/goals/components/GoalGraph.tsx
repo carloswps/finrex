@@ -19,7 +19,14 @@ const GoalGraph = ({
 }: Props) => {
 	return (
 		<GraphProvider initialStyle={'doughnut'}>
-			<Box sx={{ position: 'relative', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+			<Box
+				sx={{
+					position: 'relative',
+					display: 'flex',
+					alignItems: 'center',
+					justifyContent: 'center',
+				}}
+			>
 				<FloatPercent
 					percent={completePercent}
 					color={'#5dbc75'}

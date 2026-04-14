@@ -1,5 +1,5 @@
 'use client';
-import { Stack, Box } from '@mui/material';
+import { Box, Stack } from '@mui/material';
 import { useContext } from 'react';
 import {
 	type ChartStyle,

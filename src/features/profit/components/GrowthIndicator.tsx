@@ -1,5 +1,5 @@
-import TripleUpArrow from '@/features/profit/components/icons/TripleUpArrow.svg';
 import { Stack, Typography } from '@mui/material';
+import TripleUpArrow from '@/features/profit/components/icons/TripleUpArrow.svg';
 
 type Props = {
 	month: string;

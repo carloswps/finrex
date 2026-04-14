@@ -1,4 +1,5 @@
 'use client';
+import { Box } from '@mui/material';
 import {
 	ArcElement,
 	BarController,
@@ -16,7 +17,6 @@ import {
 	Title,
 	Tooltip,
 } from 'chart.js';
-import { Box } from '@mui/material';
 import { useContext, useEffect, useRef } from 'react';
 import { GraphContext } from '@/features/insights/contexts/GraphContext';
 
@@ -99,7 +99,13 @@ const FormDataGraph = ({
 
 		options = { ...options, ...chartOptions };
 
-		const dynamicColors = ['#4DA1D8', '#F2858E', '#FFB86B', '#2EBCB3', '#F6C971'];
+		const dynamicColors = [
+			'#4DA1D8',
+			'#F2858E',
+			'#FFB86B',
+			'#2EBCB3',
+			'#F6C971',
+		];
 
 		const myChart = new Chart(ctx, {
 			type: context?.style || graphType || 'bar',

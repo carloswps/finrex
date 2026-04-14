@@ -1,7 +1,7 @@
 import { Stack, Typography } from '@mui/material';
 import { useContext } from 'react';
-import CalendarArrow from './icons/CalendarArrow.svg';
 import { CalendarContext } from '@/features/insights/contexts/CalendarContext';
+import CalendarArrow from './icons/CalendarArrow.svg';
 
 const CalendarShowBtn = () => {
 	const ctx = useContext(CalendarContext);
