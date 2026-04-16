@@ -138,6 +138,3 @@ Defina `NEXT_PUBLIC_URL_FINREX_API` para apontar para sua API backend.
 - [TanStack Query](https://tanstack.com/query/latest)
 - [Biome](https://biomejs.dev/)
 
----
-
-Feito com ❤️ para controle financeiro pessoal
